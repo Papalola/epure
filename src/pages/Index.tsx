@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle, Ruler, Box, HardHat } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroIllustration from "@/assets/hero-illustration.png";
 
 const services = [
   {
@@ -39,33 +39,36 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={heroBg} alt="Bureau d'études BIM" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-primary/70" />
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="relative min-h-[85vh] flex items-center bg-background overflow-hidden">
+        <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
           <AnimatedSection>
-            <p className="text-accent font-medium tracking-widest uppercase text-sm mb-4">
+            <p className="text-accent font-semibold tracking-widest uppercase text-sm mb-4">
               David Badin
             </p>
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight max-w-3xl">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
               BIM Modeleur &<br />Expert Agencement
             </h1>
-            <p className="mt-6 text-primary-foreground/80 text-lg md:text-xl max-w-xl leading-relaxed">
+            <p className="mt-6 text-muted-foreground text-lg md:text-xl max-w-xl leading-relaxed">
               25 ans d'expérience terrain + Certification BIM
               <br />Au service de vos projets d'agencement et de construction
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+              <Button asChild size="lg" className="bg-foreground text-background hover:bg-foreground/90">
                 <Link to="/contact">
                   Me contacter <ArrowRight className="ml-2" size={18} />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button asChild variant="outline" size="lg" className="border-foreground/30 text-foreground hover:bg-foreground/5">
                 <Link to="/services">Découvrir mes services</Link>
               </Button>
             </div>
+          </AnimatedSection>
+          <AnimatedSection delay={0.2}>
+            <img
+              src={heroIllustration}
+              alt="BIM Modeleur au travail"
+              className="w-full max-w-xl mx-auto rounded-lg"
+            />
           </AnimatedSection>
         </div>
       </section>
