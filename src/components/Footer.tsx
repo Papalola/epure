@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
+import logoEpure from "@/assets/logo-epure.png";
 
 const Footer = () => (
   <footer className="bg-primary text-primary-foreground py-16">
     <div className="container mx-auto px-4 grid md:grid-cols-3 gap-12">
       <div>
-        <h3 className="font-display text-2xl font-bold mb-4">épure</h3>
+        <img src={logoEpure} alt="Épure" className="h-12 mb-4 brightness-0 invert" />
         <p className="text-primary-foreground/70 text-sm leading-relaxed">
           BIM Modélisation & Expertise Agencement.
           <br />25 ans d'expérience au service de vos projets.
