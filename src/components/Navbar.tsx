@@ -18,9 +18,9 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto flex items-center justify-between h-20 px-4">
+      <div className="container mx-auto flex items-center justify-between h-24 px-4">
         <Link to="/" className="flex items-center">
-          <img src={logoEpure} alt="Épure" className="h-14" />
+          <img src={logoEpure} alt="Épure" className="h-20" />
         </Link>
 
         {/* Desktop */}
