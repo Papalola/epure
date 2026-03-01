@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Ruler, Box, HardHat } from "lucide-react";
+import { ArrowRight, CheckCircle, Box, HardHat, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -8,22 +8,22 @@ import heroIllustration from "@/assets/hero-illustration.png";
 const services = [
   {
     icon: Box,
-    title: "Modélisation BIM & Plans techniques",
+    title: "Bureau d'études technique",
     items: [
-      "Modélisation Revit (architecturale et technique)",
-      "Plans d'exécution AutoCAD 2D",
-      "Coordination BIM et gestion de maquettes numériques",
-      "Extraction de métrés et quantitatifs",
+      "Modélisation et coordination BIM (Revit)",
+      "Plans d'exécution et dessins techniques (AutoCAD)",
+      "Gestion de projet et maquettes numériques",
+      "Relevés techniques, assistance MOE, suivi de chantier",
     ],
   },
   {
-    icon: Ruler,
-    title: "Expertise Agencement",
+    icon: Home,
+    title: "Architecture d'intérieur & Agencement",
     items: [
-      "Études techniques et solutions constructives",
-      "Optimisation production et méthodes",
-      "Suivi de chantier et contrôle qualité",
-      "Coordination multi-corps d'état",
+      "Conception et pilotage de projets d'aménagement",
+      "Mobilier et menuiserie sur mesure, de l'étude à la pose",
+      "Optimisation des volumes et agencements fonctionnels",
+      "Coordination des intervenants et suivi de réalisation",
     ],
   },
 ];
@@ -46,11 +46,11 @@ const Index = () => {
               David Badin
             </p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-              BIM Modeleur &<br />Expert Agencement
+              Bureau d'études &<br />Architecture d'intérieur
             </h1>
             <p className="mt-6 text-muted-foreground text-lg md:text-xl max-w-xl leading-relaxed">
               25 ans d'expérience terrain + Certification BIM
-              <br />Au service de vos projets d'agencement et de construction
+              <br />De la conception technique à la réalisation de vos espaces
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-foreground text-background hover:bg-foreground/90">
