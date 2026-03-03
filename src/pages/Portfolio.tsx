@@ -36,6 +36,7 @@ const Portfolio = () => (
                 <div className="p-5">
                   <span className="text-xs font-medium text-accent uppercase tracking-wider">{p.category}</span>
                   <h3 className="font-display text-lg font-semibold text-card-foreground mt-2">{p.title}</h3>
+                  <p className="text-xs text-muted-foreground italic mt-2">📷 Photos de réalisations à venir</p>
                 </div>
               </div>
             </AnimatedSection>
