@@ -18,7 +18,7 @@ const contactSchema = z.object({
 
 const contactInfo = [
   { icon: Phone, label: "Téléphone", value: "06 88 81 30 86", href: "tel:0688813086" },
-  { icon: Mail, label: "Email", value: "davidbadin@outlook.fr", href: "mailto:davidbadin@outlook.fr" },
+  { icon: Mail, label: "Email", value: "contact@epure-db.com", href: "mailto:contact@epure-db.com" },
   { icon: MapPin, label: "Localisation", value: "Pomeys (69590) – Rhône", sub: "Interventions région Auvergne-Rhône-Alpes et au-delà" },
 ];
 

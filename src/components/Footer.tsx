@@ -6,9 +6,9 @@ const Footer = () => (
   <footer className="bg-primary text-primary-foreground py-16">
     <div className="container mx-auto px-4 grid md:grid-cols-3 gap-12">
       <div>
-        <img src={logoEpure} alt="Épure" className="h-20 mb-4 brightness-0 invert" />
+        <img src={logoEpure} alt="Épure" className="h-20 mb-4" />
         <p className="text-primary-foreground/70 text-sm leading-relaxed">
-          BIM Modélisation & Expertise Agencement.
+          Bureau d'études & Expertise Agencement.
           <br />25 ans d'expérience au service de vos projets.
         </p>
       </div>
@@ -28,8 +28,8 @@ const Footer = () => (
           <a href="tel:0688813086" className="flex items-center gap-2 hover:text-primary-foreground transition-colors">
             <Phone size={16} /> 06 88 81 30 86
           </a>
-          <a href="mailto:davidbadin@outlook.fr" className="flex items-center gap-2 hover:text-primary-foreground transition-colors">
-            <Mail size={16} /> davidbadin@outlook.fr
+          <a href="mailto:contact@epure-db.com" className="flex items-center gap-2 hover:text-primary-foreground transition-colors">
+            <Mail size={16} /> contact@epure-db.com
           </a>
           <span className="flex items-center gap-2">
             <MapPin size={16} /> Pomeys (69590) – Rhône

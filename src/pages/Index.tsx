@@ -50,7 +50,7 @@ const Index = () => {
               David Badin
             </p>
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight">
-              Bureau d'études &<br />Architecture d'intérieur
+              Bureau d'études &<br />Expertise Agencement
             </h1>
             <p className="mt-6 text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
               25 ans d'expérience terrain + Certification BIM
@@ -62,8 +62,8 @@ const Index = () => {
                   Me contacter <ArrowRight className="ml-2" size={18} />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10">
-                <Link to="/services">Découvrir mes services</Link>
+              <Button asChild variant="outline" size="lg" className="border-white/50 text-white bg-white/10 hover:bg-white/20">
+                <Link to="/services">Voir mes services</Link>
               </Button>
             </div>
           </AnimatedSection>

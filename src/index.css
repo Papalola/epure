@@ -14,32 +14,32 @@
 
 @layer base {
   :root {
-    --background: 36 18% 90%;
+    --background: 60 88% 94%;
     --foreground: 30 5% 22%;
 
-    --card: 36 16% 94%;
+    --card: 60 60% 96%;
     --card-foreground: 30 5% 22%;
 
-    --popover: 36 16% 94%;
+    --popover: 60 60% 96%;
     --popover-foreground: 30 5% 22%;
 
     --primary: 30 5% 22%;
-    --primary-foreground: 36 18% 90%;
+    --primary-foreground: 60 88% 94%;
 
-    --secondary: 35 14% 85%;
+    --secondary: 55 40% 90%;
     --secondary-foreground: 30 5% 22%;
 
-    --muted: 34 12% 86%;
+    --muted: 55 30% 88%;
     --muted-foreground: 30 5% 42%;
 
     --accent: 30 20% 40%;
-    --accent-foreground: 36 18% 94%;
+    --accent-foreground: 60 88% 96%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 34 12% 82%;
-    --input: 34 12% 82%;
+    --border: 50 20% 82%;
+    --input: 50 20% 82%;
     --ring: 30 5% 22%;
 
     --radius: 0.5rem;
@@ -98,10 +98,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
-  }
-
-  h1, h2, h3, h4 {
+    @apply bg-background text-foreground;
     font-family: 'Agrandir Grand', 'Urbanist', sans-serif;
   }
 }
