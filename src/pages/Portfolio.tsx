@@ -26,12 +26,12 @@ const Portfolio = () => (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {placeholders.map((p, i) => (
             <AnimatedSection key={p.title} delay={i * 0.08}>
-              <div className="border border-card-foreground bg-card overflow-hidden transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
-                <div className="aspect-[4/3] bg-card-foreground/10 flex items-center justify-center">
-                  <ImageIcon className="text-card-foreground/40" size={48} />
+              <div className="border border-border bg-card overflow-hidden transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
+                <div className="aspect-[4/3] bg-secondary flex items-center justify-center">
+                  <ImageIcon className="text-muted-foreground" size={48} />
                 </div>
                 <div className="p-5">
-                  <span className="text-xs font-medium text-card-foreground/60 uppercase tracking-wider">{p.category}</span>
+                  <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">{p.category}</span>
                   <h3 className="font-display text-lg font-bold text-card-foreground mt-2">{p.title}</h3>
                 </div>
               </div>

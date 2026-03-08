@@ -3,32 +3,32 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import logoEpure from "@/assets/logo-epure.png";
 
 const Footer = () => (
-  <footer className="bg-background text-foreground py-16 border-t border-foreground/20">
+  <footer className="py-16" style={{ backgroundColor: '#343332', color: '#FFFFFF' }}>
     <div className="container mx-auto px-4 grid md:grid-cols-3 gap-12">
       <div>
-        <img src={logoEpure} alt="Épure" className="h-20 mb-4 invert" />
-        <p className="text-foreground/50 text-sm leading-relaxed">
+        <img src={logoEpure} alt="Épure" className="h-20 mb-4 invert brightness-200" />
+        <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.5)' }}>
           Bureau d'études & Expertise Agencement.
           <br />25 ans d'expérience au service de vos projets.
         </p>
       </div>
       <div>
         <h4 className="font-display text-lg font-bold mb-4 uppercase tracking-wide">Navigation</h4>
-        <div className="flex flex-col gap-2 text-sm text-foreground/50">
-          <Link to="/" className="hover:text-foreground transition-colors">Accueil</Link>
-          <Link to="/services" className="hover:text-foreground transition-colors">Services</Link>
-          <Link to="/a-propos" className="hover:text-foreground transition-colors">À propos</Link>
-          <Link to="/realisations" className="hover:text-foreground transition-colors">Réalisations</Link>
-          <Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link>
+        <div className="flex flex-col gap-2 text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>
+          <Link to="/" className="hover:text-white transition-colors">Accueil</Link>
+          <Link to="/services" className="hover:text-white transition-colors">Services</Link>
+          <Link to="/a-propos" className="hover:text-white transition-colors">À propos</Link>
+          <Link to="/realisations" className="hover:text-white transition-colors">Réalisations</Link>
+          <Link to="/contact" className="hover:text-white transition-colors">Contact</Link>
         </div>
       </div>
       <div>
         <h4 className="font-display text-lg font-bold mb-4 uppercase tracking-wide">Contact</h4>
-        <div className="flex flex-col gap-3 text-sm text-foreground/50">
-          <a href="tel:0688813086" className="flex items-center gap-2 hover:text-foreground transition-colors">
+        <div className="flex flex-col gap-3 text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>
+          <a href="tel:0688813086" className="flex items-center gap-2 hover:text-white transition-colors">
             <Phone size={16} strokeWidth={1} /> 06 88 81 30 86
           </a>
-          <a href="mailto:contact@epure-db.com" className="flex items-center gap-2 hover:text-foreground transition-colors">
+          <a href="mailto:contact@epure-db.com" className="flex items-center gap-2 hover:text-white transition-colors">
             <Mail size={16} strokeWidth={1} /> contact@epure-db.com
           </a>
           <span className="flex items-center gap-2">
@@ -37,8 +37,8 @@ const Footer = () => (
         </div>
       </div>
     </div>
-    <div className="container mx-auto px-4 mt-12 pt-8 border-t border-foreground/20 text-center text-xs text-foreground/40">
-      © {new Date().getFullYear()} Epure — David BADIN · SIRET : 10209784700010 · <Link to="/mentions-legales" className="underline hover:text-foreground transition-colors">Mentions légales & CGV</Link>
+    <div className="container mx-auto px-4 mt-12 pt-8 text-center text-xs" style={{ borderTop: '1px solid rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.4)' }}>
+      © {new Date().getFullYear()} Epure — David BADIN · SIRET : 10209784700010 · <Link to="/mentions-legales" className="underline hover:text-white transition-colors">Mentions légales & CGV</Link>
     </div>
   </footer>
 );
