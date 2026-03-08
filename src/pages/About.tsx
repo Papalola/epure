@@ -40,7 +40,9 @@ const About = () => (
         {/* Portrait + intro */}
         <AnimatedSection>
           <div className="flex flex-col md:flex-row items-center gap-12 mb-20">
-            <img src={portrait} alt="David Badin" className="w-48 h-48 object-cover grayscale" />
+            <div className="w-48 h-48 flex-shrink-0 relative">
+              <img src={portrait} alt="David Badin" className="w-full h-full object-cover grayscale" style={{ mask: 'radial-gradient(ellipse at center, black 50%, transparent 100%)', WebkitMask: 'radial-gradient(ellipse at center, black 50%, transparent 100%)' }} />
+            </div>
             <p className="text-foreground text-lg leading-relaxed max-w-2xl">
               Passionné par les métiers du bois et de l'agencement depuis plus de 25 ans,
               j'ai évolué du terrain à la conception technique. Ma double compétence — 
