@@ -1,5 +1,5 @@
-import heroAlt2 from "@/assets/hero-alt-2e.jpg";
-import heroAlt3 from "@/assets/hero-alt-3j.jpg";
+import heroAlt2 from "@/assets/hero-alt-2f.jpg";
+import heroAlt3 from "@/assets/hero-alt-3k.jpg";
 
 const CompareHero = () => {
   return (
@@ -8,12 +8,12 @@ const CompareHero = () => {
       
       <div className="space-y-8 max-w-5xl mx-auto">
         <div>
-          <h2 className="text-white text-xl mb-4">Alt 2 — Bureau agenceur/BIM (épuré : PC Revit + calepin cuir + quelques échantillons bois/tissu)</h2>
+          <h2 className="text-white text-xl mb-4">Alt 2 — Revit Architecture N&B + calepin cuir + échantillons bois/tissu</h2>
           <img src={heroAlt2} alt="Hero Alt 2" className="w-full rounded-lg" />
         </div>
         
         <div>
-          <h2 className="text-white text-xl mb-4">Alt 3 — Plan BIM sur mur béton → béton brut → agencement chêne (mur continu aligné)</h2>
+          <h2 className="text-white text-xl mb-4">Alt 3 — Plan BIM → béton brut → agencement chêne (retravaillée)</h2>
           <img src={heroAlt3} alt="Hero Alt 3" className="w-full rounded-lg" />
         </div>
       </div>
