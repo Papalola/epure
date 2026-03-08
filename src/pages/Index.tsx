@@ -65,7 +65,7 @@ const Index = () => {
       {/* Hero Banner */}
       <section
         className="relative min-h-[85vh] flex items-center justify-center"
-        style={{ backgroundImage: `url(${heroBg})`, backgroundPosition: 'center 30%', backgroundSize: '140%' }}
+        style={{ backgroundImage: `url(${heroBg})`, backgroundPosition: 'center 15%', backgroundSize: '140%' }}
       >
         <div className="absolute inset-0 bg-primary/70" />
         <div className="relative z-10 container mx-auto px-4 text-center">
