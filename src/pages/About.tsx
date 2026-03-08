@@ -80,7 +80,7 @@ const About = () => (
               Ma valeur ajoutée ? Je ne fais pas que dessiner des plans, je propose des solutions
               techniques réalistes et réalisables.
             </p>
-          </div>
+          </BrushCard>
         </AnimatedSection>
 
         {/* Horizontal Timeline */}
