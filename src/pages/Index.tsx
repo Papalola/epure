@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Box, HardHat, Home, Search } from "lucide-react";
+import { ArrowRight, CheckCircle, Box, HardHat, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -11,11 +11,15 @@ const services = [
     title: "BIM Modeleur",
     items: [
       "Modélisation 3D BIM (Revit, AutoCAD)",
-      "Production de plans et détails techniques",
-      "Mise à jour et structuration des maquettes",
-      "Export IFC et livrables numériques",
-      "Coordination avec architectes et ingénieurs",
-      "Vérification cohérence des modèles",
+      "Maquettes numériques architecturales",
+      "Mise en plan depuis maquette BIM",
+      "Adaptation et modification de plans existants",
+      "Plans de détails techniques",
+      "Gestion et mise à jour de maquettes existantes",
+      "Détection de conflits inter-corps d'état",
+      "Synthèse technique",
+      "Export fichiers IFC",
+      "Extraction de métrés et quantitatifs",
     ],
   },
   {
@@ -25,30 +29,32 @@ const services = [
       "Études d'aménagement intérieur",
       "Optimisation des volumes et espaces",
       "Mobilier et menuiserie sur mesure (de l'étude à la pose)",
-      "Détails techniques d'exécution",
-      "Coordination des intervenants",
+      "Détails techniques d'exécution et plans d'atelier",
+      "Recherche de solutions constructives",
+      "Optimisation des méthodes de fabrication",
       "Suivi de réalisation",
-    ],
-  },
-  {
-    icon: Search,
-    title: "Bureau d'études",
-    items: [
-      "Relevés techniques sur site",
-      "Assistance MOE",
-      "Nomenclatures et quantitatifs",
-      "Support technique pour architectes et entreprises",
-      "Missions courtes ou longues",
-      "Télétravail ou intervention sur site",
+      "Interface chantier / bureau d'études",
     ],
   },
 ];
 
 const advantages = [
-  "Double compétence rare : BIM + 25 ans d'expérience terrain (menuiserie, ébénisterie, agencement)",
-  "Solutions concrètes : Je comprends les contraintes de réalisation",
-  "Réactivité & flexibilité : Missions courtes ou longues, télétravail ou sur site",
-  "Basé en Rhône (69) : Interventions région Auvergne-Rhône-Alpes et au-delà",
+  {
+    title: "Double compétence rare",
+    desc: "BIM Modeleur + 25 ans terrain. Je ne fais pas que dessiner des plans — je comprends ce que je dessine.",
+  },
+  {
+    title: "Solutions concrètes",
+    desc: "Je comprends les contraintes de réalisation. Mes propositions sont techniques, réalistes et réalisables.",
+  },
+  {
+    title: "Réactivité & flexibilité",
+    desc: "Missions courtes ou longues. Télétravail privilégié, déplacements selon projet.",
+  },
+  {
+    title: "Basé en Rhône-Alpes (69)",
+    desc: "Interventions région Auvergne-Rhône-Alpes et au-delà.",
+  },
 ];
 
 const Index = () => {
@@ -69,8 +75,7 @@ const Index = () => {
               Bureau d'études<br />& Expert Agencement
             </h1>
             <p className="mt-6 text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-              25 ans d'expérience terrain + Certification BIM
-              <br />De la conception technique à la réalisation de vos espaces
+              De la conception technique à la réalisation de vos espaces
             </p>
             <div className="mt-10 flex flex-wrap gap-4 justify-center">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
@@ -98,7 +103,7 @@ const Index = () => {
             </p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, i) => (
               <AnimatedSection key={service.title} delay={i * 0.15}>
                 <div className="bg-card rounded-lg p-8 border border-border hover:shadow-lg transition-shadow h-full">
@@ -118,6 +123,12 @@ const Index = () => {
               </AnimatedSection>
             ))}
           </div>
+
+          <AnimatedSection>
+            <p className="text-muted-foreground text-center text-sm mt-10">
+              Sous-traitance · Mission ponctuelle · Renfort d'équipe · Télétravail privilégié, déplacements selon projet
+            </p>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -134,7 +145,10 @@ const Index = () => {
               <AnimatedSection key={i} delay={i * 0.1}>
                 <div className="flex items-start gap-4 bg-card rounded-lg p-6 border border-border">
                   <CheckCircle className="text-accent flex-shrink-0 mt-0.5" size={22} />
-                  <p className="text-foreground text-sm leading-relaxed">{adv}</p>
+                  <div>
+                    <p className="text-foreground font-semibold text-sm mb-1">{adv.title}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{adv.desc}</p>
+                  </div>
                 </div>
               </AnimatedSection>
             ))}
