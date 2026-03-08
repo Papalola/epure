@@ -38,7 +38,7 @@ const Footer = () => (
       </div>
     </div>
     <div className="container mx-auto px-4 mt-12 pt-8 border-t border-primary-foreground/20 text-center text-xs text-primary-foreground/50">
-      © {new Date().getFullYear()} Épure – David Badin. Tous droits réservés.
+      © {new Date().getFullYear()} Epure — David BADIN · SIRET : 10209784700010 · <Link to="/mentions-legales" className="underline hover:text-primary-foreground transition-colors">Mentions légales & CGV</Link>
     </div>
   </footer>
 );
