@@ -3,7 +3,6 @@ import { ArrowRight, Box, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
-import BrushCard from "@/components/BrushCard";
 
 const bimServices = [
   "Modélisation 3D BIM (Revit, AutoCAD)",
@@ -51,7 +50,7 @@ const Services = () => (
 
         <div className="grid md:grid-cols-2 gap-8 mb-10">
           <AnimatedSection>
-            <BrushCard className="h-full">
+            <div className="border border-border bg-card p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
               <Box className="text-foreground mb-4" size={32} strokeWidth={1} />
               <h2 className="font-display text-2xl font-bold text-foreground mb-6 uppercase tracking-wide">BIM Modeleur</h2>
               <ul className="space-y-2">
@@ -62,11 +61,11 @@ const Services = () => (
                   </li>
                 ))}
               </ul>
-            </BrushCard>
+            </div>
           </AnimatedSection>
 
           <AnimatedSection delay={0.15}>
-            <BrushCard className="h-full">
+            <div className="border border-border bg-card p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
               <Home className="text-foreground mb-4" size={32} strokeWidth={1} />
               <h2 className="font-display text-2xl font-bold text-foreground mb-6 uppercase tracking-wide">Expert Agencement</h2>
               <ul className="space-y-2">
@@ -77,7 +76,7 @@ const Services = () => (
                   </li>
                 ))}
               </ul>
-            </BrushCard>
+            </div>
           </AnimatedSection>
         </div>
 
@@ -88,14 +87,14 @@ const Services = () => (
         </AnimatedSection>
 
         <AnimatedSection>
-          <BrushCard className="mb-10">
+          <div className="border border-border bg-card p-10 mb-10 transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
             <h3 className="font-display text-xl font-bold text-foreground mb-4 uppercase tracking-wide">Secteurs d'intervention</h3>
             <div className="flex flex-wrap gap-3">
               {sectors.map((s) => (
                 <span key={s} className="border border-border px-4 py-1.5 text-sm text-foreground">{s}</span>
               ))}
             </div>
-          </BrushCard>
+          </div>
         </AnimatedSection>
 
         <AnimatedSection>
