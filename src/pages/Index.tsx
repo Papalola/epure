@@ -152,7 +152,7 @@ const Index = () => {
             {advantages.map((adv, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
                 <div className="border border-border bg-card p-6 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
-                  <p className="text-card-foreground font-bold text-sm mb-2 uppercase tracking-wide">{adv.title}</p>
+                  <p className="text-card-foreground font-bold text-sm mb-2 tracking-wide">{adv.title}</p>
                   <p className="text-card-foreground/70 text-sm leading-relaxed">{adv.desc}</p>
                 </div>
               </AnimatedSection>
