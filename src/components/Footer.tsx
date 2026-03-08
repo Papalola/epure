@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
-import logoEpureWhite from "@/assets/logo-epure-white.png";
+import logoEpure from "@/assets/logo-epure.png";
 
 const Footer = () => (
   <footer className="py-16" style={{ backgroundColor: '#343332', color: '#FFFFFF' }}>
