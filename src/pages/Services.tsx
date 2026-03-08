@@ -40,7 +40,7 @@ const Services = () => (
           <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
             Prestations
           </p>
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground text-center mb-4">
+          <h1 className="text-5xl md:text-6xl font-bold text-foreground text-center mb-4">
             Mes services
           </h1>
           <p className="text-muted-foreground text-center max-w-lg mx-auto mb-20">
@@ -52,7 +52,7 @@ const Services = () => (
           <AnimatedSection>
             <div className="border border-border bg-card p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
               <Box className="text-card-foreground mb-4" size={32} strokeWidth={1} />
-              <h2 className="font-display text-2xl font-bold text-card-foreground mb-6 tracking-wide">BIM Modeleur</h2>
+              <h2 className="text-2xl font-bold text-card-foreground mb-6 tracking-wide uppercase">BIM Modeleur</h2>
               <ul className="space-y-2">
                 {bimServices.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-card-foreground/70 text-sm">
@@ -67,7 +67,7 @@ const Services = () => (
           <AnimatedSection delay={0.15}>
             <div className="border border-border bg-card p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
               <Home className="text-card-foreground mb-4" size={32} strokeWidth={1} />
-              <h2 className="font-display text-2xl font-bold text-card-foreground mb-6 tracking-wide">Expert Agencement</h2>
+              <h2 className="text-2xl font-bold text-card-foreground mb-6 tracking-wide uppercase">Expert Agencement</h2>
               <ul className="space-y-2">
                 {agencementServices.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-card-foreground/70 text-sm">
@@ -87,11 +87,13 @@ const Services = () => (
         </AnimatedSection>
 
         <AnimatedSection>
-          <div className="border border-border bg-card p-10 mb-10 transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
-            <h3 className="font-display text-xl font-bold text-card-foreground mb-4 tracking-wide">Secteurs d'intervention</h3>
-            <div className="flex flex-wrap gap-3">
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground mb-6">
+              Secteurs d'intervention
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center">
               {sectors.map((s) => (
-                <span key={s} className="border border-border px-4 py-1.5 text-sm text-card-foreground">{s}</span>
+                <span key={s} className="border border-border px-5 py-2 text-sm text-foreground">{s}</span>
               ))}
             </div>
           </div>
@@ -99,7 +101,7 @@ const Services = () => (
 
         <AnimatedSection>
           <div className="text-center mt-12">
-            <Button asChild size="lg" className="border border-foreground text-foreground bg-transparent hover:bg-foreground hover:text-background">
+            <Button asChild size="lg" className="border border-foreground text-foreground bg-transparent hover:bg-foreground hover:text-background w-full sm:w-auto">
               <Link to="/contact">
                 Discutons de votre projet <ArrowRight className="ml-2" size={18} />
               </Link>
