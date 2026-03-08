@@ -47,10 +47,10 @@ const Index = () => {
         <div className="relative z-10 container mx-auto px-4 text-center">
           <AnimatedSection>
             <p className="text-accent-foreground/80 font-semibold tracking-widest uppercase text-sm mb-4">
-              David Badin
+              David Badin · Epure
             </p>
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight">
-              Bureau d'études &<br />Expertise Agencement
+            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight uppercase">
+              Bureau d'études<br />& Expert Agencement
             </h1>
             <p className="mt-6 text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
               25 ans d'expérience terrain + Certification BIM
