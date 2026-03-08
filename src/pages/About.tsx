@@ -56,7 +56,7 @@ const About = () => (
         <AnimatedSection>
           <div className="border border-border p-10 mb-20">
             <div className="flex items-center gap-3 mb-6">
-              <Star className="text-foreground" size={28} strokeWidth={1} />
+              
               <h2 className="font-display text-3xl font-bold text-foreground">Aujourd'hui</h2>
             </div>
             <p className="text-foreground leading-relaxed mb-6">
