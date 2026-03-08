@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logoEpure from "@/assets/logo-epure.png";
+import logoEpure from "@/assets/logo-epure.svg";
 
 const navLinks = [
   { to: "/", label: "Accueil" },
@@ -20,7 +20,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-24 px-4">
         <Link to="/" className="flex items-center">
-          <img src={logoEpure} alt="Épure" className="h-20 mix-blend-multiply" />
+          <img src={logoEpure} alt="Épure" className="h-16" />
         </Link>
 
         {/* Desktop */}
