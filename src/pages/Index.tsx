@@ -113,7 +113,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, i) => (
               <AnimatedSection key={service.title} delay={i * 0.15}>
-                <div className="border border-border bg-card p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
+                <BrushCard className="h-full">
                   <service.icon className="text-foreground mb-4" size={36} strokeWidth={1} />
                   <h3 className="font-display text-2xl font-bold text-foreground mb-4 uppercase tracking-wide">
                     {service.title}
@@ -126,7 +126,7 @@ const Index = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </BrushCard>
               </AnimatedSection>
             ))}
           </div>
