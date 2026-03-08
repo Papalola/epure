@@ -73,7 +73,7 @@ const Index = () => {
             <p className="text-primary-foreground/60 font-semibold tracking-[0.3em] uppercase text-xs mb-4">
               David Badin · Epure
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight uppercase">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
               Bureau d'études<br />& Expert Agencement
             </h1>
             <p className="mt-6 text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
@@ -113,7 +113,7 @@ const Index = () => {
               <AnimatedSection key={service.title} delay={i * 0.15}>
                 <div className="border border-border bg-card p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
                   <service.icon className="text-card-foreground mb-4" size={36} strokeWidth={1} />
-                  <h3 className="text-2xl font-bold text-card-foreground mb-4 tracking-wide uppercase">
+                  <h3 className="text-2xl font-bold text-card-foreground mb-4 tracking-wide">
                     {service.title}
                   </h3>
                   <ul className="space-y-2">
@@ -152,7 +152,7 @@ const Index = () => {
             {advantages.map((adv, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
                 <div className="border border-border bg-card p-6 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
-                  <p className="text-card-foreground font-bold text-sm mb-2 uppercase tracking-wide">{adv.title}</p>
+                  <p className="text-card-foreground font-bold text-sm mb-2 tracking-wide">{adv.title}</p>
                   <p className="text-card-foreground/70 text-sm leading-relaxed">{adv.desc}</p>
                 </div>
               </AnimatedSection>
