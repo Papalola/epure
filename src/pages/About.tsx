@@ -44,8 +44,9 @@ const About = () => (
               <img src={portrait} alt="David Badin" className="w-full h-full object-cover object-top" />
             </div>
             <p className="text-foreground text-lg leading-relaxed max-w-2xl">
-              Passionné par les métiers du bois et de l'agencement depuis plus de 25 ans,
-              j'ai évolué du terrain à la conception technique.
+              25 ans sur le terrain. De la menuiserie à l'ébénisterie, de l'agencement à la modélisation BIM.
+              Je parle la langue des artisans et celle des bureaux d'études.
+              Epure, c'est cette double expertise au service de vos projets.
             </p>
           </div>
         </AnimatedSection>
