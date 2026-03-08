@@ -73,7 +73,7 @@ const Index = () => {
             <p className="text-primary-foreground/60 font-semibold tracking-[0.3em] uppercase text-xs mb-4">
               David Badin · Epure
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight uppercase">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
               Bureau d'études<br />& Expert Agencement
             </h1>
             <p className="mt-6 text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
