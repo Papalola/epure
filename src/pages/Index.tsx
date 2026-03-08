@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Box, HardHat, Home } from "lucide-react";
+import { ArrowRight, CheckCircle, Box, HardHat, Home, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -8,22 +8,38 @@ import heroBg from "@/assets/hero-bg.jpg";
 const services = [
   {
     icon: Box,
-    title: "Bureau d'études technique",
+    title: "BIM Modeleur",
     items: [
-      "Modélisation et coordination BIM (Revit)",
-      "Plans d'exécution et dessins techniques (AutoCAD)",
-      "Gestion de projet et maquettes numériques",
-      "Relevés techniques, assistance MOE, suivi de chantier",
+      "Modélisation 3D BIM (Revit, AutoCAD)",
+      "Production de plans et détails techniques",
+      "Mise à jour et structuration des maquettes",
+      "Export IFC et livrables numériques",
+      "Coordination avec architectes et ingénieurs",
+      "Vérification cohérence des modèles",
     ],
   },
   {
     icon: Home,
-    title: "Architecture d'intérieur & Agencement",
+    title: "Expert Agencement",
     items: [
-      "Conception et pilotage de projets d'aménagement",
-      "Mobilier et menuiserie sur mesure, de l'étude à la pose",
-      "Optimisation des volumes et agencements fonctionnels",
-      "Coordination des intervenants et suivi de réalisation",
+      "Études d'aménagement intérieur",
+      "Optimisation des volumes et espaces",
+      "Mobilier et menuiserie sur mesure (de l'étude à la pose)",
+      "Détails techniques d'exécution",
+      "Coordination des intervenants",
+      "Suivi de réalisation",
+    ],
+  },
+  {
+    icon: Search,
+    title: "Bureau d'études",
+    items: [
+      "Relevés techniques sur site",
+      "Assistance MOE",
+      "Nomenclatures et quantitatifs",
+      "Support technique pour architectes et entreprises",
+      "Missions courtes ou longues",
+      "Télétravail ou intervention sur site",
     ],
   },
 ];
