@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
-import logoEpure from "@/assets/logo-epure.png";
+import logoEpureWhite from "@/assets/logo-epure-white.svg";
 
 const Footer = () => (
   <footer className="py-16 bg-primary text-primary-foreground">
     <div className="container mx-auto px-4 grid md:grid-cols-3 gap-12">
       <div>
-        <img src={logoEpure} alt="Épure" className="h-20 mb-4 invert mix-blend-screen opacity-50" />
+        <img src={logoEpureWhite} alt="Épure" className="h-16 mb-4 opacity-80" />
         <p className="text-sm leading-relaxed text-primary-foreground/50">
           Bureau d'études & Expertise Agencement.
           <br />25 ans d'expérience au service de vos projets.
