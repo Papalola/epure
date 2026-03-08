@@ -3,6 +3,8 @@ import { ArrowRight, CheckCircle, Box, Home, HardHat } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
+import BrushCard from "@/components/BrushCard";
+import heroBg from "@/assets/hero-bg.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const services = [
