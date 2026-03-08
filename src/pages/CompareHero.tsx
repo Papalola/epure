@@ -1,5 +1,5 @@
-import heroAlt2 from "@/assets/hero-alt-2h.jpg";
-import heroAlt3 from "@/assets/hero-alt-3v.jpg";
+import heroAlt2 from "@/assets/hero-alt-2i.jpg";
+import heroAlt3 from "@/assets/hero-alt-3w.jpg";
 
 const CompareHero = () => {
   return (
@@ -8,12 +8,12 @@ const CompareHero = () => {
       
       <div className="space-y-8 max-w-5xl mx-auto">
         <div>
-          <h2 className="text-white text-xl mb-4">Alt 2 — Style V4 : Revit blanc N&B + plan déroulé + calepin cuir + crayon + feutre + mètre</h2>
+          <h2 className="text-white text-xl mb-4">Alt 2 — Palette du site (gris clair #EEEDEA + anthracite #343332)</h2>
           <img src={heroAlt2} alt="Hero Alt 2" className="w-full rounded-lg" />
         </div>
         
         <div>
-          <h2 className="text-white text-xl mb-4">Alt 3 — Plan BIM projeté → béton brut → boiserie chêne (transition très progressive)</h2>
+          <h2 className="text-white text-xl mb-4">Alt 3 — Panoramique : croquis → wireframe → béton → boiserie (fond clair)</h2>
           <img src={heroAlt3} alt="Hero Alt 3" className="w-full rounded-lg" />
         </div>
       </div>
