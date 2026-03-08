@@ -113,7 +113,39 @@ const About = () => (
           </div>
         </AnimatedSection>
 
-        {/* Certifications */}
+        {/* Parcours Timeline */}
+        <AnimatedSection>
+          <div className="mb-16">
+            <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-10">
+              Parcours
+            </p>
+            <div className="relative flex flex-col lg:flex-row lg:items-start gap-8 lg:gap-0">
+              {/* Horizontal line (desktop) */}
+              <div className="hidden lg:block absolute top-3 left-0 right-0 h-px bg-border" />
+              {[
+                { year: "1997", title: "Apprenti · Ébéniste", desc: "Les mains dans la matière. La précision comme culture." },
+                { year: "2004", title: "Menuisier Agenceur", desc: "De la pièce unique au projet complet. Conception et pose." },
+                { year: "2011", title: "Responsable Production", desc: "Chef d'orchestre entre artisans, architectes et maîtres d'ouvrage." },
+                { year: "2025", title: "BIM Modeleur", desc: "Le numérique au service du terrain. Titre Professionnel BIM Modeleur — octobre 2025." },
+                { year: "2026", title: "Epure", desc: "L'indépendance. Bureau d'études & Expert Agencement. Le projet abouti." },
+              ].map((step, i) => (
+                <div key={step.year} className="relative flex-1 lg:text-center lg:px-3">
+                  {/* Dot */}
+                  <div className="hidden lg:flex items-center justify-center mb-4">
+                    <div className="w-2.5 h-2.5 rounded-full bg-foreground" />
+                  </div>
+                  {/* Vertical line dot (mobile) */}
+                  <div className="lg:hidden absolute left-0 top-1 w-2 h-2 rounded-full bg-foreground" />
+                  <div className="lg:pl-0 pl-6">
+                    <p className="font-display text-lg font-bold text-foreground">{step.year}</p>
+                    <p className="text-xs font-semibold tracking-[0.15em] uppercase text-foreground/80 mt-1">{step.title}</p>
+                    <p className="text-xs text-muted-foreground mt-1.5 leading-relaxed">{step.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </AnimatedSection>
         <AnimatedSection>
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-6">
