@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
 import NotFound from "./pages/NotFound";
 import MentionsLegales from "./pages/MentionsLegales";
+import CompareHero from "./pages/CompareHero";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/realisations" element={<Portfolio />} />
           <Route path="/mentions-legales" element={<MentionsLegales />} />
+          <Route path="/compare-hero" element={<CompareHero />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
