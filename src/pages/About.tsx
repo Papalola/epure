@@ -3,6 +3,7 @@ import { ArrowRight, Award, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
+import BrushCard from "@/components/BrushCard";
 import portrait from "@/assets/portrait-david.png";
 
 const parcours = [
