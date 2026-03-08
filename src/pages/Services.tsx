@@ -3,6 +3,7 @@ import { ArrowRight, Box, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
+import BrushCard from "@/components/BrushCard";
 
 const bimServices = [
   "Modélisation 3D BIM (Revit, AutoCAD)",
