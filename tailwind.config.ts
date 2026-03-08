@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Agrandir Grand", "Urbanist", "sans-serif"],
-        display: ["Agrandir Grand", "Urbanist", "sans-serif"],
+        sans: ["Agrandir Grand", "sans-serif"],
+        display: ["Agrandir Grand", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

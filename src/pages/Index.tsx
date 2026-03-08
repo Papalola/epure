@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Box, Home, HardHat } from "lucide-react";
+import { ArrowRight, Box, Home, HardHat } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -73,19 +73,19 @@ const Index = () => {
             <p className="text-primary-foreground/60 font-semibold tracking-[0.3em] uppercase text-xs mb-4">
               David Badin · Epure
             </p>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight uppercase">
               Bureau d'études<br />& Expert Agencement
             </h1>
             <p className="mt-6 text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
               De la conception technique à la réalisation de vos espaces
             </p>
-            <div className="mt-10 flex flex-wrap gap-4 justify-center">
-              <Button asChild size="lg" className="border border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground hover:text-primary">
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="border border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground hover:text-primary w-full sm:w-auto">
                 <Link to="/contact">
                   Me contacter <ArrowRight className="ml-2" size={18} />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border border-primary-foreground/50 text-primary-foreground bg-transparent hover:bg-primary-foreground/10">
+              <Button asChild variant="outline" size="lg" className="border border-primary-foreground/50 text-primary-foreground bg-transparent hover:bg-primary-foreground/10 w-full sm:w-auto">
                 <Link to="/services">Voir mes services</Link>
               </Button>
             </div>
@@ -98,13 +98,13 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <AnimatedSection>
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
-              Services
+              Prestations
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground text-center mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground text-center mb-4">
               Mes services
             </h2>
             <p className="text-muted-foreground text-center max-w-lg mx-auto mb-16">
-              Une expertise complète, du plan à la réalisation
+              Une offre complète de la modélisation BIM à l'expertise terrain
             </p>
           </AnimatedSection>
 
@@ -113,7 +113,7 @@ const Index = () => {
               <AnimatedSection key={service.title} delay={i * 0.15}>
                 <div className="border border-border bg-card p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
                   <service.icon className="text-card-foreground mb-4" size={36} strokeWidth={1} />
-                  <h3 className="font-display text-2xl font-bold text-card-foreground mb-4 tracking-wide">
+                  <h3 className="text-2xl font-bold text-card-foreground mb-4 tracking-wide uppercase">
                     {service.title}
                   </h3>
                   <ul className="space-y-2">
@@ -138,25 +138,22 @@ const Index = () => {
       </section>
 
       {/* Why choose me */}
-      <section className="py-24 bg-secondary">
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <AnimatedSection>
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
               Avantages
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground text-center mb-16">
               Pourquoi me choisir ?
             </h2>
           </AnimatedSection>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {advantages.map((adv, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="flex items-start gap-4 border border-border bg-card p-6 transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
-                  <CheckCircle className="text-card-foreground flex-shrink-0 mt-0.5" size={20} strokeWidth={1.5} />
-                  <div>
-                    <p className="text-card-foreground font-semibold text-sm mb-1 uppercase tracking-wide">{adv.title}</p>
-                    <p className="text-card-foreground/70 text-sm leading-relaxed">{adv.desc}</p>
-                  </div>
+                <div className="border border-border bg-card p-6 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
+                  <p className="text-card-foreground font-bold text-sm mb-2 uppercase tracking-wide">{adv.title}</p>
+                  <p className="text-card-foreground/70 text-sm leading-relaxed">{adv.desc}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -169,13 +166,13 @@ const Index = () => {
         <AnimatedSection>
           <div className="container mx-auto px-4">
             <HardHat className="mx-auto mb-6 text-primary-foreground/60" size={48} strokeWidth={1} />
-            <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Vous avez un projet ?
             </h2>
             <p className="text-primary-foreground/60 mb-8 max-w-md mx-auto">
               Parlons de vos besoins et trouvons la meilleure solution ensemble.
             </p>
-            <Button asChild size="lg" className="border border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground hover:text-primary">
+            <Button asChild size="lg" className="border border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground hover:text-primary w-full sm:w-auto">
               <Link to="/contact">
                 Me contacter <ArrowRight className="ml-2" size={18} />
               </Link>

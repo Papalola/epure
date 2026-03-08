@@ -29,7 +29,7 @@ const Navbar = () => {
             <Link
               key={link.to}
               to={link.to}
-              className={`text-xs font-medium tracking-[0.15em] uppercase transition-colors hover:text-foreground ${
+              className={`text-xs font-bold tracking-[0.15em] uppercase transition-colors hover:text-foreground ${
                 location.pathname === link.to ? "text-foreground" : "text-muted-foreground"
               }`}
             >
@@ -63,7 +63,7 @@ const Navbar = () => {
                   key={link.to}
                   to={link.to}
                   onClick={() => setOpen(false)}
-                  className={`text-xs font-medium tracking-[0.15em] uppercase transition-colors hover:text-foreground ${
+                  className={`text-xs font-bold tracking-[0.15em] uppercase transition-colors hover:text-foreground ${
                     location.pathname === link.to ? "text-foreground" : "text-muted-foreground"
                   }`}
                 >

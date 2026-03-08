@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin, Send } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import Layout from "@/components/Layout";
@@ -55,7 +55,7 @@ const Contact = () => {
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
               Échangeons
             </p>
-            <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground text-center mb-4">
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground text-center mb-4">
               Contact
             </h1>
             <p className="text-muted-foreground text-center max-w-lg mx-auto mb-20">
@@ -75,11 +75,11 @@ const Contact = () => {
                     <div>
                       <p className="text-sm mb-1 text-muted-foreground">{c.label}</p>
                       {c.href ? (
-                        <a href={c.href} className="font-medium text-foreground transition-colors hover:opacity-80">
+                        <a href={c.href} className="font-bold text-foreground transition-colors hover:opacity-80">
                           {c.value}
                         </a>
                       ) : (
-                        <p className="font-medium text-foreground">{c.value}</p>
+                        <p className="font-bold text-foreground">{c.value}</p>
                       )}
                       {c.sub && <p className="text-xs mt-1 text-muted-foreground">{c.sub}</p>}
                     </div>
@@ -88,9 +88,9 @@ const Contact = () => {
               ))}
               <AnimatedSection>
                 <div className="border border-border bg-card p-6 mt-8">
-                  <p className="text-sm font-medium text-card-foreground">Disponibilité</p>
+                  <p className="text-sm font-bold text-card-foreground">Disponibilité</p>
                   <p className="text-sm mt-1 text-card-foreground/70">
-                    Missions ponctuelles ou régulières • Télétravail ou sur site
+                    Missions ponctuelles ou régulières · Télétravail ou sur site
                   </p>
                 </div>
               </AnimatedSection>
@@ -99,13 +99,10 @@ const Contact = () => {
             {/* Form */}
             <AnimatedSection className="lg:col-span-3">
               <div className="border border-border bg-card p-8">
-                <h2 className="font-display text-2xl font-bold text-card-foreground mb-6 tracking-wide">
-                  Envoyez-moi un message
-                </h2>
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="text-sm font-medium text-card-foreground mb-1.5 block">Nom / Prénom *</label>
+                      <label className="text-sm font-bold text-card-foreground mb-1.5 block">Nom / Prénom *</label>
                       <input
                         value={form.name}
                         onChange={update("name")}
@@ -114,7 +111,7 @@ const Contact = () => {
                       {errors.name && <p className="text-destructive text-xs mt-1">{errors.name}</p>}
                     </div>
                     <div>
-                      <label className="text-sm font-medium text-card-foreground mb-1.5 block">Entreprise</label>
+                      <label className="text-sm font-bold text-card-foreground mb-1.5 block">Entreprise</label>
                       <input
                         value={form.company}
                         onChange={update("company")}
@@ -124,7 +121,7 @@ const Contact = () => {
                   </div>
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="text-sm font-medium text-card-foreground mb-1.5 block">Email *</label>
+                      <label className="text-sm font-bold text-card-foreground mb-1.5 block">Email *</label>
                       <input
                         type="email"
                         value={form.email}
@@ -134,7 +131,7 @@ const Contact = () => {
                       {errors.email && <p className="text-destructive text-xs mt-1">{errors.email}</p>}
                     </div>
                     <div>
-                      <label className="text-sm font-medium text-card-foreground mb-1.5 block">Téléphone</label>
+                      <label className="text-sm font-bold text-card-foreground mb-1.5 block">Téléphone</label>
                       <input
                         type="tel"
                         value={form.phone}
@@ -144,7 +141,7 @@ const Contact = () => {
                     </div>
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-card-foreground mb-1.5 block">Message *</label>
+                    <label className="text-sm font-bold text-card-foreground mb-1.5 block">Message *</label>
                     <textarea
                       rows={5}
                       value={form.message}
@@ -156,9 +153,9 @@ const Contact = () => {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full border border-foreground text-foreground bg-transparent hover:bg-foreground hover:text-background"
+                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
                   >
-                    Envoyer <Send className="ml-2" size={18} />
+                    Envoyer <ArrowRight className="ml-2" size={18} />
                   </Button>
                 </form>
               </div>
