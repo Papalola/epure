@@ -5,7 +5,6 @@ import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import BrushCard from "@/components/BrushCard";
 import heroBg from "@/assets/hero-bg.jpg";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const services = [
   {
