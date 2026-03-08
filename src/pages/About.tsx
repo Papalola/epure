@@ -52,7 +52,7 @@ const About = () => (
 
         {/* Today */}
         <AnimatedSection>
-          <div className="border border-border p-10 mb-20">
+          <div className="border border-foreground/20 p-10 mb-20">
             <div className="flex items-center gap-3 mb-6">
               <Star className="text-foreground" size={28} strokeWidth={1} />
               <h2 className="font-display text-3xl font-bold text-foreground uppercase">Aujourd'hui</h2>
@@ -101,7 +101,7 @@ const About = () => (
                     </div>
                     {/* Connector line */}
                     {i < parcours.length - 1 && (
-                      <div className="flex-1 h-px bg-border mt-[6px] min-w-[20px]" />
+                      <div className="flex-1 h-px bg-foreground/20 mt-[6px] min-w-[20px]" />
                     )}
                   </div>
                 ))}
@@ -119,7 +119,7 @@ const About = () => (
             </div>
             <div className="grid sm:grid-cols-2 gap-3">
               {certifications.map((c) => (
-                <div key={c} className="border border-border px-5 py-3 text-sm text-foreground">
+                <div key={c} className="border border-card-foreground bg-card px-5 py-3 text-sm text-card-foreground">
                   {c}
                 </div>
               ))}
