@@ -1,6 +1,7 @@
 import heroAlt2 from "@/assets/hero-alt-2i.jpg";
 import heroAlt3 from "@/assets/hero-alt-3w.jpg";
 import heroCombined from "@/assets/hero-combined.jpg";
+import heroUnified from "@/assets/hero-unified.jpg";
 
 const CompareHero = () => {
   return (
@@ -21,6 +22,10 @@ const CompareHero = () => {
         <div>
           <h2 className="text-white text-xl mb-4">Combined — BIM Modeleur + Expert Agencement</h2>
           <img src={heroCombined} alt="Hero Combined" className="w-full rounded-lg" />
+        </div>
+        <div>
+          <h2 className="text-white text-xl mb-4">Unified — Bureau d'études BIM + Agencement (une seule scène)</h2>
+          <img src={heroUnified} alt="Hero Unified" className="w-full rounded-lg" />
         </div>
       </div>
     </div>
