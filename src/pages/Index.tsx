@@ -73,7 +73,7 @@ const Index = () => {
             <p className="text-primary-foreground/60 font-semibold tracking-[0.3em] uppercase text-xs mb-4">
               David Badin · Epure
             </p>
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight uppercase">
+            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground leading-tight uppercase">
               Bureau d'études<br />& Expert Agencement
             </h1>
             <p className="mt-6 text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
@@ -100,7 +100,7 @@ const Index = () => {
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
               Services
             </p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-4">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground text-center mb-4">
               Mes services
             </h2>
             <p className="text-muted-foreground text-center max-w-lg mx-auto mb-16">
@@ -113,7 +113,7 @@ const Index = () => {
               <AnimatedSection key={service.title} delay={i * 0.15}>
                 <div className="border border-border p-8 h-full">
                   <service.icon className="text-foreground mb-4" size={36} strokeWidth={1} />
-                  <h3 className="font-display text-xl font-semibold text-foreground mb-4 uppercase tracking-wide">
+                  <h3 className="font-display text-2xl font-bold text-foreground mb-4 uppercase tracking-wide">
                     {service.title}
                   </h3>
                   <ul className="space-y-2">
@@ -144,7 +144,7 @@ const Index = () => {
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
               Avantages
             </p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-16">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground text-center mb-16">
               Pourquoi me choisir ?
             </h2>
           </AnimatedSection>
@@ -169,7 +169,7 @@ const Index = () => {
         <AnimatedSection>
           <div className="container mx-auto px-4">
             <HardHat className="mx-auto mb-6 text-primary-foreground/60" size={48} strokeWidth={1} />
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
               Vous avez un projet ?
             </h2>
             <p className="text-primary-foreground/60 mb-8 max-w-md mx-auto">
