@@ -69,8 +69,8 @@ const Index = () => {
               Bureau d'études<br />& Expert Agencement
             </h1>
             <p className="mt-6 text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-              25 ans d'expérience terrain + Certification BIM
-              <br />De la conception technique à la réalisation de vos espaces
+              De la conception technique à la réalisation de vos espaces
+            </p>
             </p>
             <div className="mt-10 flex flex-wrap gap-4 justify-center">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
