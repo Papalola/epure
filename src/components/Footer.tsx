@@ -6,7 +6,7 @@ const Footer = () => (
   <footer className="py-16" style={{ backgroundColor: '#343332', color: '#FFFFFF' }}>
     <div className="container mx-auto px-4 grid md:grid-cols-3 gap-12">
       <div>
-        <img src={logoEpure} alt="Épure" className="h-20 mb-4 invert brightness-200" />
+        <img src={logoEpure} alt="Épure" className="h-20 mb-4" />
         <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.5)' }}>
           Bureau d'études & Expertise Agencement.
           <br />25 ans d'expérience au service de vos projets.
