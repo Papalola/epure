@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Box, Home, Wrench, HardHat } from "lucide-react";
+import { ArrowRight, Box, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -15,6 +15,7 @@ const bimServices = [
   "Synthèse technique",
   "Export fichiers IFC",
   "Extraction de métrés et quantitatifs",
+  "Assistance MOE BIM (mise à jour maquette, vérification modèles, coordination réunions)",
 ];
 
 const agencementServices = [
@@ -26,6 +27,7 @@ const agencementServices = [
   "Optimisation des méthodes de fabrication",
   "Suivi de réalisation",
   "Interface chantier / bureau d'études",
+  "Assistance MOE Agencement (mise à jour plans, préparation dossiers entreprises, suivi chantier)",
 ];
 
 const sectors = [
@@ -37,6 +39,9 @@ const Services = () => (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <AnimatedSection>
+          <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
+            Prestations
+          </p>
           <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground text-center mb-4">
             Mes Services
           </h1>
@@ -48,13 +53,13 @@ const Services = () => (
         <div className="grid md:grid-cols-2 gap-8 mb-10">
           {/* BIM */}
           <AnimatedSection>
-            <div className="bg-card rounded-lg p-8 border border-border h-full hover:shadow-lg transition-shadow">
-              <Box className="text-accent mb-4" size={32} />
-              <h2 className="font-display text-2xl font-semibold text-card-foreground mb-6">BIM Modeleur</h2>
+            <div className="border border-border p-8 h-full">
+              <Box className="text-foreground mb-4" size={32} strokeWidth={1} />
+              <h2 className="font-display text-2xl font-semibold text-foreground mb-6 uppercase tracking-wide">BIM Modeleur</h2>
               <ul className="space-y-2">
                 {bimServices.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-muted-foreground text-sm">
-                    <span className="mt-1 block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
+                    <span className="mt-1.5 block w-1 h-1 bg-foreground flex-shrink-0" />
                     {item}
                   </li>
                 ))}
@@ -64,13 +69,13 @@ const Services = () => (
 
           {/* Agencement */}
           <AnimatedSection delay={0.15}>
-            <div className="bg-card rounded-lg p-8 border border-border h-full hover:shadow-lg transition-shadow">
-              <Home className="text-accent mb-4" size={32} />
-              <h2 className="font-display text-2xl font-semibold text-card-foreground mb-6">Expert Agencement</h2>
+            <div className="border border-border p-8 h-full">
+              <Home className="text-foreground mb-4" size={32} strokeWidth={1} />
+              <h2 className="font-display text-2xl font-semibold text-foreground mb-6 uppercase tracking-wide">Expert Agencement</h2>
               <ul className="space-y-2">
                 {agencementServices.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-muted-foreground text-sm">
-                    <span className="mt-1 block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
+                    <span className="mt-1.5 block w-1 h-1 bg-foreground flex-shrink-0" />
                     {item}
                   </li>
                 ))}
@@ -88,11 +93,11 @@ const Services = () => (
 
         {/* Sectors */}
         <AnimatedSection>
-          <div className="bg-secondary rounded-lg p-10 mb-10">
-            <h3 className="font-display text-xl font-semibold text-foreground mb-4">Secteurs d'intervention</h3>
+          <div className="border border-border p-10 mb-10">
+            <h3 className="font-display text-xl font-semibold text-foreground mb-4 uppercase tracking-wide">Secteurs d'intervention</h3>
             <div className="flex flex-wrap gap-3">
               {sectors.map((s) => (
-                <span key={s} className="bg-card border border-border rounded-full px-4 py-1.5 text-sm text-foreground">{s}</span>
+                <span key={s} className="border border-border px-4 py-1.5 text-sm text-foreground">{s}</span>
               ))}
             </div>
           </div>
@@ -100,7 +105,7 @@ const Services = () => (
 
         <AnimatedSection>
           <div className="text-center mt-12">
-            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+            <Button asChild size="lg" className="border border-foreground text-foreground bg-transparent hover:bg-foreground hover:text-background">
               <Link to="/contact">
                 Discutons de votre projet <ArrowRight className="ml-2" size={18} />
               </Link>
