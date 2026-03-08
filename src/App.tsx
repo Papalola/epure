@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
 import NotFound from "./pages/NotFound";
 import MentionsLegales from "./pages/MentionsLegales";
+import CompareHero from "./pages/CompareHero";
 
 const queryClient = new QueryClient();
 
