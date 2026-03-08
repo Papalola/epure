@@ -1,7 +1,7 @@
 import heroBgV4 from "@/assets/hero-bg-v4.jpg";
 import heroAlt1 from "@/assets/hero-alt-1.jpg";
-import heroAlt2 from "@/assets/hero-alt-2b.jpg";
-import heroAlt3 from "@/assets/hero-alt-3g.jpg";
+import heroAlt2 from "@/assets/hero-alt-2c.jpg";
+import heroAlt3 from "@/assets/hero-alt-3h.jpg";
 
 const CompareHero = () => {
   return (
@@ -20,12 +20,12 @@ const CompareHero = () => {
         </div>
         
         <div>
-          <h2 className="text-white text-xl mb-4">Alt 2 — Bureau agenceur / BIM modeleur</h2>
+          <h2 className="text-white text-xl mb-4">Alt 2 — Bureau agenceur / BIM (calepin + échantillons variés)</h2>
           <img src={heroAlt2} alt="Hero Alt 2" className="w-full rounded-lg" />
         </div>
         
         <div>
-          <h2 className="text-white text-xl mb-4">Alt 3 — Avant/Après (transition fluide)</h2>
+          <h2 className="text-white text-xl mb-4">Alt 3 — BIM wireframe → Agencement fini</h2>
           <img src={heroAlt3} alt="Hero Alt 3" className="w-full rounded-lg" />
         </div>
       </div>
