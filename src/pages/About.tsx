@@ -14,23 +14,22 @@ const timeline = [
       "Responsable de production et méthodes",
       "Gestion d'équipes et coordination de projets",
     ],
-    companies: "Grange, Pardin Lagresle, Ébène, Bissardon, Lito Production, Saga Agencement, Menuiserie Raffin, Leuco France",
   },
   {
     period: "2024 – 2025",
     title: "Formation BIM Modeleur",
     icon: GraduationCap,
     items: [
-      "Certification BIM Modeleur obtenue",
+      "Titre Professionnel BIM Modeleur obtenu",
       "Maîtrise Revit et AutoCAD",
-      "Spécialisation coordination de projets BIM",
+      "Collaboration multi-disciplinaire avec architectes et ingénieurs",
     ],
   },
 ];
 
 const certifications = [
-  "Certification BIM Modeleur (2024-2025)",
-  "Bac Pro CAB Option Bois – Mention Bien (1999)",
+  "Titre Professionnel BIM Modeleur (2025)",
+  "Bac Pro CAB Option Bois (1999)",
   "CAP Ébénisterie",
   "BEP Bois et Matériaux",
   "CAP Menuiserie-Agencement",
@@ -126,9 +125,9 @@ const About = () => (
                 { year: "1997", title: "Apprenti · Ébéniste", desc: "Les mains dans la matière. La précision comme culture." },
                 { year: "2004", title: "Menuisier Agenceur", desc: "De la pièce unique au projet complet. Conception et pose." },
                 { year: "2011", title: "Responsable Production", desc: "Chef d'orchestre entre artisans, architectes et maîtres d'ouvrage." },
-                { year: "2025", title: "BIM Modeleur", desc: "Le numérique au service du terrain. Titre Professionnel BIM Modeleur — octobre 2025." },
+                { year: "2025", title: "BIM Modeleur · Titre Professionnel", desc: "Le numérique au service du terrain." },
                 { year: "2026", title: "Epure", desc: "L'indépendance. Bureau d'études & Expert Agencement. Le projet abouti." },
-              ].map((step, i) => (
+              ].map((step) => (
                 <div key={step.year} className="relative flex-1 lg:text-center lg:px-3">
                   {/* Dot */}
                   <div className="hidden lg:flex items-center justify-center mb-4">
@@ -188,11 +187,6 @@ const TimelineContent = ({ item }: { item: typeof timeline[0] }) => (
         </li>
       ))}
     </ul>
-    {item.companies && (
-      <p className="text-xs text-muted-foreground italic">
-        Entreprises : {item.companies}
-      </p>
-    )}
   </div>
 );
 

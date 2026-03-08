@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Box, HardHat, Home, Search } from "lucide-react";
+import { ArrowRight, CheckCircle, Box, HardHat, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -77,7 +77,6 @@ const Index = () => {
             <p className="mt-6 text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
               De la conception technique à la réalisation de vos espaces
             </p>
-            </p>
             <div className="mt-10 flex flex-wrap gap-4 justify-center">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                 <Link to="/contact">
@@ -104,7 +103,7 @@ const Index = () => {
             </p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, i) => (
               <AnimatedSection key={service.title} delay={i * 0.15}>
                 <div className="bg-card rounded-lg p-8 border border-border hover:shadow-lg transition-shadow h-full">
@@ -124,6 +123,12 @@ const Index = () => {
               </AnimatedSection>
             ))}
           </div>
+
+          <AnimatedSection>
+            <p className="text-muted-foreground text-center text-sm mt-10">
+              Sous-traitance · Mission ponctuelle · Renfort d'équipe · Télétravail privilégié, déplacements selon projet
+            </p>
+          </AnimatedSection>
         </div>
       </section>
 
@@ -140,7 +145,10 @@ const Index = () => {
               <AnimatedSection key={i} delay={i * 0.1}>
                 <div className="flex items-start gap-4 bg-card rounded-lg p-6 border border-border">
                   <CheckCircle className="text-accent flex-shrink-0 mt-0.5" size={22} />
-                  <p className="text-foreground text-sm leading-relaxed">{adv}</p>
+                  <div>
+                    <p className="text-foreground font-semibold text-sm mb-1">{adv.title}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{adv.desc}</p>
+                  </div>
                 </div>
               </AnimatedSection>
             ))}
