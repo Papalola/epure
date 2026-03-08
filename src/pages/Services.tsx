@@ -88,14 +88,14 @@ const Services = () => (
         </AnimatedSection>
 
         <AnimatedSection>
-          <div className="border border-border bg-card p-10 mb-10 transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
+          <BrushCard className="mb-10">
             <h3 className="font-display text-xl font-bold text-foreground mb-4 uppercase tracking-wide">Secteurs d'intervention</h3>
             <div className="flex flex-wrap gap-3">
               {sectors.map((s) => (
                 <span key={s} className="border border-border px-4 py-1.5 text-sm text-foreground">{s}</span>
               ))}
             </div>
-          </div>
+          </BrushCard>
         </AnimatedSection>
 
         <AnimatedSection>
