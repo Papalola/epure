@@ -43,11 +43,12 @@ const About = () => (
             <div className="w-48 h-48 flex-shrink-0">
               <img src={portrait} alt="David Badin" className="w-full h-full object-cover object-top" />
             </div>
-            <p className="text-foreground text-lg leading-relaxed max-w-2xl">
-              25 ans sur le terrain. De la menuiserie à l'ébénisterie, de l'agencement à la modélisation BIM.
-              Je parle la langue des artisans et celle des bureaux d'études.
-              Epure, c'est cette double expertise au service de vos projets.
-            </p>
+            <div className="text-foreground text-lg leading-relaxed max-w-2xl">
+              <p>25 ans sur le terrain.</p>
+              <p>De la menuiserie à l'ébénisterie, de l'agencement à la modélisation BIM.</p>
+              <p>Je parle la langue des artisans et celle des bureaux d'études.</p>
+              <p className="font-bold mt-2">Epure, c'est cette double expertise au service de vos projets.</p>
+            </div>
           </div>
         </AnimatedSection>
 
