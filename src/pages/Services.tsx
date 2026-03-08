@@ -50,13 +50,13 @@ const Services = () => (
 
         <div className="grid md:grid-cols-2 gap-8 mb-10">
           <AnimatedSection>
-            <div className="border border-border bg-card p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
-              <Box className="text-foreground mb-4" size={32} strokeWidth={1} />
-              <h2 className="font-display text-2xl font-bold text-foreground mb-6 uppercase tracking-wide">BIM Modeleur</h2>
+            <div className="border border-card-foreground bg-card p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
+              <Box className="text-card-foreground mb-4" size={32} strokeWidth={1} />
+              <h2 className="font-display text-2xl font-bold text-card-foreground mb-6 uppercase tracking-wide">BIM Modeleur</h2>
               <ul className="space-y-2">
                 {bimServices.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-muted-foreground text-sm">
-                    <span className="mt-1.5 block w-1 h-1 bg-foreground flex-shrink-0" />
+                  <li key={item} className="flex items-start gap-2 text-card-foreground/70 text-sm">
+                    <span className="mt-1.5 block w-1 h-1 bg-card-foreground flex-shrink-0" />
                     {item}
                   </li>
                 ))}
@@ -65,13 +65,13 @@ const Services = () => (
           </AnimatedSection>
 
           <AnimatedSection delay={0.15}>
-            <div className="border border-border bg-card p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
-              <Home className="text-foreground mb-4" size={32} strokeWidth={1} />
-              <h2 className="font-display text-2xl font-bold text-foreground mb-6 uppercase tracking-wide">Expert Agencement</h2>
+            <div className="border border-card-foreground bg-card p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
+              <Home className="text-card-foreground mb-4" size={32} strokeWidth={1} />
+              <h2 className="font-display text-2xl font-bold text-card-foreground mb-6 uppercase tracking-wide">Expert Agencement</h2>
               <ul className="space-y-2">
                 {agencementServices.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-muted-foreground text-sm">
-                    <span className="mt-1.5 block w-1 h-1 bg-foreground flex-shrink-0" />
+                  <li key={item} className="flex items-start gap-2 text-card-foreground/70 text-sm">
+                    <span className="mt-1.5 block w-1 h-1 bg-card-foreground flex-shrink-0" />
                     {item}
                   </li>
                 ))}
@@ -87,11 +87,11 @@ const Services = () => (
         </AnimatedSection>
 
         <AnimatedSection>
-          <div className="border border-border bg-card p-10 mb-10 transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
-            <h3 className="font-display text-xl font-bold text-foreground mb-4 uppercase tracking-wide">Secteurs d'intervention</h3>
+          <div className="border border-card-foreground bg-card p-10 mb-10 transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
+            <h3 className="font-display text-xl font-bold text-card-foreground mb-4 uppercase tracking-wide">Secteurs d'intervention</h3>
             <div className="flex flex-wrap gap-3">
               {sectors.map((s) => (
-                <span key={s} className="border border-border px-4 py-1.5 text-sm text-foreground">{s}</span>
+                <span key={s} className="border border-card-foreground px-4 py-1.5 text-sm text-card-foreground">{s}</span>
               ))}
             </div>
           </div>
