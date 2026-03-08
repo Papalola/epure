@@ -49,16 +49,16 @@ const Contact = () => {
 
   return (
     <Layout>
-      <section className="py-24" style={{ backgroundColor: '#1A1A1A' }}>
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <AnimatedSection>
-            <p className="text-xs font-semibold tracking-[0.3em] uppercase text-center mb-3" style={{ color: '#fefee0' }}>
+            <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
               Échangeons
             </p>
-            <h1 className="font-display text-5xl md:text-6xl font-bold text-center mb-4" style={{ color: '#FFFFFF' }}>
+            <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground text-center mb-4">
               Contact
             </h1>
-            <p className="text-center max-w-lg mx-auto mb-20" style={{ color: 'rgba(255,255,255,0.6)' }}>
+            <p className="text-muted-foreground text-center max-w-lg mx-auto mb-20">
               Une question ? Un projet ? Je suis disponible pour échanger sur vos besoins.
             </p>
           </AnimatedSection>
@@ -69,27 +69,27 @@ const Contact = () => {
               {contactInfo.map((c) => (
                 <AnimatedSection key={c.label}>
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 flex items-center justify-center flex-shrink-0" style={{ border: '1px solid #343332' }}>
-                      <c.icon style={{ color: '#fefee0' }} size={20} strokeWidth={1} />
+                    <div className="w-10 h-10 border border-border flex items-center justify-center flex-shrink-0">
+                      <c.icon className="text-foreground" size={20} strokeWidth={1} />
                     </div>
                     <div>
-                      <p className="text-sm mb-1" style={{ color: 'rgba(255,255,255,0.5)' }}>{c.label}</p>
+                      <p className="text-sm mb-1 text-muted-foreground">{c.label}</p>
                       {c.href ? (
-                        <a href={c.href} className="font-medium transition-colors hover:opacity-80" style={{ color: '#FFFFFF' }}>
+                        <a href={c.href} className="font-medium text-foreground transition-colors hover:opacity-80">
                           {c.value}
                         </a>
                       ) : (
-                        <p className="font-medium" style={{ color: '#FFFFFF' }}>{c.value}</p>
+                        <p className="font-medium text-foreground">{c.value}</p>
                       )}
-                      {c.sub && <p className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.4)' }}>{c.sub}</p>}
+                      {c.sub && <p className="text-xs mt-1 text-muted-foreground">{c.sub}</p>}
                     </div>
                   </div>
                 </AnimatedSection>
               ))}
               <AnimatedSection>
-                <div className="p-6 mt-8" style={{ border: '1px solid #343332' }}>
-                  <p className="text-sm font-medium" style={{ color: '#FFFFFF' }}>Disponibilité</p>
-                  <p className="text-sm mt-1" style={{ color: 'rgba(255,255,255,0.5)' }}>
+                <div className="border border-border bg-card p-6 mt-8">
+                  <p className="text-sm font-medium text-card-foreground">Disponibilité</p>
+                  <p className="text-sm mt-1 text-card-foreground/70">
                     Missions ponctuelles ou régulières • Télétravail ou sur site
                   </p>
                 </div>
@@ -98,71 +98,65 @@ const Contact = () => {
 
             {/* Form */}
             <AnimatedSection className="lg:col-span-3">
-              <div className="p-8" style={{ border: '1px solid #343332' }}>
-                <h2 className="font-display text-2xl font-bold mb-6 uppercase tracking-wide" style={{ color: '#FFFFFF' }}>
+              <div className="border border-border bg-card p-8">
+                <h2 className="font-display text-2xl font-bold text-card-foreground mb-6 tracking-wide">
                   Envoyez-moi un message
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="text-sm font-medium mb-1.5 block" style={{ color: '#FFFFFF' }}>Nom / Prénom *</label>
+                      <label className="text-sm font-medium text-card-foreground mb-1.5 block">Nom / Prénom *</label>
                       <input
                         value={form.name}
                         onChange={update("name")}
-                        className="flex h-10 w-full px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-offset-2"
-                        style={{ backgroundColor: '#2A2A2A', border: '1px solid #343332', color: '#FFFFFF' }}
+                        className="flex h-10 w-full border border-border bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-foreground focus:ring-offset-2"
                       />
                       {errors.name && <p className="text-destructive text-xs mt-1">{errors.name}</p>}
                     </div>
                     <div>
-                      <label className="text-sm font-medium mb-1.5 block" style={{ color: '#FFFFFF' }}>Entreprise</label>
+                      <label className="text-sm font-medium text-card-foreground mb-1.5 block">Entreprise</label>
                       <input
                         value={form.company}
                         onChange={update("company")}
-                        className="flex h-10 w-full px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-offset-2"
-                        style={{ backgroundColor: '#2A2A2A', border: '1px solid #343332', color: '#FFFFFF' }}
+                        className="flex h-10 w-full border border-border bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-foreground focus:ring-offset-2"
                       />
                     </div>
                   </div>
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="text-sm font-medium mb-1.5 block" style={{ color: '#FFFFFF' }}>Email *</label>
+                      <label className="text-sm font-medium text-card-foreground mb-1.5 block">Email *</label>
                       <input
                         type="email"
                         value={form.email}
                         onChange={update("email")}
-                        className="flex h-10 w-full px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-offset-2"
-                        style={{ backgroundColor: '#2A2A2A', border: '1px solid #343332', color: '#FFFFFF' }}
+                        className="flex h-10 w-full border border-border bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-foreground focus:ring-offset-2"
                       />
                       {errors.email && <p className="text-destructive text-xs mt-1">{errors.email}</p>}
                     </div>
                     <div>
-                      <label className="text-sm font-medium mb-1.5 block" style={{ color: '#FFFFFF' }}>Téléphone</label>
+                      <label className="text-sm font-medium text-card-foreground mb-1.5 block">Téléphone</label>
                       <input
                         type="tel"
                         value={form.phone}
                         onChange={update("phone")}
-                        className="flex h-10 w-full px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-offset-2"
-                        style={{ backgroundColor: '#2A2A2A', border: '1px solid #343332', color: '#FFFFFF' }}
+                        className="flex h-10 w-full border border-border bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-foreground focus:ring-offset-2"
                       />
                     </div>
                   </div>
                   <div>
-                    <label className="text-sm font-medium mb-1.5 block" style={{ color: '#FFFFFF' }}>Message *</label>
+                    <label className="text-sm font-medium text-card-foreground mb-1.5 block">Message *</label>
                     <textarea
                       rows={5}
                       value={form.message}
                       onChange={update("message")}
-                      className="flex w-full px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-offset-2"
-                      style={{ backgroundColor: '#2A2A2A', border: '1px solid #343332', color: '#FFFFFF' }}
+                      className="flex w-full border border-border bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-foreground focus:ring-offset-2"
                     />
                     {errors.message && <p className="text-destructive text-xs mt-1">{errors.message}</p>}
                   </div>
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full"
-                    style={{ backgroundColor: '#fefee0', color: '#343332', border: '1px solid #343332' }}
+                    className="w-full border border-foreground text-foreground bg-transparent hover:bg-foreground hover:text-background"
                   >
                     Envoyer <Send className="ml-2" size={18} />
                   </Button>
