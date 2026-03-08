@@ -101,7 +101,7 @@ const Contact = () => {
             {/* Form */}
             <AnimatedSection className="lg:col-span-3">
               <div className="border border-border p-8">
-                <h2 className="font-display text-xl font-semibold text-foreground mb-6 uppercase tracking-wide">
+                <h2 className="font-display text-2xl font-bold text-foreground mb-6 uppercase tracking-wide">
                   Envoyez-moi un message
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-5">
