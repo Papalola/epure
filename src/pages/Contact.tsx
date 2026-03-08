@@ -54,6 +54,9 @@ const Contact = () => {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <AnimatedSection>
+            <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
+              Échangeons
+            </p>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground text-center mb-4">
               Contact
             </h1>
@@ -68,13 +71,13 @@ const Contact = () => {
               {contactInfo.map((c) => (
                 <AnimatedSection key={c.label}>
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                      <c.icon className="text-accent" size={20} />
+                    <div className="w-10 h-10 border border-border flex items-center justify-center flex-shrink-0">
+                      <c.icon className="text-foreground" size={20} strokeWidth={1} />
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground mb-1">{c.label}</p>
                       {c.href ? (
-                        <a href={c.href} className="text-foreground font-medium hover:text-accent transition-colors">
+                        <a href={c.href} className="text-foreground font-medium hover:text-muted-foreground transition-colors">
                           {c.value}
                         </a>
                       ) : (
@@ -86,7 +89,7 @@ const Contact = () => {
                 </AnimatedSection>
               ))}
               <AnimatedSection>
-                <div className="bg-secondary rounded-lg p-6 mt-8">
+                <div className="border border-border p-6 mt-8">
                   <p className="text-sm text-foreground font-medium">Disponibilité</p>
                   <p className="text-sm text-muted-foreground mt-1">
                     Missions ponctuelles ou régulières • Télétravail ou sur site
@@ -97,8 +100,8 @@ const Contact = () => {
 
             {/* Form */}
             <AnimatedSection className="lg:col-span-3">
-              <div className="bg-card rounded-lg p-8 border border-border">
-                <h2 className="font-display text-xl font-semibold text-card-foreground mb-6">
+              <div className="border border-border p-8">
+                <h2 className="font-display text-xl font-semibold text-foreground mb-6 uppercase tracking-wide">
                   Envoyez-moi un message
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-5">
@@ -129,7 +132,7 @@ const Contact = () => {
                     <Textarea rows={5} value={form.message} onChange={update("message")} />
                     {errors.message && <p className="text-destructive text-xs mt-1">{errors.message}</p>}
                   </div>
-                  <Button type="submit" size="lg" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                  <Button type="submit" size="lg" className="w-full border border-foreground text-foreground bg-transparent hover:bg-foreground hover:text-background">
                     Envoyer <Send className="ml-2" size={18} />
                   </Button>
                 </form>
