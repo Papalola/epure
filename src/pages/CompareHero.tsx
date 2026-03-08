@@ -1,7 +1,7 @@
 import heroBgV4 from "@/assets/hero-bg-v4.jpg";
 import heroAlt1 from "@/assets/hero-alt-1.jpg";
 import heroAlt2 from "@/assets/hero-alt-2b.jpg";
-import heroAlt3 from "@/assets/hero-alt-3d.jpg";
+import heroAlt3 from "@/assets/hero-alt-3e.jpg";
 
 const CompareHero = () => {
   return (
