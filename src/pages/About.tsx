@@ -52,10 +52,10 @@ const About = () => (
 
         {/* Today */}
         <AnimatedSection>
-          <div className="border border-foreground/20 p-10 mb-20">
+          <div className="border border-border p-10 mb-20">
             <div className="flex items-center gap-3 mb-6">
               <Star className="text-foreground" size={28} strokeWidth={1} />
-              <h2 className="font-display text-3xl font-bold text-foreground uppercase">Aujourd'hui</h2>
+              <h2 className="font-display text-3xl font-bold text-foreground">Aujourd'hui</h2>
             </div>
             <p className="text-foreground leading-relaxed mb-6">
               Je mets cette double expertise au service des bureaux d'études, architectes, agenceurs
@@ -93,15 +93,13 @@ const About = () => (
                 {parcours.map((step, i) => (
                   <div key={step.year} className="flex items-start flex-1">
                     <div className="flex flex-col items-center text-center px-2">
-                      {/* Dot */}
                       <div className="w-3 h-3 bg-foreground mb-4 flex-shrink-0" />
                       <p className="font-display text-2xl font-bold text-foreground">{step.year}</p>
                       <p className="text-[10px] font-semibold tracking-[0.15em] uppercase text-foreground/80 mt-1">{step.title}</p>
                       <p className="text-xs text-muted-foreground mt-2 leading-relaxed max-w-[160px]">{step.desc}</p>
                     </div>
-                    {/* Connector line */}
                     {i < parcours.length - 1 && (
-                      <div className="flex-1 h-px bg-foreground/20 mt-[6px] min-w-[20px]" />
+                      <div className="flex-1 h-px bg-border mt-[6px] min-w-[20px]" />
                     )}
                   </div>
                 ))}
@@ -115,11 +113,11 @@ const About = () => (
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-6">
               <Award className="text-foreground" size={28} strokeWidth={1} />
-              <h2 className="font-display text-3xl font-bold text-foreground uppercase">Formations & Certifications</h2>
+              <h2 className="font-display text-3xl font-bold text-foreground">Formations & Certifications</h2>
             </div>
             <div className="grid sm:grid-cols-2 gap-3">
               {certifications.map((c) => (
-                <div key={c} className="border border-card-foreground bg-card px-5 py-3 text-sm text-card-foreground">
+                <div key={c} className="border border-border bg-card px-5 py-3 text-sm text-card-foreground">
                   {c}
                 </div>
               ))}

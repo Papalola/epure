@@ -67,25 +67,25 @@ const Index = () => {
         className="relative min-h-[85vh] flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
-        <div className="absolute inset-0 bg-background/80" />
+        <div className="absolute inset-0 bg-primary/70" />
         <div className="relative z-10 container mx-auto px-4 text-center">
           <AnimatedSection>
-            <p className="text-foreground/50 font-semibold tracking-[0.3em] uppercase text-xs mb-4">
+            <p className="text-primary-foreground/60 font-semibold tracking-[0.3em] uppercase text-xs mb-4">
               David Badin · Epure
             </p>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight uppercase">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
               Bureau d'études<br />& Expert Agencement
             </h1>
-            <p className="mt-6 text-foreground/70 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            <p className="mt-6 text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
               De la conception technique à la réalisation de vos espaces
             </p>
             <div className="mt-10 flex flex-wrap gap-4 justify-center">
-              <Button asChild size="lg" className="border border-foreground text-foreground bg-transparent hover:bg-foreground hover:text-background">
+              <Button asChild size="lg" className="border border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground hover:text-primary">
                 <Link to="/contact">
                   Me contacter <ArrowRight className="ml-2" size={18} />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border border-foreground/50 text-foreground bg-transparent hover:bg-foreground/10">
+              <Button asChild variant="outline" size="lg" className="border border-primary-foreground/50 text-primary-foreground bg-transparent hover:bg-primary-foreground/10">
                 <Link to="/services">Voir mes services</Link>
               </Button>
             </div>
@@ -111,9 +111,9 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, i) => (
               <AnimatedSection key={service.title} delay={i * 0.15}>
-                <div className="border border-card-foreground bg-card p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
+                <div className="border border-border bg-card p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
                   <service.icon className="text-card-foreground mb-4" size={36} strokeWidth={1} />
-                  <h3 className="font-display text-2xl font-bold text-card-foreground mb-4 uppercase tracking-wide">
+                  <h3 className="font-display text-2xl font-bold text-card-foreground mb-4 tracking-wide">
                     {service.title}
                   </h3>
                   <ul className="space-y-2">
@@ -138,7 +138,7 @@ const Index = () => {
       </section>
 
       {/* Why choose me */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-secondary">
         <div className="container mx-auto px-4">
           <AnimatedSection>
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
@@ -151,7 +151,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {advantages.map((adv, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="flex items-start gap-4 border border-card-foreground bg-card p-6 transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
+                <div className="flex items-start gap-4 border border-border bg-card p-6 transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
                   <CheckCircle className="text-card-foreground flex-shrink-0 mt-0.5" size={20} strokeWidth={1.5} />
                   <div>
                     <p className="text-card-foreground font-semibold text-sm mb-1 uppercase tracking-wide">{adv.title}</p>
@@ -165,17 +165,17 @@ const Index = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-background border-t border-foreground/20 text-foreground text-center">
+      <section className="py-24 bg-primary text-primary-foreground text-center">
         <AnimatedSection>
           <div className="container mx-auto px-4">
-            <HardHat className="mx-auto mb-6 text-foreground/50" size={48} strokeWidth={1} />
+            <HardHat className="mx-auto mb-6 text-primary-foreground/60" size={48} strokeWidth={1} />
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
               Vous avez un projet ?
             </h2>
-            <p className="text-foreground/50 mb-8 max-w-md mx-auto">
+            <p className="text-primary-foreground/60 mb-8 max-w-md mx-auto">
               Parlons de vos besoins et trouvons la meilleure solution ensemble.
             </p>
-            <Button asChild size="lg" className="border border-foreground text-foreground bg-transparent hover:bg-foreground hover:text-background">
+            <Button asChild size="lg" className="border border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground hover:text-primary">
               <Link to="/contact">
                 Me contacter <ArrowRight className="ml-2" size={18} />
               </Link>
