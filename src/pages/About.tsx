@@ -3,6 +3,7 @@ import { ArrowRight, Award, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
+import BrushCard from "@/components/BrushCard";
 import portrait from "@/assets/portrait-david.png";
 
 const parcours = [
@@ -52,7 +53,7 @@ const About = () => (
 
         {/* Today */}
         <AnimatedSection>
-          <div className="border border-border p-10 mb-20">
+          <BrushCard className="mb-20">
             <div className="flex items-center gap-3 mb-6">
               <Star className="text-foreground" size={28} strokeWidth={1} />
               <h2 className="font-display text-3xl font-bold text-foreground uppercase">Aujourd'hui</h2>
@@ -79,7 +80,7 @@ const About = () => (
               Ma valeur ajoutée ? Je ne fais pas que dessiner des plans, je propose des solutions
               techniques réalistes et réalisables.
             </p>
-          </div>
+          </BrushCard>
         </AnimatedSection>
 
         {/* Horizontal Timeline */}
@@ -119,9 +120,9 @@ const About = () => (
             </div>
             <div className="grid sm:grid-cols-2 gap-3">
               {certifications.map((c) => (
-                <div key={c} className="border border-border px-5 py-3 text-sm text-foreground">
-                  {c}
-                </div>
+                <BrushCard key={c}>
+                  <span className="text-sm text-foreground">{c}</span>
+                </BrushCard>
               ))}
             </div>
           </div>
