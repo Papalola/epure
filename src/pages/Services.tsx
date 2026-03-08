@@ -52,7 +52,7 @@ const Services = () => (
           <AnimatedSection>
             <div className="border border-border bg-card p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
               <Box className="text-card-foreground mb-4" size={32} strokeWidth={1} />
-              <h2 className="text-2xl font-bold text-card-foreground mb-6 tracking-wide uppercase">BIM Modeleur</h2>
+              <h2 className="text-2xl font-bold text-card-foreground mb-6 tracking-wide">BIM Modeleur</h2>
               <ul className="space-y-2">
                 {bimServices.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-card-foreground/70 text-sm">
