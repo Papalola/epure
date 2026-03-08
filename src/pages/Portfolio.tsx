@@ -8,7 +8,7 @@ const placeholders = [
   { title: "Maquette BIM – Projet résidentiel", category: "BIM" },
   { title: "Plans d'exécution – Agencement commercial", category: "Plans" },
   { title: "Agencement sur mesure – Espace professionnel", category: "Agencement" },
-  { title: "Coordination BIM – Projet tertiaire", category: "BIM" },
+  { title: "Collaboration multi-disciplinaire – Projet tertiaire", category: "BIM" },
   { title: "Menuiserie d'art – Réalisation terrain", category: "Terrain" },
   { title: "Synthèse technique – Multi-corps d'état", category: "Plans" },
 ];

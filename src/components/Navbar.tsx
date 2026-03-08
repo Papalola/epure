@@ -17,7 +17,7 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-24 px-4">
         <Link to="/" className="flex items-center">
           <img src={logoEpure} alt="Épure" className="h-20 mix-blend-multiply" />
@@ -29,8 +29,8 @@ const Navbar = () => {
             <Link
               key={link.to}
               to={link.to}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                location.pathname === link.to ? "text-primary" : "text-muted-foreground"
+              className={`text-xs font-medium tracking-[0.15em] uppercase transition-colors hover:text-foreground ${
+                location.pathname === link.to ? "text-foreground" : "text-muted-foreground"
               }`}
             >
               {link.label}
@@ -63,8 +63,8 @@ const Navbar = () => {
                   key={link.to}
                   to={link.to}
                   onClick={() => setOpen(false)}
-                  className={`text-sm font-medium transition-colors hover:text-primary ${
-                    location.pathname === link.to ? "text-primary" : "text-muted-foreground"
+                  className={`text-xs font-medium tracking-[0.15em] uppercase transition-colors hover:text-foreground ${
+                    location.pathname === link.to ? "text-foreground" : "text-muted-foreground"
                   }`}
                 >
                   {link.label}

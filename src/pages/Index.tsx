@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Box, HardHat, Home } from "lucide-react";
+import { ArrowRight, CheckCircle, Box, Home, HardHat } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -20,6 +20,7 @@ const services = [
       "Synthèse technique",
       "Export fichiers IFC",
       "Extraction de métrés et quantitatifs",
+      "Assistance MOE BIM (mise à jour maquette, vérification modèles, coordination réunions)",
     ],
   },
   {
@@ -34,6 +35,7 @@ const services = [
       "Optimisation des méthodes de fabrication",
       "Suivi de réalisation",
       "Interface chantier / bureau d'études",
+      "Assistance MOE Agencement (mise à jour plans, préparation dossiers entreprises, suivi chantier)",
     ],
   },
 ];
@@ -68,7 +70,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-primary/70" />
         <div className="relative z-10 container mx-auto px-4 text-center">
           <AnimatedSection>
-            <p className="text-accent-foreground/80 font-semibold tracking-widest uppercase text-sm mb-4">
+            <p className="text-primary-foreground/60 font-semibold tracking-[0.3em] uppercase text-xs mb-4">
               David Badin · Epure
             </p>
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight uppercase">
@@ -78,12 +80,12 @@ const Index = () => {
               De la conception technique à la réalisation de vos espaces
             </p>
             <div className="mt-10 flex flex-wrap gap-4 justify-center">
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+              <Button asChild size="lg" className="border border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground hover:text-primary">
                 <Link to="/contact">
                   Me contacter <ArrowRight className="ml-2" size={18} />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-white/50 text-white bg-white/10 hover:bg-white/20">
+              <Button asChild variant="outline" size="lg" className="border border-primary-foreground/50 text-primary-foreground bg-transparent hover:bg-primary-foreground/10">
                 <Link to="/services">Voir mes services</Link>
               </Button>
             </div>
@@ -95,6 +97,9 @@ const Index = () => {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <AnimatedSection>
+            <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
+              Services
+            </p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-4">
               Mes services
             </h2>
@@ -106,15 +111,15 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, i) => (
               <AnimatedSection key={service.title} delay={i * 0.15}>
-                <div className="bg-card rounded-lg p-8 border border-border hover:shadow-lg transition-shadow h-full">
-                  <service.icon className="text-accent mb-4" size={36} />
-                  <h3 className="font-display text-xl font-semibold text-card-foreground mb-4">
+                <div className="border border-border p-8 h-full">
+                  <service.icon className="text-foreground mb-4" size={36} strokeWidth={1} />
+                  <h3 className="font-display text-xl font-semibold text-foreground mb-4 uppercase tracking-wide">
                     {service.title}
                   </h3>
                   <ul className="space-y-2">
                     {service.items.map((item) => (
                       <li key={item} className="flex items-start gap-2 text-muted-foreground text-sm">
-                        <span className="mt-1 block w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
+                        <span className="mt-1.5 block w-1 h-1 bg-foreground flex-shrink-0" />
                         {item}
                       </li>
                     ))}
@@ -136,6 +141,9 @@ const Index = () => {
       <section className="py-24 bg-secondary">
         <div className="container mx-auto px-4">
           <AnimatedSection>
+            <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
+              Avantages
+            </p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-16">
               Pourquoi me choisir ?
             </h2>
@@ -143,10 +151,10 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {advantages.map((adv, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="flex items-start gap-4 bg-card rounded-lg p-6 border border-border">
-                  <CheckCircle className="text-accent flex-shrink-0 mt-0.5" size={22} />
+                <div className="flex items-start gap-4 border border-border bg-background p-6">
+                  <CheckCircle className="text-foreground flex-shrink-0 mt-0.5" size={20} strokeWidth={1.5} />
                   <div>
-                    <p className="text-foreground font-semibold text-sm mb-1">{adv.title}</p>
+                    <p className="text-foreground font-semibold text-sm mb-1 uppercase tracking-wide">{adv.title}</p>
                     <p className="text-muted-foreground text-sm leading-relaxed">{adv.desc}</p>
                   </div>
                 </div>
@@ -160,14 +168,14 @@ const Index = () => {
       <section className="py-24 bg-primary text-primary-foreground text-center">
         <AnimatedSection>
           <div className="container mx-auto px-4">
-            <HardHat className="mx-auto mb-6 text-accent" size={48} />
+            <HardHat className="mx-auto mb-6 text-primary-foreground/60" size={48} strokeWidth={1} />
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
               Vous avez un projet ?
             </h2>
-            <p className="text-primary-foreground/70 mb-8 max-w-md mx-auto">
+            <p className="text-primary-foreground/60 mb-8 max-w-md mx-auto">
               Parlons de vos besoins et trouvons la meilleure solution ensemble.
             </p>
-            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+            <Button asChild size="lg" className="border border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground hover:text-primary">
               <Link to="/contact">
                 Me contacter <ArrowRight className="ml-2" size={18} />
               </Link>
