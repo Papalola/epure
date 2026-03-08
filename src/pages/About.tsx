@@ -120,9 +120,9 @@ const About = () => (
             </div>
             <div className="grid sm:grid-cols-2 gap-3">
               {certifications.map((c) => (
-                <div key={c} className="border border-border px-5 py-3 text-sm text-foreground">
-                  {c}
-                </div>
+                <BrushCard key={c}>
+                  <span className="text-sm text-foreground">{c}</span>
+                </BrushCard>
               ))}
             </div>
           </div>
