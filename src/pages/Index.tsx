@@ -151,7 +151,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {advantages.map((adv, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="flex items-start gap-4 border border-border bg-background p-6">
+                <div className="flex items-start gap-4 border border-border bg-card p-6 transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
                   <CheckCircle className="text-foreground flex-shrink-0 mt-0.5" size={20} strokeWidth={1.5} />
                   <div>
                     <p className="text-foreground font-semibold text-sm mb-1 uppercase tracking-wide">{adv.title}</p>
