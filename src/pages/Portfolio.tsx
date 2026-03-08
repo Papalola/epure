@@ -8,9 +8,6 @@ const placeholders = [
   { title: "Maquette BIM – Projet résidentiel", category: "BIM" },
   { title: "Plans d'exécution – Agencement commercial", category: "Plans" },
   { title: "Agencement sur mesure – Espace professionnel", category: "Agencement" },
-  { title: "Collaboration multi-disciplinaire – Projet tertiaire", category: "BIM" },
-  { title: "Menuiserie d'art – Réalisation terrain", category: "Terrain" },
-  { title: "Synthèse technique – Multi-corps d'état", category: "Plans" },
 ];
 
 const Portfolio = () => (
@@ -18,7 +15,7 @@ const Portfolio = () => (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <AnimatedSection>
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground text-center mb-4">
+          <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground text-center mb-4">
             Réalisations
           </h1>
           <p className="text-muted-foreground text-center max-w-lg mx-auto mb-20">
@@ -29,14 +26,13 @@ const Portfolio = () => (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {placeholders.map((p, i) => (
             <AnimatedSection key={p.title} delay={i * 0.08}>
-              <div className="group bg-card rounded-lg border border-border overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="aspect-[4/3] bg-muted flex items-center justify-center">
+              <div className="border border-border overflow-hidden">
+                <div className="aspect-[4/3] bg-secondary flex items-center justify-center">
                   <ImageIcon className="text-muted-foreground/40" size={48} />
                 </div>
                 <div className="p-5">
-                  <span className="text-xs font-medium text-accent uppercase tracking-wider">{p.category}</span>
-                  <h3 className="font-display text-lg font-semibold text-card-foreground mt-2">{p.title}</h3>
-                  <p className="text-xs text-muted-foreground italic mt-2">📷 Photos de réalisations à venir</p>
+                  <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">{p.category}</span>
+                  <h3 className="font-display text-lg font-bold text-foreground mt-2">{p.title}</h3>
                 </div>
               </div>
             </AnimatedSection>
@@ -44,12 +40,8 @@ const Portfolio = () => (
         </div>
 
         <AnimatedSection>
-          <div className="bg-secondary rounded-lg p-10 text-center max-w-2xl mx-auto">
-            <p className="text-muted-foreground mb-6">
-              Cette section sera enrichie au fur et à mesure avec des captures de maquettes BIM,
-              plans réalisés et projets d'agencement.
-            </p>
-            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+          <div className="text-center">
+            <Button asChild size="lg" className="border border-foreground text-foreground bg-transparent hover:bg-foreground hover:text-background">
               <Link to="/contact">
                 Discutons de votre projet <ArrowRight className="ml-2" size={18} />
               </Link>

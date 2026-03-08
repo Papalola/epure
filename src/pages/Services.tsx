@@ -30,9 +30,7 @@ const agencementServices = [
   "Assistance MOE Agencement (mise à jour plans, préparation dossiers entreprises, suivi chantier)",
 ];
 
-const sectors = [
-  "Agencement", "BTP", "Architecture", "Menuiserie", "Ébénisterie", "Aménagement intérieur",
-];
+const sectors = ["BTP", "Architecture", "Agencement"];
 
 const Services = () => (
   <Layout>
@@ -42,7 +40,7 @@ const Services = () => (
           <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
             Prestations
           </p>
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground text-center mb-4">
+          <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground text-center mb-4">
             Mes Services
           </h1>
           <p className="text-muted-foreground text-center max-w-lg mx-auto mb-20">
@@ -51,11 +49,10 @@ const Services = () => (
         </AnimatedSection>
 
         <div className="grid md:grid-cols-2 gap-8 mb-10">
-          {/* BIM */}
           <AnimatedSection>
             <div className="border border-border p-8 h-full">
               <Box className="text-foreground mb-4" size={32} strokeWidth={1} />
-              <h2 className="font-display text-2xl font-semibold text-foreground mb-6 uppercase tracking-wide">BIM Modeleur</h2>
+              <h2 className="font-display text-2xl font-bold text-foreground mb-6 uppercase tracking-wide">BIM Modeleur</h2>
               <ul className="space-y-2">
                 {bimServices.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-muted-foreground text-sm">
@@ -67,11 +64,10 @@ const Services = () => (
             </div>
           </AnimatedSection>
 
-          {/* Agencement */}
           <AnimatedSection delay={0.15}>
             <div className="border border-border p-8 h-full">
               <Home className="text-foreground mb-4" size={32} strokeWidth={1} />
-              <h2 className="font-display text-2xl font-semibold text-foreground mb-6 uppercase tracking-wide">Expert Agencement</h2>
+              <h2 className="font-display text-2xl font-bold text-foreground mb-6 uppercase tracking-wide">Expert Agencement</h2>
               <ul className="space-y-2">
                 {agencementServices.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-muted-foreground text-sm">
@@ -84,17 +80,15 @@ const Services = () => (
           </AnimatedSection>
         </div>
 
-        {/* Modes de collaboration */}
         <AnimatedSection>
           <p className="text-muted-foreground text-center text-sm mb-20">
             Sous-traitance · Mission ponctuelle · Renfort d'équipe · Télétravail privilégié, déplacements selon projet
           </p>
         </AnimatedSection>
 
-        {/* Sectors */}
         <AnimatedSection>
           <div className="border border-border p-10 mb-10">
-            <h3 className="font-display text-xl font-semibold text-foreground mb-4 uppercase tracking-wide">Secteurs d'intervention</h3>
+            <h3 className="font-display text-xl font-bold text-foreground mb-4 uppercase tracking-wide">Secteurs d'intervention</h3>
             <div className="flex flex-wrap gap-3">
               {sectors.map((s) => (
                 <span key={s} className="border border-border px-4 py-1.5 text-sm text-foreground">{s}</span>

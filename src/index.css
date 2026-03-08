@@ -1,12 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
-
-@font-face {
-  font-family: 'Agrandir Grand';
-  src: url('/fonts/AgrandirGrand-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,43 +7,43 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 0 0% 7%;
+    --foreground: 30 1% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 7%;
+    --card-foreground: 30 1% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 7%;
+    --popover-foreground: 30 1% 20%;
 
-    --primary: 0 0% 13%;
+    --primary: 0 0% 10%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 40 3% 95%;
-    --secondary-foreground: 0 0% 7%;
+    --secondary: 0 0% 92%;
+    --secondary-foreground: 30 1% 20%;
 
-    --muted: 40 3% 95%;
+    --muted: 0 0% 92%;
     --muted-foreground: 0 0% 33%;
 
-    --accent: 0 0% 13%;
+    --accent: 0 0% 10%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 88%;
-    --input: 0 0% 88%;
-    --ring: 0 0% 13%;
+    --border: 30 1% 20%;
+    --input: 0 0% 82%;
+    --ring: 30 1% 20%;
 
     --radius: 0rem;
 
     --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 0 0% 7%;
-    --sidebar-primary: 0 0% 13%;
+    --sidebar-foreground: 30 1% 20%;
+    --sidebar-primary: 0 0% 10%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 40 3% 95%;
-    --sidebar-accent-foreground: 0 0% 7%;
-    --sidebar-border: 0 0% 88%;
-    --sidebar-ring: 0 0% 13%;
+    --sidebar-accent: 0 0% 92%;
+    --sidebar-accent-foreground: 30 1% 20%;
+    --sidebar-border: 30 1% 20%;
+    --sidebar-ring: 30 1% 20%;
   }
 
   .dark {
@@ -98,7 +90,7 @@
 
 @layer utilities {
   .font-display {
-    font-family: 'Agrandir Grand', 'Urbanist', sans-serif;
+    font-family: 'Bebas Neue', 'Urbanist', sans-serif;
   }
   .font-body {
     font-family: 'Urbanist', sans-serif;

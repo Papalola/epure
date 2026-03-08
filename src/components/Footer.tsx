@@ -6,14 +6,14 @@ const Footer = () => (
   <footer className="bg-primary text-primary-foreground py-16">
     <div className="container mx-auto px-4 grid md:grid-cols-3 gap-12">
       <div>
-        <img src={logoEpure} alt="Épure" className="h-20 mb-4 invert" />
+        <img src={logoEpure} alt="Épure" className="h-20 mb-4 invert brightness-200" />
         <p className="text-primary-foreground/50 text-sm leading-relaxed">
           Bureau d'études & Expertise Agencement.
           <br />25 ans d'expérience au service de vos projets.
         </p>
       </div>
       <div>
-        <h4 className="font-display text-lg font-semibold mb-4 uppercase tracking-wide">Navigation</h4>
+        <h4 className="font-display text-lg font-bold mb-4 uppercase tracking-wide">Navigation</h4>
         <div className="flex flex-col gap-2 text-sm text-primary-foreground/50">
           <Link to="/" className="hover:text-primary-foreground transition-colors">Accueil</Link>
           <Link to="/services" className="hover:text-primary-foreground transition-colors">Services</Link>
@@ -23,7 +23,7 @@ const Footer = () => (
         </div>
       </div>
       <div>
-        <h4 className="font-display text-lg font-semibold mb-4 uppercase tracking-wide">Contact</h4>
+        <h4 className="font-display text-lg font-bold mb-4 uppercase tracking-wide">Contact</h4>
         <div className="flex flex-col gap-3 text-sm text-primary-foreground/50">
           <a href="tel:0688813086" className="flex items-center gap-2 hover:text-primary-foreground transition-colors">
             <Phone size={16} strokeWidth={1} /> 06 88 81 30 86
