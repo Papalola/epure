@@ -113,7 +113,7 @@ const Index = () => {
               <AnimatedSection key={service.title} delay={i * 0.15}>
                 <div className="border border-border bg-card p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
                   <service.icon className="text-card-foreground mb-4" size={36} strokeWidth={1} />
-                  <h3 className="text-2xl font-bold text-card-foreground mb-4 tracking-wide uppercase">
+                  <h3 className="text-2xl font-bold text-card-foreground mb-4 tracking-wide">
                     {service.title}
                   </h3>
                   <ul className="space-y-2">
