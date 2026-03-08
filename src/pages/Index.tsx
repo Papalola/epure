@@ -39,10 +39,22 @@ const services = [
 ];
 
 const advantages = [
-  "Double compétence rare : BIM + 25 ans d'expérience terrain (menuiserie, ébénisterie, agencement)",
-  "Solutions concrètes : Je comprends les contraintes de réalisation",
-  "Réactivité & flexibilité : Missions courtes ou longues, télétravail ou sur site",
-  "Basé en Rhône (69) : Interventions région Auvergne-Rhône-Alpes et au-delà",
+  {
+    title: "Double compétence rare",
+    desc: "BIM Modeleur + 25 ans terrain. Je ne fais pas que dessiner des plans — je comprends ce que je dessine.",
+  },
+  {
+    title: "Solutions concrètes",
+    desc: "Je comprends les contraintes de réalisation. Mes propositions sont techniques, réalistes et réalisables.",
+  },
+  {
+    title: "Réactivité & flexibilité",
+    desc: "Missions courtes ou longues. Télétravail privilégié, déplacements selon projet.",
+  },
+  {
+    title: "Basé en Rhône-Alpes (69)",
+    desc: "Interventions région Auvergne-Rhône-Alpes et au-delà.",
+  },
 ];
 
 const Index = () => {
