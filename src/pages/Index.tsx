@@ -82,7 +82,7 @@ const Index = () => {
             </p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, i) => (
               <AnimatedSection key={service.title} delay={i * 0.15}>
                 <div className="bg-card rounded-lg p-8 border border-border hover:shadow-lg transition-shadow h-full">
