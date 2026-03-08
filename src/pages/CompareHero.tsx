@@ -1,5 +1,5 @@
 import heroAlt2 from "@/assets/hero-alt-2h.jpg";
-import heroAlt3 from "@/assets/hero-alt-3m.jpg";
+import heroAlt3 from "@/assets/hero-alt-3o.jpg";
 
 const CompareHero = () => {
   return (
