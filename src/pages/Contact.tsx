@@ -57,7 +57,7 @@ const Contact = () => {
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
               Échangeons
             </p>
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground text-center mb-4">
+            <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground text-center mb-4">
               Contact
             </h1>
             <p className="text-muted-foreground text-center max-w-lg mx-auto mb-20">
