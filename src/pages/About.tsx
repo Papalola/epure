@@ -41,7 +41,7 @@ const About = () => (
         <AnimatedSection>
           <div className="flex flex-col md:flex-row items-center gap-12 mb-20">
             <div className="w-48 h-48 flex-shrink-0">
-              <img src={portrait} alt="David Badin" className="w-full h-full object-cover object-top" style={{ mask: 'linear-gradient(to bottom, black 60%, transparent 100%)', WebkitMask: 'linear-gradient(to bottom, black 60%, transparent 100%)' }} />
+              <img src={portrait} alt="David Badin" className="w-full h-full object-cover object-top" />
             </div>
             <p className="text-foreground text-lg leading-relaxed max-w-2xl">
               Passionné par les métiers du bois et de l'agencement depuis plus de 25 ans,
