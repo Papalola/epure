@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Box, Home, HardHat } from "lucide-react";
+import BimWireframeOverlay from "@/components/BimWireframeOverlay";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -67,7 +68,8 @@ const Index = () => {
         className="relative min-h-[85vh] flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
-        <div className="absolute inset-0 bg-primary/70" />
+        <div className="absolute inset-0 bg-primary/60" />
+        <BimWireframeOverlay />
         <div className="relative z-10 container mx-auto px-4 text-center">
           <AnimatedSection>
             <p className="text-primary-foreground/60 font-semibold tracking-[0.3em] uppercase text-xs mb-4">
