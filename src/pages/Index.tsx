@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Box, Home, HardHat } from "lucide-react";
+import BimWireframeOverlay from "@/components/BimWireframeOverlay";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
