@@ -74,7 +74,7 @@ const Index = () => {
               David Badin · Epure
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
-              Bim Modeleur<br />& Expert Agencement
+              BIM Modeleur & Expert Agencement
             </h1>
             <p className="mt-6 text-primary-foreground/80 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed whitespace-nowrap">
               De la modélisation numérique à la réalisation de vos espaces.
