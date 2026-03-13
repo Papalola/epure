@@ -32,7 +32,7 @@ const Portfolio = () => (
                   <img
                     src={p.src}
                     alt={p.category}
-                    className="w-full h-full object-cover"
+                   className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="p-4">
