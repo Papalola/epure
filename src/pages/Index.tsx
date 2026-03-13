@@ -3,7 +3,7 @@ import { ArrowRight, Box, Home, HardHat } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
-import heroBg from "@/assets/hero-bg-new.png";
+import heroBg from "@/assets/hero-bg-new.svg";
 
 const services = [
   {
@@ -76,7 +76,7 @@ const Index = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
               Bim Modeleur<br />& Expert Agencement
             </h1>
-            <p className="mt-6 text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            <p className="mt-6 text-primary-foreground/80 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed"
               De la modélisation numérique à la réalisation de vos espaces.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
