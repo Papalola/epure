@@ -95,7 +95,7 @@ const Contact = () => {
                 </AnimatedSection>
               ))}
               <AnimatedSection>
-                <div className="border border-border bg-white p-6 mt-8">
+                <div className="border border-border bg-gray-50 p-6 mt-8">
                   <p className="text-sm font-bold text-card-foreground">Disponibilité</p>
                   <p className="text-sm mt-1 text-card-foreground/70">
                     Missions ponctuelles ou régulières · Télétravail ou sur site
@@ -106,7 +106,7 @@ const Contact = () => {
 
             {/* Form */}
             <AnimatedSection className="lg:col-span-3">
-              <div className="border border-border bg-white p-8">
+              <div className="border border-border bg-gray-50 p-8">
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
