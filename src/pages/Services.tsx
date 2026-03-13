@@ -65,7 +65,7 @@ const Services = () => (
           </AnimatedSection>
 
           <AnimatedSection delay={0.15}>
-            <div className="border border-border bg-white p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
+            <div className="border border-border bg-gray-50 p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
               <Home className="text-card-foreground mb-4" size={32} strokeWidth={1} />
               <h2 className="text-2xl font-bold text-card-foreground mb-6 tracking-wide">Expert Agencement</h2>
               <ul className="space-y-2">
