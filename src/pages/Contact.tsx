@@ -17,7 +17,12 @@ const contactSchema = z.object({
 const contactInfo = [
   { icon: Phone, label: "Téléphone", value: "06 88 81 30 86", href: "tel:0688813086" },
   { icon: Mail, label: "Email", value: "contact@epure-db.com", href: "mailto:contact@epure-db.com" },
-  { icon: MapPin, label: "Localisation", value: "Pomeys (69590) – Rhône", sub: "Interventions région Auvergne-Rhône-Alpes et au-delà" },
+  {
+    icon: MapPin,
+    label: "Localisation",
+    value: "Rhône-Alpes",
+    sub: "Interventions région Auvergne-Rhône-Alpes\net au-delà",
+  },
 ];
 
 const Contact = () => {
@@ -59,7 +64,8 @@ const Contact = () => {
               Contact
             </h1>
             <p className="text-muted-foreground text-center max-w-lg mx-auto mb-20">
-              Une question ? Un projet ? Je suis disponible pour échanger sur vos besoins.
+              Une question ? Un projet ?<br />
+              Je suis disponible pour échanger sur vos besoins.
             </p>
           </AnimatedSection>
 
@@ -81,13 +87,15 @@ const Contact = () => {
                       ) : (
                         <p className="font-bold text-foreground">{c.value}</p>
                       )}
-                      {c.sub && <p className="text-xs mt-1 text-muted-foreground">{c.sub}</p>}
+                      {c.sub && (
+                        <p className="text-xs mt-1 text-muted-foreground whitespace-pre-line">{c.sub}</p>
+                      )}
                     </div>
                   </div>
                 </AnimatedSection>
               ))}
               <AnimatedSection>
-                <div className="border border-border bg-card p-6 mt-8">
+                <div className="border border-border bg-white p-6 mt-8">
                   <p className="text-sm font-bold text-card-foreground">Disponibilité</p>
                   <p className="text-sm mt-1 text-card-foreground/70">
                     Missions ponctuelles ou régulières · Télétravail ou sur site
@@ -98,7 +106,7 @@ const Contact = () => {
 
             {/* Form */}
             <AnimatedSection className="lg:col-span-3">
-              <div className="border border-border bg-card p-8">
+              <div className="border border-border bg-white p-8">
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
