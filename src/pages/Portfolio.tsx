@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const plans = [
-  { src: "/epure/plans/plan_coupe_rdc.pdf", category: "BIM" },
-  { src: "/epure/plans/plan_detail_appartement.pdf", category: "BIM" },
-  { src: "/epure/plans/plan_masse_afpa.pdf", category: "BIM" },
-  { src: "/epure/plans/plan_elevations.pdf", category: "Plans" },
+  { src: "/epure/plans/plan_coupe_rdc.pdf", category: "BIM", label: "Plan de coupe RDC" },
+  { src: "/epure/plans/plan_detail_appartement.pdf", category: "BIM", label: "Détail appartement" },
+  { src: "/epure/plans/plan_masse_afpa.pdf", category: "BIM", label: "Plan masse" },
+  { src: "/epure/plans/plan_elevations.pdf", category: "Plans", label: "Élévations" },
 ];
 
 const Portfolio = () => (
@@ -27,15 +27,15 @@ const Portfolio = () => (
           {plans.map((p, i) => (
             <AnimatedSection key={p.src} delay={i * 0.08}>
               <div className="border border-border bg-gray-50 overflow-hidden transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
-                <div className="aspect-square overflow-hidden">
-                  <iframe
-                    src={p.src}
-                    className="w-full h-full pointer-events-none"
-                    title={p.category}
-                  />
-                </div>
-                <div className="p-4">
+                <a href={p.src} target="_blank" rel="noopener noreferrer">
+                  <div className="aspect-square flex flex-col items-center justify-center gap-4 bg-gray-50 hover:bg-gray-100 transition-colors cursor-pointer">
+                    <FileText className="text-foreground/30" size={64} strokeWidth={1} />
+                    <span className="text-sm font-bold text-foreground/50 uppercase tracking-widest">Voir le plan</span>
+                  </div>
+                </a>
+                <div className="p-4 flex items-center justify-between">
                   <span className="text-xs font-bold text-muted-foreground uppercase tracking-wider">{p.category}</span>
+                  <span className="text-xs text-muted-foreground">{p.label}</span>
                 </div>
               </div>
             </AnimatedSection>
