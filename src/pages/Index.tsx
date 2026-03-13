@@ -3,7 +3,7 @@ import { ArrowRight, Box, Home, HardHat } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
-import heroBg from "@/assets/hero-bg-new.svg";
+import heroBg from "@/assets/hero-bg-new.png";
 
 const services = [
   {
