@@ -74,10 +74,10 @@ const Index = () => {
               David Badin · Epure
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
-              BIM Modeleur<br />& Expert Agencement
+              Bim Modeleur<br />& Expert Agencement
             </h1>
             <p className="mt-6 text-primary-foreground/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-              De la conception technique à la réalisation de vos espaces
+              De la modélisation numérique à la réalisation de vos espaces.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="border border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground hover:text-primary w-full sm:w-auto">
@@ -104,14 +104,14 @@ const Index = () => {
               Mes services
             </h2>
             <p className="text-muted-foreground text-center max-w-lg mx-auto mb-16">
-              Une offre complète de la modélisation BIM à l'expertise terrain
+              De la maquette BIM à l'expertise terrain
             </p>
           </AnimatedSection>
 
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, i) => (
               <AnimatedSection key={service.title} delay={i * 0.15}>
-                <div className="border border-border bg-card p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
+                <div className="border border-border bg-white p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
                   <service.icon className="text-card-foreground mb-4" size={36} strokeWidth={1} />
                   <h3 className="text-2xl font-bold text-card-foreground mb-4 tracking-wide">
                     {service.title}
@@ -151,7 +151,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {advantages.map((adv, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="border border-border bg-card p-6 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
+                <div className="border border-border bg-white p-6 transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
                   <p className="text-card-foreground font-bold text-sm mb-2 tracking-wide">{adv.title}</p>
                   <p className="text-card-foreground/70 text-sm leading-relaxed">{adv.desc}</p>
                 </div>
