@@ -5,11 +5,11 @@ import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const plans = [
-  { src: "/epure/plans/Capture 1.PNG", category: "BIM" },
-  { src: "/epure/plans/Capture 2.PNG", category: "BIM" },
-  { src: "/epure/plans/Capture 3.PNG", category: "BIM" },
-  { src: "/epure/plans/Capture 4.PNG", category: "Plans" },
-  { src: "/epure/plans/Capture 5.PNG", category: "Plans" },
+  { src: "/epure/plans/capture1.png", category: "BIM" },
+  { src: "/epure/plans/capture2.png", category: "BIM" },
+  { src: "/epure/plans/capture3.png", category: "BIM" },
+  { src: "/epure/plans/capture4.png", category: "Plans" },
+  { src: "/epure/plans/capture5.png", category: "Plans" },
 ];
 
 const Portfolio = () => (
