@@ -8,7 +8,7 @@ const Footer = () => (
       <div>
         <img src={logoEpureWhite} alt="Épure" className="h-20 mb-4 opacity-80" />
         <p className="text-sm leading-relaxed text-primary-foreground/50">
-          Bim Modeleur & Expert Agencement.
+          BIM Modeleur & Expert Agencement.
           <br />25 ans d'expérience au service de vos projets.
         </p>
       </div>
