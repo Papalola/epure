@@ -44,15 +44,15 @@ const Services = () => (
             Mes services
           </h1>
           <p className="text-muted-foreground text-center max-w-lg mx-auto mb-20">
-            Une offre complète de la modélisation BIM à l'expertise terrain
+            De la maquette BIM à l'expertise terrain
           </p>
         </AnimatedSection>
 
         <div className="grid md:grid-cols-2 gap-8 mb-10">
           <AnimatedSection>
-            <div className="border border-border bg-card p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
+            <div className="border border-border bg-white p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
               <Box className="text-card-foreground mb-4" size={32} strokeWidth={1} />
-              <h2 className="text-2xl font-bold text-card-foreground mb-6 tracking-wide">BIM Modeleur</h2>
+              <h2 className="text-2xl font-bold text-card-foreground mb-6 tracking-wide">Bim Modeleur</h2>
               <ul className="space-y-2">
                 {bimServices.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-card-foreground/70 text-sm">
@@ -65,7 +65,7 @@ const Services = () => (
           </AnimatedSection>
 
           <AnimatedSection delay={0.15}>
-            <div className="border border-border bg-card p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
+            <div className="border border-border bg-white p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
               <Home className="text-card-foreground mb-4" size={32} strokeWidth={1} />
               <h2 className="text-2xl font-bold text-card-foreground mb-6 tracking-wide">Expert Agencement</h2>
               <ul className="space-y-2">
