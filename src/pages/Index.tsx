@@ -67,7 +67,7 @@ const Index = () => {
         className="relative min-h-[85vh] flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
-       <div className="absolute inset-0 bg-primary/50" />
+       <div className="absolute inset-0 bg-primary/70" />
         <div className="relative z-10 container mx-auto px-4 text-center">
           <AnimatedSection>
             <p className="text-primary-foreground/60 font-semibold tracking-[0.3em] uppercase text-xs mb-4">
