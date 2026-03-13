@@ -8,7 +8,7 @@ const Footer = () => (
       <div>
         <img src={logoEpureWhite} alt="Épure" className="h-20 mb-4 opacity-80" />
         <p className="text-sm leading-relaxed text-primary-foreground/50">
-          Bureau d'études & Expertise Agencement.
+          Bim Modeleur & Expert Agencement.
           <br />25 ans d'expérience au service de vos projets.
         </p>
       </div>
@@ -32,7 +32,7 @@ const Footer = () => (
             <Mail size={16} strokeWidth={1} /> contact@epure-db.com
           </a>
           <span className="flex items-center gap-2">
-            <MapPin size={16} strokeWidth={1} /> Pomeys (69590) – Rhône
+            <MapPin size={16} strokeWidth={1} /> Rhône-Alpes
           </span>
         </div>
       </div>
