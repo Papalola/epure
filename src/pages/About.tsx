@@ -8,9 +8,9 @@ import portrait from "@/assets/portrait-david.png";
 const parcours = [
   { year: "1997", title: "Apprenti · Ébéniste", desc: "Les mains dans la matière. La précision comme culture." },
   { year: "2004", title: "Menuisier Agenceur", desc: "De la pièce unique au projet complet. Conception et pose." },
-  { year: "2011", title: "Responsable Production", desc: "Chef d'orchestre entre artisans, architectes et maîtres d'ouvrage." },
+  { year: "2011", title: "Responsable Production", desc: "Coordination entre artisans, architectes et maîtres d'ouvrage." },
   { year: "2025", title: "BIM Modeleur · Titre Professionnel", desc: "Le numérique au service du terrain." },
-  { year: "2026", title: "Epure", desc: "L'indépendance. Bureau d'études & Expert Agencement. Le projet abouti." },
+  { year: "2026", title: "Epure", desc: "L'indépendance. Bim Modeleur & Expert Agencement. Le projet abouti." },
 ];
 
 const certifications = [
@@ -40,29 +40,29 @@ const About = () => (
         {/* Portrait + intro */}
         <AnimatedSection>
           <div className="flex flex-col md:flex-row items-center gap-12 mb-20">
-            <div className="w-48 h-48 flex-shrink-0">
-              <img src={portrait} alt="David Badin" className="w-full h-full object-cover object-top" />
+            <div className="flex-shrink-0">
+              <img src={portrait} alt="David Badin" className="w-auto object-cover object-top" style={{ height: "160px" }} />
             </div>
-            <div className="text-foreground text-lg leading-relaxed max-w-2xl">
+            <div className="text-foreground text-lg leading-relaxed max-w-2xl space-y-1">
               <p>25 ans sur le terrain.</p>
               <p>De la menuiserie à l'ébénisterie, de l'agencement à la modélisation BIM.</p>
               <p>Je parle la langue des artisans et celle des bureaux d'études.</p>
-              <p className="font-bold mt-2">Epure, c'est cette double expertise au service de vos projets.</p>
+              <p className="font-bold mt-3">Epure, c'est cette double expertise au service de vos projets.</p>
             </div>
           </div>
         </AnimatedSection>
 
         {/* Value box */}
         <AnimatedSection>
-          <div className="border border-border bg-card p-10 mb-20">
+          <div className="border border-border bg-white p-10 mb-20">
             <ul className="space-y-3 mb-8">
               <li className="flex items-start gap-3 text-card-foreground">
                 <span className="mt-2 block w-1.5 h-1.5 bg-card-foreground flex-shrink-0" />
-                Un BIM Modeleur qui a fabriqué et posé ce qu'il modélise
+                Un Bim Modeleur capable de modéliser et coordonner
               </li>
               <li className="flex items-start gap-3 text-card-foreground">
                 <span className="mt-2 block w-1.5 h-1.5 bg-card-foreground flex-shrink-0" />
-                Un expert agencement capable de modéliser et coordonner
+                Un expert agencement qui a fabriqué et posé ce qu'il dessine
               </li>
               <li className="flex items-start gap-3 text-card-foreground">
                 <span className="mt-2 block w-1.5 h-1.5 bg-card-foreground flex-shrink-0" />
@@ -130,7 +130,7 @@ const About = () => (
             </div>
             <div className="grid sm:grid-cols-2 gap-3">
               {certifications.map((c) => (
-                <div key={c} className="border border-border bg-card px-5 py-3 text-sm text-card-foreground">
+                <div key={c} className="border border-border bg-white px-5 py-3 text-sm text-card-foreground">
                   {c}
                 </div>
               ))}
