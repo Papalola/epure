@@ -5,10 +5,10 @@ import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const plans = [
-  { src: "/plans/plan_coupe_rdc.pdf", title: "Plan de coupe RDC — Projet Beauregard", category: "BIM" },
-  { src: "/plans/plan_detail_appartement.pdf", title: "Détail appartement — Projet Beauregard", category: "BIM" },
-  { src: "/plans/plan_masse_afpa.pdf", title: "Plan masse — Projet AFPA", category: "BIM" },
-  { src: "/plans/plan_elevations.pdf", title: "Élévations — Projet Beauregard", category: "Plans" },
+  { src: "/epure/plans/plan_coupe_rdc.pdf", category: "BIM" },
+  { src: "/epure/plans/plan_detail_appartement.pdf", category: "BIM" },
+  { src: "/epure/plans/plan_masse_afpa.pdf", category: "BIM" },
+  { src: "/epure/plans/plan_elevations.pdf", category: "Plans" },
 ];
 
 const Portfolio = () => (
@@ -25,18 +25,17 @@ const Portfolio = () => (
         </AnimatedSection>
         <div className="grid md:grid-cols-2 gap-6 mb-16">
           {plans.map((p, i) => (
-            <AnimatedSection key={p.title} delay={i * 0.08}>
-              <div className="border border-border bg-white overflow-hidden transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
-                <div className="aspect-[4/3] overflow-hidden bg-gray-50">
+            <AnimatedSection key={p.src} delay={i * 0.08}>
+              <div className="border border-border bg-gray-50 overflow-hidden transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
+                <div className="aspect-square overflow-hidden">
                   <iframe
                     src={p.src}
                     className="w-full h-full pointer-events-none"
-                    title={p.title}
+                    title={p.category}
                   />
                 </div>
-                <div className="p-5">
+                <div className="p-4">
                   <span className="text-xs font-bold text-muted-foreground uppercase tracking-wider">{p.category}</span>
-                  <h3 className="text-lg font-bold text-card-foreground mt-2">{p.title}</h3>
                 </div>
               </div>
             </AnimatedSection>
