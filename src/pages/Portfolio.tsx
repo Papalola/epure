@@ -27,18 +27,12 @@ const Portfolio = () => (
         <div className="grid md:grid-cols-2 gap-6 mb-16">
           {plans.map((p, i) => (
             <AnimatedSection key={p.src} delay={i * 0.08}>
-              <div className="border border-border bg-gray-50 overflow-hidden transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
+              <div className="border border-border bg-white overflow-hidden transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
                 <div className="overflow-hidden bg-white">
-  <img
-    src={p.src}
-    alt={p.category}
-    className="w-full h-auto object-contain"
-  />
-</div>
                   <img
                     src={p.src}
                     alt={p.category}
-                   className="w-full h-full object-contain"
+                    className="w-full h-auto object-contain"
                   />
                 </div>
                 <div className="p-4">
