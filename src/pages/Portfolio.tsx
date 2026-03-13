@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ImageIcon } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 
-const placeholders = [
-  { title: "Collaboration multi-disciplinaire – Projet tertiaire", category: "BIM" },
-  { title: "Menuiserie d'art – Réalisation terrain", category: "Terrain" },
-  { title: "Synthèse technique – Multi-corps d'état", category: "Plans" },
+const plans = [
+  { src: "/plans/plan_coupe_rdc.pdf", title: "Plan de coupe RDC — Projet Beauregard", category: "BIM" },
+  { src: "/plans/plan_detail_appartement.pdf", title: "Détail appartement — Projet Beauregard", category: "BIM" },
+  { src: "/plans/plan_masse_afpa.pdf", title: "Plan masse — Projet AFPA", category: "BIM" },
+  { src: "/plans/plan_elevations.pdf", title: "Élévations — Projet Beauregard", category: "Plans" },
 ];
 
 const Portfolio = () => (
@@ -22,13 +23,16 @@ const Portfolio = () => (
             Réalisations
           </h1>
         </AnimatedSection>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {placeholders.map((p, i) => (
+        <div className="grid md:grid-cols-2 gap-6 mb-16">
+          {plans.map((p, i) => (
             <AnimatedSection key={p.title} delay={i * 0.08}>
-              <div className="border border-border bg-card overflow-hidden transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
-                <div className="aspect-[4/3] bg-card flex items-center justify-center">
-                  <ImageIcon className="text-muted-foreground" size={48} />
+              <div className="border border-border bg-white overflow-hidden transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
+                <div className="aspect-[4/3] overflow-hidden bg-gray-50">
+                  <iframe
+                    src={p.src}
+                    className="w-full h-full pointer-events-none"
+                    title={p.title}
+                  />
                 </div>
                 <div className="p-5">
                   <span className="text-xs font-bold text-muted-foreground uppercase tracking-wider">{p.category}</span>
@@ -38,7 +42,6 @@ const Portfolio = () => (
             </AnimatedSection>
           ))}
         </div>
-
         <AnimatedSection>
           <div className="text-center">
             <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 w-full sm:w-auto">
