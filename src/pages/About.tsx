@@ -9,7 +9,7 @@ const parcours = [
   { year: "1997", title: "Apprenti Ébéniste", desc: "Les mains dans la matière. La précision comme culture." },
   { year: "2004", title: "Menuisier Agenceur", desc: "De la pièce unique au projet complet. Conception et pose." },
   { year: "2011", title: "Responsable de Projet Agencement", desc: "Planification et coordination. Entre artisans, architectes et maîtres d'ouvrage." },
-  { year: "2025", title: "BIM Modeleur · Titre Professionnel", desc: "Le numérique au service du terrain." },
+  { year: "2025", title: "BIM Modeleur", desc: "Le numérique au service du terrain." },
   { year: "2026", title: "Epure", desc: "L'indépendance. Bim Modeleur & Expert Agencement. Le projet abouti." },
 ];
 
