@@ -15,7 +15,7 @@ const Footer = () => {
             Dessinateur-Projeteur<br />
             Expert Agencement
           </p>
-          <p className="text-sm text-primary-foreground/50 mt-auto pt-8">
+          <p className="text-sm text-primary-foreground/50 mt-6">
             25 ans d'expérience au service de vos projets.
           </p>
         </div>
@@ -48,8 +48,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
-      {/* Bouton scroll to top + ligne de séparation */}
       <div className="container mx-auto px-4 pb-8 border-t border-primary-foreground/20 pt-8 flex flex-col items-center gap-6">
         <button onClick={scrollToTop} className="w-10 h-10 rounded-full border border-primary-foreground/50 flex items-center justify-center hover:bg-primary-foreground/10 transition-colors" aria-label="Remonter en haut">
           <ArrowUp size={18} className="text-primary-foreground/50" />
