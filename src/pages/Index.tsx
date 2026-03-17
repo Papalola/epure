@@ -43,19 +43,24 @@ const services = [
 const advantages = [
   {
     title: "Double compétence rare",
-    desc: "BIM Modeleur + 25 ans terrain. Je ne fais pas que dessiner des plans — je comprends ce que je dessine.",
+    lines: [
+      "BIM Modeleur + 25 ans terrain.",
+      "Je ne fais pas que dessiner des plans — je comprends ce que je dessine.",
+    ],
   },
   {
     title: "Solutions concrètes",
-    desc: "Je comprends les contraintes de réalisation. Mes propositions sont techniques, réalistes et réalisables.",
+    lines: [
+      "Je comprends les contraintes de réalisation.",
+      "Mes propositions sont techniques, réalistes et réalisables.",
+    ],
   },
   {
     title: "Réactivité & flexibilité",
-    desc: "Missions courtes ou longues. Télétravail privilégié, déplacements selon projet.",
-  },
-  {
-    title: "Basé en Rhône-Alpes (69)",
-    desc: "Déplacements selon projet.",
+    lines: [
+      "Missions courtes ou longues.",
+      "Télétravail privilégié, déplacements selon projet.",
+    ],
   },
 ];
 
@@ -138,22 +143,24 @@ const Index = () => {
       </section>
 
       {/* Why choose me */}
-      <section className="py-24 bg-background">
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-4">
           <AnimatedSection>
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
               Avantages
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground text-center mb-10">
               Pourquoi me choisir ?
             </h2>
           </AnimatedSection>
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {advantages.map((adv, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="border border-border bg-gray-50 p-6 transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
-                  <p className="text-card-foreground font-bold text-sm mb-2 tracking-wide">{adv.title}</p>
-                  <p className="text-card-foreground/70 text-sm leading-relaxed">{adv.desc}</p>
+                <div className="border border-border bg-gray-50 p-6 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
+                  <p className="text-card-foreground font-bold text-sm mb-3 tracking-wide">{adv.title}</p>
+                  {adv.lines.map((line, j) => (
+                    <p key={j} className="text-card-foreground/70 text-sm leading-relaxed">{line}</p>
+                  ))}
                 </div>
               </AnimatedSection>
             ))}
