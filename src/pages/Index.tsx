@@ -150,7 +150,7 @@ const Index = () => {
       </section>
 
       {/* Why choose me */}
-      <section className="pt-4 pb-16 bg-background">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <AnimatedSection>
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
@@ -164,9 +164,9 @@ const Index = () => {
             {advantages.map((adv, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
                 <div className="border border-border bg-gray-50 p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
-                  <p className="text-card-foreground font-bold text-xs mb-3 tracking-wide uppercase">{adv.title}</p>
+                  <p className="text-card-foreground font-bold text-sm mb-3 tracking-wide">{adv.title}</p>
                   {adv.lines.map((line, j) => (
-                    <p key={j} className="text-card-foreground/70 text-xs leading-relaxed">{line}</p>
+                    <p key={j} className="text-card-foreground/70 text-sm leading-relaxed">{line}</p>
                   ))}
                 </div>
               </AnimatedSection>
