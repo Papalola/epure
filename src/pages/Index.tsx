@@ -43,14 +43,14 @@ const advantages = [
     title: "Double compétence rare",
     lines: [
       "BIM Modeleur + 25 ans terrain.",
-      "Je ne fais pas que dessiner des plans — je comprends ce que je dessine.",
+      "Je comprends ce que je dessine.",
     ],
   },
   {
     title: "Solutions concrètes",
     lines: [
-      "Je comprends les contraintes de réalisation.",
-      "Mes propositions sont techniques, réalistes et réalisables.",
+      "Propositions techniques, réalistes,",
+      "réalisables — ancrées dans le terrain.",
     ],
   },
   {
@@ -147,7 +147,7 @@ const Index = () => {
       </section>
 
       {/* Why choose me */}
-      <section className="py-8 bg-background">
+      <section className="pt-4 pb-16 bg-background">
         <div className="container mx-auto px-4">
           <AnimatedSection>
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
