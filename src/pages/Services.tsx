@@ -1,31 +1,36 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Box, Home } from "lucide-react";
+import { ArrowRight, Box, Home, Ruler } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const bimServices = [
-  "Modélisation 3D BIM (Revit, AutoCAD)",
-  "Maquettes numériques architecturales",
-  "Mise en plan depuis maquette BIM",
-  "Adaptation et modification de plans existants",
-  "Plans de détails techniques",
+  "Modélisation 3D BIM — maquettes architecturales (Revit, AutoCAD)",
+  "Plans d'exécution et mise en plan depuis maquette BIM",
   "Gestion et mise à jour de maquettes existantes",
   "Détection de conflits inter-corps d'état",
-  "Synthèse technique",
-  "Export fichiers IFC",
-  "Extraction de métrés et quantitatifs",
-  "Assistance MOE BIM (mise à jour maquette, vérification modèles, coordination réunions)",
+  "Synthèse technique multi-lots",
+  "Export fichiers IFC et extraction de métrés",
+  "Production des pièces graphiques pour permis de construire (PC / PCMI)",
+  "Assistance MOE BIM (coordination, vérification modèles, réunions)",
+];
+
+const dessinateurServices = [
+  "Plans d'exécution tous corps d'état (AutoCAD)",
+  "Plans de détails techniques et coupes constructives",
+  "Dossiers graphiques pour permis de construire (PC / PCMI)",
+  "Mise en plan depuis relevés terrain ou données existantes",
+  "Pièces graphiques pour dossiers de consultation entreprises (DCE)",
+  "Plans conformes à exécution (DOE)",
 ];
 
 const agencementServices = [
   "Études d'aménagement intérieur",
   "Optimisation des volumes et espaces",
   "Mobilier et menuiserie sur mesure (de l'étude à la pose)",
-  "Détails techniques d'exécution et plans d'atelier",
+  "Détails techniques d'exécution et plans d'atelier (AutoCAD)",
   "Recherche de solutions constructives",
-  "Optimisation des méthodes de fabrication",
-  "Suivi de réalisation",
+  "Conseil en optimisation des méthodes de fabrication",
   "Interface chantier / bureau d'études",
   "Assistance MOE Agencement (mise à jour plans, préparation dossiers entreprises, suivi chantier)",
 ];
@@ -48,12 +53,12 @@ const Services = () => (
           </p>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-10">
+        <div className="grid md:grid-cols-3 gap-8 mb-10 items-stretch">
           <AnimatedSection>
-            <div className="border border-border bg-gray-50 p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
+            <div className="border border-border bg-gray-50 p-8 h-full flex flex-col transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
               <Box className="text-card-foreground mb-4" size={32} strokeWidth={1} />
-              <h2 className="text-2xl font-bold text-card-foreground mb-6 tracking-wide">Bim Modeleur</h2>
-              <ul className="space-y-2">
+              <h2 className="text-2xl font-bold text-card-foreground mb-6 tracking-wide">BIM Modeleur</h2>
+              <ul className="space-y-2 flex-1">
                 {bimServices.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-card-foreground/70 text-sm">
                     <span className="mt-1.5 block w-1 h-1 bg-card-foreground flex-shrink-0" />
@@ -65,10 +70,25 @@ const Services = () => (
           </AnimatedSection>
 
           <AnimatedSection delay={0.15}>
-            <div className="border border-border bg-gray-50 p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
+            <div className="border border-border bg-gray-50 p-8 h-full flex flex-col transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
+              <Ruler className="text-card-foreground mb-4" size={32} strokeWidth={1} />
+              <h2 className="text-2xl font-bold text-card-foreground mb-6 tracking-wide">Dessinateur-Projeteur</h2>
+              <ul className="space-y-2 flex-1">
+                {dessinateurServices.map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-card-foreground/70 text-sm">
+                    <span className="mt-1.5 block w-1 h-1 bg-card-foreground flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection delay={0.3}>
+            <div className="border border-border bg-gray-50 p-8 h-full flex flex-col transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
               <Home className="text-card-foreground mb-4" size={32} strokeWidth={1} />
               <h2 className="text-2xl font-bold text-card-foreground mb-6 tracking-wide">Expert Agencement</h2>
-              <ul className="space-y-2">
+              <ul className="space-y-2 flex-1">
                 {agencementServices.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-card-foreground/70 text-sm">
                     <span className="mt-1.5 block w-1 h-1 bg-card-foreground flex-shrink-0" />
