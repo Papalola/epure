@@ -11,11 +11,10 @@ const Footer = () => {
         <div className="flex flex-col">
           <img src={logoEpureWhite} alt="Epure" className="h-20 mb-4 opacity-80 self-start -ml-1" />
           <p className="text-sm text-primary-foreground/50 leading-relaxed">
-            BIM Modeleur<br />
-            Dessinateur-Projeteur<br />
+            BIM Modeleur / Dessinateur-Projeteur<br />
             Expert Agencement
           </p>
-          <p className="text-sm text-primary-foreground/50 mt-6">
+          <p className="text-sm text-primary-foreground/50 mt-4">
             25 ans d'expérience au service de vos projets.
           </p>
         </div>
