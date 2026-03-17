@@ -4,9 +4,9 @@ import logoEpureWhite from "@/assets/logo-epure-white.svg";
 
 const Footer = () => (
   <footer className="py-16 bg-primary text-primary-foreground">
-    <div className="container mx-auto px-4 grid md:grid-cols-3 gap-12">
-      <div>
-        <img src={logoEpureWhite} alt="Epure" className="h-24 mb-6 opacity-80" />
+    <div className="container mx-auto px-4 grid md:grid-cols-3 gap-12 items-start">
+      <div className="flex flex-col">
+        <img src={logoEpureWhite} alt="Epure" className="h-32 mb-2 opacity-80 self-start" />
         <p className="text-sm text-primary-foreground/50 leading-relaxed">
           BIM Modeleur<br />
           Dessinateur-Projeteur<br />
