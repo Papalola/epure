@@ -43,21 +43,24 @@ const advantages = [
     title: "Double compétence rare",
     lines: [
       "BIM Modeleur + 25 ans terrain.",
-      "Je ne fais pas que dessiner des plans — je comprends ce que je dessine.",
+      "Je ne fais pas que dessiner des plans —",
+      "je comprends ce que je dessine.",
     ],
   },
   {
     title: "Solutions concrètes",
     lines: [
       "Je comprends les contraintes de réalisation.",
-      "Mes propositions sont techniques, réalistes et réalisables.",
+      "Mes propositions sont techniques,",
+      "réalistes et réalisables.",
     ],
   },
   {
     title: "Réactivité & flexibilité",
     lines: [
       "Missions courtes ou longues.",
-      "Télétravail privilégié, déplacements selon projet.",
+      "Télétravail privilégié,",
+      "déplacements selon projet.",
     ],
   },
 ];
@@ -76,8 +79,8 @@ const Index = () => {
             <p className="text-primary-foreground/60 font-semibold tracking-[0.3em] uppercase text-xs mb-4">
               David Badin · Epure
             </p>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
-              BIM Modeleur / Dessinateur-Projeteur<br className="hidden md:block" /> & Expert Agencement
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight">
+              BIM Modeleur / Dessinateur-Projeteur & Expert Agencement
             </h1>
             <p className="mt-6 text-primary-foreground/80 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
               De la modélisation numérique à la réalisation de vos espaces.
