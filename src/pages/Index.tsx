@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Box, Home, HardHat, PenTool } from "lucide-react";
+import { ArrowRight, Box, Home, HardHat, Ruler } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -11,24 +11,18 @@ const services = [
     title: "BIM Modeleur",
     items: [
       "Modélisation 3D BIM — maquettes architecturales (Revit, AutoCAD)",
-      "Plans d'exécution et mise en plan depuis maquette BIM",
-      "Gestion et mise à jour de maquettes existantes",
       "Détection de conflits inter-corps d'état",
-      "Synthèse technique multi-lots",
       "Export fichiers IFC et extraction de métrés",
-      "Production des pièces graphiques pour permis de construire (PC / PCMI)",
       "Assistance MOE BIM (coordination, vérification modèles, réunions)",
     ],
   },
   {
-    icon: PenTool,
+    icon: Ruler,
     title: "Dessinateur-Projeteur",
     items: [
       "Plans d'exécution tous corps d'état (AutoCAD)",
       "Plans de détails techniques et coupes constructives",
       "Dossiers graphiques pour permis de construire (PC / PCMI)",
-      "Mise en plan depuis relevés terrain ou données existantes",
-      "Pièces graphiques pour dossiers de consultation entreprises (DCE)",
       "Plans conformes à exécution (DOE)",
     ],
   },
@@ -36,13 +30,9 @@ const services = [
     icon: Home,
     title: "Expert Agencement",
     items: [
-      "Études d'aménagement intérieur",
-      "Optimisation des volumes et espaces",
       "Mobilier et menuiserie sur mesure (de l'étude à la pose)",
-      "Détails techniques d'exécution et plans d'atelier (AutoCAD)",
-      "Recherche de solutions constructives",
+      "Détails techniques d'exécution et plans d'atelier",
       "Conseil en optimisation des méthodes de fabrication",
-      "Interface chantier / bureau d'études",
       "Assistance MOE Agencement (mise à jour plans, préparation dossiers entreprises, suivi chantier)",
     ],
   },
@@ -86,9 +76,8 @@ const Index = () => {
             <p className="text-primary-foreground/60 font-semibold tracking-[0.3em] uppercase text-xs mb-4">
               David Badin · Epure
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
-              BIM Modeleur / Dessinateur-Projeteur<br />
-              Expert Agencement
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
+              BIM Modeleur / Dessinateur-Projeteur<br className="hidden md:block" /> & Expert Agencement
             </h1>
             <p className="mt-6 text-primary-foreground/80 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
               De la modélisation numérique à la réalisation de vos espaces.
@@ -122,15 +111,15 @@ const Index = () => {
             </p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 items-stretch">
             {services.map((service, i) => (
               <AnimatedSection key={service.title} delay={i * 0.15}>
-                <div className="border border-border bg-gray-50 p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
+                <div className="border border-border bg-gray-50 p-8 h-full flex flex-col transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
                   <service.icon className="text-card-foreground mb-4" size={36} strokeWidth={1} />
-                  <h3 className="text-2xl font-bold text-card-foreground mb-4 tracking-wide">
+                  <h3 className="text-xl font-bold text-card-foreground mb-4 tracking-wide">
                     {service.title}
                   </h3>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 flex-1">
                     {service.items.map((item) => (
                       <li key={item} className="flex items-start gap-2 text-card-foreground/70 text-sm">
                         <span className="mt-1.5 block w-1 h-1 bg-card-foreground flex-shrink-0" />
@@ -138,6 +127,11 @@ const Index = () => {
                       </li>
                     ))}
                   </ul>
+                  <div className="mt-6">
+                    <Link to="/services" className="text-xs text-card-foreground/50 hover:text-card-foreground underline transition-colors">
+                      Voir toutes les prestations →
+                    </Link>
+                  </div>
                 </div>
               </AnimatedSection>
             ))}
@@ -162,7 +156,7 @@ const Index = () => {
               Pourquoi me choisir ?
             </h2>
           </AnimatedSection>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto items-stretch">
             {advantages.map((adv, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
                 <div className="border border-border bg-gray-50 p-6 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
