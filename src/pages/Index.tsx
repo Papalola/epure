@@ -43,14 +43,14 @@ const advantages = [
     title: "Double compétence rare",
     lines: [
       "BIM Modeleur + 25 ans terrain.",
-      "Je comprends ce que je dessine.",
+      "Je ne fais pas que dessiner des plans — je comprends ce que je dessine.",
     ],
   },
   {
     title: "Solutions concrètes",
     lines: [
-      "Propositions techniques, réalistes,",
-      "réalisables — ancrées dans le terrain.",
+      "Je comprends les contraintes de réalisation.",
+      "Mes propositions sont techniques, réalistes et réalisables.",
     ],
   },
   {
