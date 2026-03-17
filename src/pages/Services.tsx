@@ -35,7 +35,7 @@ const agencementServices = [
   "Assistance MOE Agencement (mise à jour plans, préparation dossiers entreprises, suivi chantier)",
 ];
 
-const sectors = ["BTP", "Architecture", "Agencement"];
+const sectors = ["Architecture", "BTP", "Agencement"];
 
 const Services = () => (
   <Layout>
@@ -54,7 +54,7 @@ const Services = () => (
         </AnimatedSection>
 
         <div className="grid md:grid-cols-3 gap-8 mb-10 items-stretch">
-          <AnimatedSection>
+          <AnimatedSection className="h-full">
             <div className="border border-border bg-gray-50 p-8 h-full flex flex-col transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
               <Box className="text-card-foreground mb-4" size={32} strokeWidth={1} />
               <h2 className="text-2xl font-bold text-card-foreground mb-6 tracking-wide">BIM Modeleur</h2>
@@ -69,7 +69,7 @@ const Services = () => (
             </div>
           </AnimatedSection>
 
-          <AnimatedSection delay={0.15}>
+          <AnimatedSection delay={0.15} className="h-full">
             <div className="border border-border bg-gray-50 p-8 h-full flex flex-col transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
               <Ruler className="text-card-foreground mb-4" size={32} strokeWidth={1} />
               <h2 className="text-2xl font-bold text-card-foreground mb-6 tracking-wide">Dessinateur-Projeteur</h2>
@@ -84,7 +84,7 @@ const Services = () => (
             </div>
           </AnimatedSection>
 
-          <AnimatedSection delay={0.3}>
+          <AnimatedSection delay={0.3} className="h-full">
             <div className="border border-border bg-gray-50 p-8 h-full flex flex-col transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
               <Home className="text-card-foreground mb-4" size={32} strokeWidth={1} />
               <h2 className="text-2xl font-bold text-card-foreground mb-6 tracking-wide">Expert Agencement</h2>
@@ -111,9 +111,11 @@ const Services = () => (
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground mb-6">
               Secteurs d'intervention
             </p>
-            <div className="flex flex-wrap gap-3 justify-center">
+            <div className="grid grid-cols-3 gap-4 max-w-lg mx-auto">
               {sectors.map((s) => (
-                <span key={s} className="border border-border bg-gray-50 px-5 py-2 text-sm text-foreground">{s}</span>
+                <div key={s} className="border border-border bg-gray-50 py-4 text-sm font-semibold text-foreground text-center tracking-wide">
+                  {s}
+                </div>
               ))}
             </div>
           </div>
