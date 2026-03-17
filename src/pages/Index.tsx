@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Box, Home, HardHat } from "lucide-react";
+import { ArrowRight, Box, Home, HardHat, PenTool } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -10,17 +10,26 @@ const services = [
     icon: Box,
     title: "BIM Modeleur",
     items: [
-      "Modélisation 3D BIM (Revit, AutoCAD)",
-      "Maquettes numériques architecturales",
-      "Mise en plan depuis maquette BIM",
-      "Adaptation et modification de plans existants",
-      "Plans de détails techniques",
+      "Modélisation 3D BIM — maquettes architecturales (Revit, AutoCAD)",
+      "Plans d'exécution et mise en plan depuis maquette BIM",
       "Gestion et mise à jour de maquettes existantes",
       "Détection de conflits inter-corps d'état",
-      "Synthèse technique",
-      "Export fichiers IFC",
-      "Extraction de métrés et quantitatifs",
-      "Assistance MOE BIM (mise à jour maquette, vérification modèles, coordination réunions)",
+      "Synthèse technique multi-lots",
+      "Export fichiers IFC et extraction de métrés",
+      "Production des pièces graphiques pour permis de construire (PC / PCMI)",
+      "Assistance MOE BIM (coordination, vérification modèles, réunions)",
+    ],
+  },
+  {
+    icon: PenTool,
+    title: "Dessinateur-Projeteur",
+    items: [
+      "Plans d'exécution tous corps d'état (AutoCAD)",
+      "Plans de détails techniques et coupes constructives",
+      "Dossiers graphiques pour permis de construire (PC / PCMI)",
+      "Mise en plan depuis relevés terrain ou données existantes",
+      "Pièces graphiques pour dossiers de consultation entreprises (DCE)",
+      "Plans conformes à exécution (DOE)",
     ],
   },
   {
@@ -30,10 +39,9 @@ const services = [
       "Études d'aménagement intérieur",
       "Optimisation des volumes et espaces",
       "Mobilier et menuiserie sur mesure (de l'étude à la pose)",
-      "Détails techniques d'exécution et plans d'atelier",
+      "Détails techniques d'exécution et plans d'atelier (AutoCAD)",
       "Recherche de solutions constructives",
-      "Optimisation des méthodes de fabrication",
-      "Suivi de réalisation",
+      "Conseil en optimisation des méthodes de fabrication",
       "Interface chantier / bureau d'études",
       "Assistance MOE Agencement (mise à jour plans, préparation dossiers entreprises, suivi chantier)",
     ],
@@ -79,13 +87,14 @@ const Index = () => {
               David Badin · Epure
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
-              BIM Modeleur · Dessinateur-Projeteur & Expert Agencement
+              BIM Modeleur / Dessinateur-Projeteur<br />
+              Expert Agencement
             </h1>
             <p className="mt-6 text-primary-foreground/80 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
               De la modélisation numérique à la réalisation de vos espaces.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="border border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground hover:text-primary w-full sm:w-auto">
+              <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 w-full sm:w-auto">
                 <Link to="/contact">
                   Me contacter <ArrowRight className="ml-2" size={18} />
                 </Link>
@@ -113,7 +122,7 @@ const Index = () => {
             </p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, i) => (
               <AnimatedSection key={service.title} delay={i * 0.15}>
                 <div className="border border-border bg-gray-50 p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
@@ -179,7 +188,7 @@ const Index = () => {
             <p className="text-primary-foreground/60 mb-8 max-w-md mx-auto">
               Parlons de vos besoins et trouvons la meilleure solution ensemble.
             </p>
-            <Button asChild size="lg" className="border border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground hover:text-primary w-full sm:w-auto">
+            <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 w-full sm:w-auto">
               <Link to="/contact">
                 Me contacter <ArrowRight className="ml-2" size={18} />
               </Link>
