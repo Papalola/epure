@@ -150,7 +150,7 @@ const Index = () => {
       </section>
 
       {/* Why choose me */}
-      <section className="py-16 bg-background">
+      <section className="pt-8 pb-16 bg-background">
         <div className="container mx-auto px-4">
           <AnimatedSection>
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
