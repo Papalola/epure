@@ -7,17 +7,6 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary text-primary-foreground">
-      {/* Bouton scroll to top */}
-      <div className="flex justify-center pt-8">
-        <button
-          onClick={scrollToTop}
-          className="w-12 h-12 rounded-full border border-primary-foreground/30 flex items-center justify-center hover:bg-primary-foreground/10 transition-colors"
-          aria-label="Remonter en haut"
-        >
-          <ArrowUp size={20} className="text-primary-foreground/60" />
-        </button>
-      </div>
-
       <div className="container mx-auto px-4 py-16 grid md:grid-cols-3 gap-12 items-stretch">
         <div className="flex flex-col">
           <img src={logoEpureWhite} alt="Epure" className="h-20 mb-4 opacity-80 self-start -ml-1" />
@@ -59,8 +48,15 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto px-4 pb-8 text-center text-xs border-t border-primary-foreground/20 pt-8 text-primary-foreground/40">
-        © {new Date().getFullYear()} Epure — David BADIN · SIRET : 10209784700010 · <Link to="/mentions-legales" className="underline hover:text-primary-foreground transition-colors">Mentions légales &amp; CGV</Link>
+
+      {/* Bouton scroll to top + ligne de séparation */}
+      <div className="container mx-auto px-4 pb-8 border-t border-primary-foreground/20 pt-8 flex flex-col items-center gap-6">
+        <button onClick={scrollToTop} className="w-10 h-10 rounded-full border border-primary-foreground/50 flex items-center justify-center hover:bg-primary-foreground/10 transition-colors" aria-label="Remonter en haut">
+          <ArrowUp size={18} className="text-primary-foreground/50" />
+        </button>
+        <p className="text-center text-xs text-primary-foreground/40">
+          © {new Date().getFullYear()} Epure — David BADIN · SIRET : 10209784700010 · <Link to="/mentions-legales" className="underline hover:text-primary-foreground transition-colors">Mentions légales &amp; CGV</Link>
+        </p>
       </div>
     </footer>
   );
