@@ -6,9 +6,11 @@ const Footer = () => (
   <footer className="py-16 bg-primary text-primary-foreground">
     <div className="container mx-auto px-4 grid md:grid-cols-3 gap-12">
       <div>
-        <img src={logoEpureWhite} alt="Epure" className="h-16 mb-6 opacity-80" />
-        <p className="text-sm text-primary-foreground/50">
-          BIM Modeleur · Dessinateur-Projeteur &amp; Expert Agencement.
+        <img src={logoEpureWhite} alt="Epure" className="h-24 mb-6 opacity-80" />
+        <p className="text-sm text-primary-foreground/50 leading-relaxed">
+          BIM Modeleur<br />
+          Dessinateur-Projeteur<br />
+          Expert Agencement
         </p>
         <p className="text-sm text-primary-foreground/50 mt-4">
           25 ans d'expérience au service de vos projets.
