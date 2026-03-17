@@ -43,21 +43,24 @@ const advantages = [
     title: "Double compétence rare",
     lines: [
       "BIM Modeleur + 25 ans terrain.",
-      "Je ne fais pas que dessiner des plans — je comprends ce que je dessine.",
+      "Je ne fais pas que dessiner des plans,",
+      "je comprends ce que je dessine.",
     ],
   },
   {
     title: "Solutions concrètes",
     lines: [
       "Je comprends les contraintes de réalisation.",
-      "Mes propositions sont techniques, réalistes et réalisables.",
+      "Mes propositions sont techniques,",
+      "réalistes et réalisables.",
     ],
   },
   {
     title: "Réactivité & flexibilité",
     lines: [
       "Missions courtes ou longues.",
-      "Télétravail privilégié, déplacements selon projet.",
+      "Télétravail privilégié,",
+      "déplacements selon projet.",
     ],
   },
 ];
@@ -157,7 +160,7 @@ const Index = () => {
               Pourquoi me choisir ?
             </h2>
           </AnimatedSection>
-          <div className="grid md:grid-cols-3 gap-6 mx-auto items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mx-auto items-stretch">
             {advantages.map((adv, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
                 <div className="border border-border bg-gray-50 p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
