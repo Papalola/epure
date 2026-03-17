@@ -8,7 +8,7 @@ const Footer = () => (
       <div>
         <img src={logoEpureWhite} alt="Epure" className="h-16 mb-6 opacity-80" />
         <p className="text-sm text-primary-foreground/50">
-          BIM Modeleur · Dessinateur-Projeteur & Expert Agencement.
+          BIM Modeleur · Dessinateur-Projeteur &amp; Expert Agencement.
         </p>
         <p className="text-sm text-primary-foreground/50 mt-4">
           25 ans d'expérience au service de vos projets.
@@ -51,7 +51,7 @@ const Footer = () => (
       </div>
     </div>
     <div className="container mx-auto px-4 mt-12 pt-8 text-center text-xs border-t border-primary-foreground/20 text-primary-foreground/40">
-      © {new Date().getFullYear()} Epure — David BADIN · SIRET : 10209784700010 · <Link to="/mentions-legales" className="underline hover:text-primary-foreground transition-colors">Mentions légales & CGV</Link>
+      © {new Date().getFullYear()} Epure — David BADIN · SIRET : 10209784700010 · <Link to="/mentions-legales" className="underline hover:text-primary-foreground transition-colors">Mentions légales &amp; CGV</Link>
     </div>
   </footer>
 );
