@@ -93,11 +93,11 @@ const Contact = () => {
               <AnimatedSection>
                 <div className="border border-border bg-gray-50 p-6 mt-6">
                   <p className="text-sm font-bold text-card-foreground mb-2">Disponibilité</p>
-                  <p className="text-xs italic text-card-foreground/70">Missions ponctuelles ou régulières</p>
-                  <p className="text-xs italic text-card-foreground/70">Télétravail privilégié</p>
-                  <p className="text-xs italic text-card-foreground/70">Déplacements selon projet</p>
+                  <p className="text-xs text-card-foreground/70">Missions ponctuelles ou régulières</p>
+                  <p className="text-xs text-card-foreground/70">Télétravail privilégié</p>
+                  <p className="text-xs text-card-foreground/70">Déplacements selon projet</p>
                   <p className="text-sm font-bold text-card-foreground mt-3 mb-2">Interventions</p>
-                  <p className="text-xs italic text-card-foreground/70">Région Auvergne-Rhône-Alpes et au-delà</p>
+                  <p className="text-xs text-card-foreground/70">Région Auvergne-Rhône-Alpes et au-delà</p>
                 </div>
               </AnimatedSection>
             </div>
