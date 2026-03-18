@@ -17,18 +17,8 @@ const contactSchema = z.object({
 const contactInfo = [
   { icon: Phone, label: "Téléphone", value: "06 88 81 30 86", href: "tel:0688813086" },
   { icon: Mail, label: "Email", value: "contact@epure-db.com", href: "mailto:contact@epure-db.com" },
-  {
-    icon: MapPin,
-    label: "Localisation",
-    value: "Rhône-Alpes",
-    sub: "Interventions région Auvergne-\nRhône-Alpes et au-delà",
-  },
-  {
-    icon: Linkedin,
-    label: "LinkedIn",
-    value: "Épure — David Badin",
-    href: "https://www.linkedin.com/company/epure-db",
-  },
+  { icon: MapPin, label: "Localisation", value: "Rhône-Alpes" },
+  { icon: Linkedin, label: "LinkedIn", value: "Epure — David Badin", href: "https://www.linkedin.com/company/epure-db" },
 ];
 
 const Contact = () => {
@@ -75,9 +65,10 @@ const Contact = () => {
             </p>
           </AnimatedSection>
 
-          <div className="grid lg:grid-cols-5 gap-12 max-w-5xl mx-auto items-end">
+          <div className="grid lg:grid-cols-5 gap-12 max-w-5xl mx-auto items-stretch">
+
             {/* Colonne gauche */}
-            <div className="lg:col-span-2 flex flex-col justify-between h-full">
+            <div className="lg:col-span-2 flex flex-col justify-between">
               <div className="space-y-8">
                 {contactInfo.map((c) => (
                   <AnimatedSection key={c.label}>
@@ -94,21 +85,20 @@ const Contact = () => {
                         ) : (
                           <p className="font-bold text-foreground">{c.value}</p>
                         )}
-                        {c.sub && (
-                          <p className="text-xs mt-1 text-muted-foreground whitespace-pre-line">{c.sub}</p>
-                        )}
                       </div>
                     </div>
                   </AnimatedSection>
                 ))}
               </div>
 
-              {/* Disponibilité */}
+              {/* Disponibilité en bas */}
               <AnimatedSection>
                 <div className="border border-border bg-gray-50 p-6 mt-8">
                   <p className="text-sm font-bold text-card-foreground">Disponibilité</p>
                   <p className="text-sm mt-1 text-card-foreground/70">
-                    Missions ponctuelles ou régulières<br />Télétravail ou sur site
+                    Missions ponctuelles ou régulières<br />
+                    Télétravail ou sur site<br />
+                    Interventions région Auvergne-Rhône-Alpes et au-delà
                   </p>
                 </div>
               </AnimatedSection>
@@ -116,7 +106,7 @@ const Contact = () => {
 
             {/* Formulaire */}
             <AnimatedSection className="lg:col-span-3">
-              <div className="border border-border bg-gray-50 p-8">
+              <div className="border border-border bg-gray-50 p-8 h-full">
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
@@ -178,6 +168,7 @@ const Contact = () => {
                 </form>
               </div>
             </AnimatedSection>
+
           </div>
         </div>
       </section>
