@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowRight, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import Layout from "@/components/Layout";
@@ -21,7 +21,13 @@ const contactInfo = [
     icon: MapPin,
     label: "Localisation",
     value: "Rhône-Alpes",
-    sub: "Interventions région Auvergne-Rhône-Alpes et au-delà",
+    sub: "Interventions région Auvergne-\nRhône-Alpes et au-delà",
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    value: "Épure — David Badin",
+    href: "https://www.linkedin.com/company/epure-db",
   },
 ];
 
@@ -82,14 +88,14 @@ const Contact = () => {
                       <div>
                         <p className="text-sm mb-1 text-muted-foreground">{c.label}</p>
                         {c.href ? (
-                          <a href={c.href} className="font-bold text-foreground transition-colors hover:opacity-80">
+                          <a href={c.href} target={c.label === "LinkedIn" ? "_blank" : undefined} rel="noreferrer" className="font-bold text-foreground transition-colors hover:opacity-80">
                             {c.value}
                           </a>
                         ) : (
                           <p className="font-bold text-foreground">{c.value}</p>
                         )}
                         {c.sub && (
-                          <p className="text-xs mt-1 text-muted-foreground whitespace-nowrap">{c.sub}</p>
+                          <p className="text-xs mt-1 text-muted-foreground whitespace-pre-line">{c.sub}</p>
                         )}
                       </div>
                     </div>
@@ -97,12 +103,12 @@ const Contact = () => {
                 ))}
               </div>
 
-              {/* Disponibilité aligné en bas */}
+              {/* Disponibilité */}
               <AnimatedSection>
                 <div className="border border-border bg-gray-50 p-6 mt-8">
                   <p className="text-sm font-bold text-card-foreground">Disponibilité</p>
-                  <p className="text-sm mt-1 text-card-foreground/70 whitespace-nowrap">
-                    Missions ponctuelles ou régulières · Télétravail ou sur site
+                  <p className="text-sm mt-1 text-card-foreground/70">
+                    Missions ponctuelles ou régulières<br />Télétravail ou sur site
                   </p>
                 </div>
               </AnimatedSection>
