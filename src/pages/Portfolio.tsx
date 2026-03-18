@@ -7,27 +7,27 @@ import AnimatedSection from "@/components/AnimatedSection";
 
 const projets = [
   {
-    src: "/epure/capture2.png",
-    titre: "CAF / URSSAF — Vue volumétrique",
+    src: "/epure/capture1.png",
+    titre: "CAF / URSSAF — Vue 3D bâtiment URSSAF",
     desc: "Modélisation 3D architecturale — Maquette numérique, équipement public",
   },
   {
-    src: "/epure/capture3.png",
+    src: "/epure/capture2.png",
     titre: "CAF / URSSAF — Plan masse",
-    desc: "Modélisation 3D architecturale — Plan masse et vues axonométriques",
+    desc: "Modélisation 3D architecturale — Plan masse et vues 3D",
   },
   {
-    src: "/epure/capture4.png",
+    src: "/epure/capture3.png",
     titre: "Immeuble collectif — Élévations",
     desc: "Modélisation 3D architecturale — Élévations 4 façades, programme collectif",
   },
   {
-    src: "/epure/capture5.png",
+    src: "/epure/capture4.png",
     titre: "Immeuble collectif — Plan de niveau",
-    desc: "Modélisation 3D architecturale — Plan RDC, 4 logements",
+    desc: "Modélisation 3D architecturale — Plan RDC, programme collectif",
   },
   {
-    src: "/epure/capture1.png",
+    src: "/epure/capture5.png",
     titre: "Logement T2 — Plan de niveau",
     desc: "Modélisation 3D architecturale — Plan RDC, logement individuel",
   },
@@ -42,7 +42,7 @@ const Portfolio = () => {
   return (
     <Layout>
       <section className="py-24 bg-background">
-        <div className="container mx-auto px-4 max-w-3xl">
+        <div className="container mx-auto px-4 max-w-2xl">
           <AnimatedSection>
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
               Projets
@@ -100,7 +100,7 @@ const Portfolio = () => {
                   className={`flex-shrink-0 border-2 transition-all duration-200 overflow-hidden ${
                     i === current ? "border-foreground" : "border-transparent opacity-50 hover:opacity-80"
                   }`}
-                  style={{ width: "88px", aspectRatio: "1.414 / 1" }}
+                  style={{ width: "80px", aspectRatio: "1.414 / 1" }}
                 >
                   <img
                     src={p.src}
