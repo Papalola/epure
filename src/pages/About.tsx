@@ -27,6 +27,8 @@ const certificationsRight = [
 const About = () => (
   <Layout>
     <section className="py-24 bg-background">
+
+      {/* Titre */}
       <div className="container mx-auto px-4 max-w-4xl">
         <AnimatedSection>
           <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
@@ -58,10 +60,12 @@ const About = () => (
             </div>
           </div>
         </AnimatedSection>
+      </div>
 
-        {/* Value box — max-w-5xl pour donner plus de place à la phrase */}
+      {/* Value box — conteneur indépendant plus large */}
+      <div className="container mx-auto px-4 max-w-5xl mb-20">
         <AnimatedSection>
-          <div className="border border-border bg-gray-50 p-8 mb-20 max-w-5xl">
+          <div className="border border-border bg-gray-50 p-8">
             <ul className="space-y-2 mb-5">
               <li className="flex items-start gap-3 text-card-foreground text-sm">
                 <span className="mt-1.5 block w-1.5 h-1.5 bg-card-foreground flex-shrink-0" />
@@ -78,10 +82,14 @@ const About = () => (
             </ul>
             <p className="text-card-foreground font-bold text-sm">Ma valeur ajoutée ?</p>
             <p className="text-card-foreground italic text-sm mt-3">
-              Je ne fais pas que dessiner des plans, je propose des solutions techniques réalistes et réalisables.
+              Je ne fais pas que dessiner des plans,<br />je propose des solutions techniques réalistes et réalisables.
             </p>
           </div>
         </AnimatedSection>
+      </div>
+
+      {/* Parcours + Formations + Bouton */}
+      <div className="container mx-auto px-4 max-w-4xl">
 
         {/* Timeline horizontale */}
         <AnimatedSection>
@@ -92,21 +100,17 @@ const About = () => (
             <div className="overflow-x-auto">
               <div style={{ minWidth: "800px" }}>
 
-                {/* Carrés + ligne */}
                 <div className="flex items-center mb-3">
                   {parcours.map((step, i) => (
                     <div key={step.year + "-dot"} className="flex items-center flex-1">
                       <div className="flex justify-center" style={{ width: "140px" }}>
                         <div className="w-3 h-3 bg-foreground flex-shrink-0" />
                       </div>
-                      {i < parcours.length - 1 && (
-                        <div className="flex-1 h-px bg-border" />
-                      )}
+                      {i < parcours.length - 1 && <div className="flex-1 h-px bg-border" />}
                     </div>
                   ))}
                 </div>
 
-                {/* Années */}
                 <div className="flex items-start mb-2">
                   {parcours.map((step, i) => (
                     <div key={step.year + "-year"} className="flex items-start flex-1">
@@ -118,7 +122,6 @@ const About = () => (
                   ))}
                 </div>
 
-                {/* Titres */}
                 <div className="flex items-start mb-3">
                   {parcours.map((step, i) => (
                     <div key={step.year + "-title"} className="flex items-start flex-1">
@@ -130,7 +133,6 @@ const About = () => (
                   ))}
                 </div>
 
-                {/* Descriptions */}
                 <div className="flex items-start">
                   {parcours.map((step, i) => (
                     <div key={step.year + "-desc"} className="flex items-start flex-1">
@@ -182,6 +184,7 @@ const About = () => (
             </Button>
           </div>
         </AnimatedSection>
+
       </div>
     </section>
   </Layout>
