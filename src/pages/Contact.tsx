@@ -18,7 +18,7 @@ const contactInfo = [
   { icon: Phone, label: "Téléphone", value: "06 88 81 30 86", href: "tel:0688813086" },
   { icon: Mail, label: "Email", value: "contact@epure-db.com", href: "mailto:contact@epure-db.com" },
   { icon: MapPin, label: "Localisation", value: "Rhône-Alpes" },
-  { icon: Linkedin, label: "LinkedIn", value: "Epure — David Badin", href: "https://www.linkedin.com/company/epure-db" },
+  { icon: Linkedin, label: "LinkedIn", value: "Epure — David Badin", href: "https://www.linkedin.com/company/112306131/" },
 ];
 
 const Contact = () => {
@@ -67,9 +67,11 @@ const Contact = () => {
 
           <div className="grid lg:grid-cols-5 gap-12 max-w-5xl mx-auto items-stretch">
 
-            {/* Colonne gauche */}
-            <div className="lg:col-span-2 flex flex-col justify-between">
-              <div className="space-y-8">
+            {/* Colonne gauche — flex column justify-between pour remplir la hauteur */}
+            <div className="lg:col-span-2 flex flex-col justify-between gap-6">
+
+              {/* Infos contact */}
+              <div className="flex flex-col justify-between flex-1 gap-6">
                 {contactInfo.map((c) => (
                   <AnimatedSection key={c.label}>
                     <div className="flex items-start gap-4">
@@ -91,17 +93,17 @@ const Contact = () => {
                 ))}
               </div>
 
-              {/* Disponibilité en bas */}
+              {/* Cadre Disponibilité */}
               <AnimatedSection>
-                <div className="border border-border bg-gray-50 p-6 mt-8">
-                  <p className="text-sm font-bold text-card-foreground">Disponibilité</p>
-                  <p className="text-sm mt-1 text-card-foreground/70">
-                    Missions ponctuelles ou régulières<br />
-                    Télétravail ou sur site<br />
-                    Interventions région Auvergne-Rhône-Alpes et au-delà
-                  </p>
+                <div className="border border-border bg-gray-50 p-6">
+                  <p className="text-sm font-bold text-card-foreground mb-2">Disponibilité</p>
+                  <p className="text-sm text-card-foreground/70">Missions ponctuelles ou régulières</p>
+                  <p className="text-sm text-card-foreground/70">Télétravail ou sur site</p>
+                  <p className="text-sm font-bold text-card-foreground mt-3 mb-2">Interventions</p>
+                  <p className="text-sm text-card-foreground/70">Région Auvergne-Rhône-Alpes et au-delà</p>
                 </div>
               </AnimatedSection>
+
             </div>
 
             {/* Formulaire */}
