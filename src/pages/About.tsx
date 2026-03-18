@@ -60,12 +60,10 @@ const About = () => (
             </div>
           </div>
         </AnimatedSection>
-      </div>
 
-      {/* Value box — conteneur indépendant plus large */}
-      <div className="container mx-auto px-4 max-w-5xl mb-20">
+        {/* Value box — même largeur que le reste */}
         <AnimatedSection>
-          <div className="border border-border bg-gray-50 p-8">
+          <div className="border border-border bg-gray-50 p-8 mb-20">
             <ul className="space-y-2 mb-5">
               <li className="flex items-start gap-3 text-card-foreground text-sm">
                 <span className="mt-1.5 block w-1.5 h-1.5 bg-card-foreground flex-shrink-0" />
@@ -82,14 +80,10 @@ const About = () => (
             </ul>
             <p className="text-card-foreground font-bold text-sm">Ma valeur ajoutée ?</p>
             <p className="text-card-foreground italic text-sm mt-3">
-              Je ne fais pas que dessiner des plans,<br />je propose des solutions techniques réalistes et réalisables.
+              Je ne fais pas que dessiner des plans, je propose des solutions techniques réalistes et réalisables.
             </p>
           </div>
         </AnimatedSection>
-      </div>
-
-      {/* Parcours + Formations + Bouton */}
-      <div className="container mx-auto px-4 max-w-4xl">
 
         {/* Timeline horizontale */}
         <AnimatedSection>
