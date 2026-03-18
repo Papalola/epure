@@ -16,9 +16,9 @@ const parcours = [
 const certifications = [
   "Titre Professionnel BIM Modeleur",
   "Bac Pro CAB Option Bois — Mention Bien",
-  "BEP Bois et Matériaux",
   "CAP Ébénisterie",
   "CAP Menuiserie-Agencement",
+  "BEP Bois et Matériaux",
 ];
 
 const About = () => (
@@ -37,8 +37,9 @@ const About = () => (
           </p>
         </AnimatedSection>
 
+        {/* Portrait + intro */}
         <AnimatedSection>
-          <div className="flex flex-col md:flex-row items-start gap-12 mb-20">
+          <div className="flex flex-col md:flex-row items-center gap-12 mb-20">
             <div className="flex-shrink-0">
               <img
                 src={portrait}
@@ -46,15 +47,16 @@ const About = () => (
                 className="w-40 h-40 object-cover object-top"
               />
             </div>
-            <div className="text-foreground text-lg leading-relaxed self-center">
+            <div className="text-foreground text-lg leading-loose">
               <p>25 ans sur le terrain.</p>
               <p>De la menuiserie à l'ébénisterie, de l'agencement à la modélisation BIM.</p>
               <p>Je parle la langue des artisans et celle des bureaux d'études.</p>
-              <p className="font-bold mt-3">Epure, c'est cette double expertise au service de vos projets.</p>
+              <p className="font-bold">Epure, c'est cette double expertise au service de vos projets.</p>
             </div>
           </div>
         </AnimatedSection>
 
+        {/* Value box */}
         <AnimatedSection>
           <div className="border border-border bg-gray-50 p-10 mb-20">
             <ul className="space-y-3 mb-8">
@@ -78,28 +80,33 @@ const About = () => (
           </div>
         </AnimatedSection>
 
+        {/* Horizontal Timeline */}
         <AnimatedSection>
           <div className="mb-20">
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground mb-10">
               Parcours
             </p>
+
+            {/* Desktop: horizontal */}
             <div className="hidden md:block overflow-x-auto">
-              <div className="flex items-start min-w-[800px]">
+              <div className="flex items-start min-w-[900px]">
                 {parcours.map((step, i) => (
                   <div key={step.year} className="flex items-start flex-1">
-                    <div className="flex flex-col items-center text-center px-2">
+                    <div className="flex flex-col items-center text-center px-3">
                       <div className="w-3 h-3 bg-foreground mb-4 flex-shrink-0" />
-                      <p className="text-2xl font-bold text-foreground">{step.year}</p>
-                      <p className="text-[10px] font-bold tracking-[0.15em] uppercase text-foreground/80 mt-1 w-[140px]">{step.title}</p>
-                      <p className="text-xs text-muted-foreground mt-2 leading-relaxed w-[140px]">{step.desc}</p>
+                      <p className="text-2xl font-bold text-foreground whitespace-nowrap">{step.year}</p>
+                      <p className="text-[10px] font-bold tracking-[0.15em] uppercase text-foreground/80 mt-1" style={{ width: "130px" }}>{step.title}</p>
+                      <p className="text-xs text-muted-foreground mt-2 leading-relaxed" style={{ width: "130px" }}>{step.desc}</p>
                     </div>
                     {i < parcours.length - 1 && (
-                      <div className="flex-1 h-px bg-border mt-[6px] min-w-[20px]" />
+                      <div className="flex-1 h-px bg-border mt-[6px] min-w-[10px]" />
                     )}
                   </div>
                 ))}
               </div>
             </div>
+
+            {/* Mobile: vertical */}
             <div className="md:hidden space-y-6">
               {parcours.map((step) => (
                 <div key={step.year} className="flex gap-4">
@@ -118,15 +125,16 @@ const About = () => (
           </div>
         </AnimatedSection>
 
+        {/* Formations */}
         <AnimatedSection>
           <div className="mb-16">
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-8">
               <Award className="text-foreground" size={28} strokeWidth={1} />
               <h2 className="text-3xl font-bold text-foreground">Formations & Certifications</h2>
             </div>
-            <div className="grid sm:grid-cols-2 gap-3">
+            <div className="flex flex-col items-center gap-3">
               {certifications.map((c) => (
-                <div key={c} className="border border-border bg-gray-50 px-5 py-3 text-sm text-card-foreground">
+                <div key={c} className="border border-border bg-gray-50 px-8 py-3 text-sm text-card-foreground w-full max-w-md text-center">
                   {c}
                 </div>
               ))}
