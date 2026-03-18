@@ -59,9 +59,9 @@ const About = () => (
           </div>
         </AnimatedSection>
 
-        {/* Value box */}
+        {/* Value box — max-w-5xl pour donner plus de place à la phrase */}
         <AnimatedSection>
-          <div className="border border-border bg-gray-50 p-8 mb-20">
+          <div className="border border-border bg-gray-50 p-8 mb-20 max-w-5xl">
             <ul className="space-y-2 mb-5">
               <li className="flex items-start gap-3 text-card-foreground text-sm">
                 <span className="mt-1.5 block w-1.5 h-1.5 bg-card-foreground flex-shrink-0" />
@@ -83,20 +83,20 @@ const About = () => (
           </div>
         </AnimatedSection>
 
-        {/* Timeline horizontale — grid rows pour alignement parfait */}
+        {/* Timeline horizontale */}
         <AnimatedSection>
           <div className="mb-20">
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground mb-10">
               Parcours
             </p>
             <div className="overflow-x-auto">
-              <div style={{ minWidth: "700px" }}>
+              <div style={{ minWidth: "800px" }}>
 
-                {/* Ligne des carrés */}
+                {/* Carrés + ligne */}
                 <div className="flex items-center mb-3">
                   {parcours.map((step, i) => (
                     <div key={step.year + "-dot"} className="flex items-center flex-1">
-                      <div className="flex justify-center" style={{ width: "120px" }}>
+                      <div className="flex justify-center" style={{ width: "140px" }}>
                         <div className="w-3 h-3 bg-foreground flex-shrink-0" />
                       </div>
                       {i < parcours.length - 1 && (
@@ -106,11 +106,11 @@ const About = () => (
                   ))}
                 </div>
 
-                {/* Ligne des années */}
+                {/* Années */}
                 <div className="flex items-start mb-2">
                   {parcours.map((step, i) => (
                     <div key={step.year + "-year"} className="flex items-start flex-1">
-                      <div className="text-center" style={{ width: "120px" }}>
+                      <div className="text-center" style={{ width: "140px" }}>
                         <p className="text-xl font-bold text-foreground">{step.year}</p>
                       </div>
                       {i < parcours.length - 1 && <div className="flex-1" />}
@@ -118,11 +118,11 @@ const About = () => (
                   ))}
                 </div>
 
-                {/* Ligne des titres */}
+                {/* Titres */}
                 <div className="flex items-start mb-3">
                   {parcours.map((step, i) => (
                     <div key={step.year + "-title"} className="flex items-start flex-1">
-                      <div className="text-center" style={{ width: "120px" }}>
+                      <div className="text-center" style={{ width: "140px" }}>
                         <p className="text-[9px] font-extrabold tracking-[0.12em] uppercase text-foreground/80">{step.title}</p>
                       </div>
                       {i < parcours.length - 1 && <div className="flex-1" />}
@@ -130,11 +130,11 @@ const About = () => (
                   ))}
                 </div>
 
-                {/* Ligne des descriptions */}
+                {/* Descriptions */}
                 <div className="flex items-start">
                   {parcours.map((step, i) => (
                     <div key={step.year + "-desc"} className="flex items-start flex-1">
-                      <div className="text-center" style={{ width: "120px" }}>
+                      <div className="text-center" style={{ width: "140px" }}>
                         <p className="text-[11px] text-muted-foreground leading-snug">{step.desc}</p>
                       </div>
                       {i < parcours.length - 1 && <div className="flex-1" />}
