@@ -8,9 +8,9 @@ import portrait from "@/assets/portrait-david.png";
 const parcours = [
   { year: "1997", title: "Apprenti Ébéniste", desc: "Les mains dans la matière. La précision comme culture." },
   { year: "2004", title: "Menuisier Agenceur", desc: "De la pièce unique au projet complet. Conception et pose." },
-  { year: "2011", title: "Responsable de Projet Agencement", desc: "Planification et coordination entre artisans, architectes et maîtres d'ouvrage." },
+  { year: "2011", title: "Responsable de Projet Agencement", desc: "Planification entre artisans, architectes et maîtres d'ouvrage." },
   { year: "2025", title: "BIM Modeleur", desc: "Le numérique au service du terrain." },
-  { year: "2026", title: "Epure", desc: "L'indépendance. BIM Modeleur & Expert Agencement. Le projet abouti." },
+  { year: "2026", title: "Epure", desc: "BIM Modeleur & Expert Agencement. Le projet abouti." },
 ];
 
 const certificationsLeft = [
@@ -50,11 +50,11 @@ const About = () => (
                 className="w-36 h-36 object-cover object-top"
               />
             </div>
-            <div className="text-foreground text-base leading-7">
-              <p>25 ans sur le terrain.</p>
-              <p>De la menuiserie à l'ébénisterie, de l'agencement à la modélisation BIM.</p>
-              <p>Je parle la langue des artisans et celle des bureaux d'études.</p>
-              <p className="font-bold mt-2">Epure, c'est cette double expertise au service de vos projets.</p>
+            <div className="text-foreground text-base" style={{ lineHeight: "1.6" }}>
+              <p style={{ margin: 0 }}>25 ans sur le terrain.</p>
+              <p style={{ margin: 0 }}>De la menuiserie à l'ébénisterie, de l'agencement à la modélisation BIM.</p>
+              <p style={{ margin: 0 }}>Je parle la langue des artisans et celle des bureaux d'études.</p>
+              <p style={{ margin: 0 }} className="font-bold">Epure, c'est cette double expertise au service de vos projets.</p>
             </div>
           </div>
         </AnimatedSection>
@@ -62,42 +62,47 @@ const About = () => (
         {/* Value box */}
         <AnimatedSection>
           <div className="border border-border bg-gray-50 p-8 mb-20">
-            <ul className="space-y-2 mb-6">
-              <li className="flex items-start gap-3 text-card-foreground text-base">
-                <span className="mt-2 block w-1.5 h-1.5 bg-card-foreground flex-shrink-0" />
+            <ul className="space-y-2 mb-5">
+              <li className="flex items-start gap-3 text-card-foreground text-sm">
+                <span className="mt-1.5 block w-1.5 h-1.5 bg-card-foreground flex-shrink-0" />
                 Un BIM Modeleur qui modélise et anticipe les contraintes terrain
               </li>
-              <li className="flex items-start gap-3 text-card-foreground text-base">
-                <span className="mt-2 block w-1.5 h-1.5 bg-card-foreground flex-shrink-0" />
+              <li className="flex items-start gap-3 text-card-foreground text-sm">
+                <span className="mt-1.5 block w-1.5 h-1.5 bg-card-foreground flex-shrink-0" />
                 Un expert agencement qui a fabriqué et posé ce qu'il dessine
               </li>
-              <li className="flex items-start gap-3 text-card-foreground text-base">
-                <span className="mt-2 block w-1.5 h-1.5 bg-card-foreground flex-shrink-0" />
+              <li className="flex items-start gap-3 text-card-foreground text-sm">
+                <span className="mt-1.5 block w-1.5 h-1.5 bg-card-foreground flex-shrink-0" />
                 Un professionnel réactif, disponible et fiable
               </li>
             </ul>
-            <p className="text-card-foreground font-bold text-base">Ma valeur ajoutée ?</p>
-            <p className="text-card-foreground italic text-base">Je ne fais pas que dessiner des plans…</p>
-            <p className="text-card-foreground italic text-base">je propose des solutions techniques réalistes et réalisables.</p>
+            <p className="text-card-foreground font-bold text-sm">Ma valeur ajoutée ?</p>
+            <p className="text-card-foreground italic text-sm">Je ne fais pas que dessiner des plans, je propose des solutions techniques réalistes et réalisables.</p>
           </div>
         </AnimatedSection>
 
-        {/* Timeline avec ligne verticale */}
+        {/* Timeline horizontale */}
         <AnimatedSection>
           <div className="mb-20">
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground mb-10">
               Parcours
             </p>
-            <div className="relative pl-6 border-l-2 border-border space-y-8">
-              {parcours.map((step) => (
-                <div key={step.year} className="relative grid grid-cols-[80px_160px_1fr] gap-6 items-start">
-                  {/* Carré sur la ligne */}
-                  <div className="absolute -left-[29px] top-1 w-3 h-3 bg-foreground" />
-                  <p className="text-xl font-bold text-foreground leading-tight">{step.year}</p>
-                  <p className="text-[10px] font-extrabold tracking-[0.12em] uppercase text-foreground pt-1 leading-tight">{step.title}</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
-                </div>
-              ))}
+            <div className="overflow-x-auto">
+              <div className="flex items-start" style={{ minWidth: "700px" }}>
+                {parcours.map((step, i) => (
+                  <div key={step.year} className="flex items-start flex-1">
+                    <div className="flex flex-col items-center text-center" style={{ width: "120px" }}>
+                      <div className="w-3 h-3 bg-foreground mb-3 flex-shrink-0" />
+                      <p className="text-xl font-bold text-foreground">{step.year}</p>
+                      <p className="text-[9px] font-extrabold tracking-[0.12em] uppercase text-foreground/80 mt-1" style={{ width: "110px" }}>{step.title}</p>
+                      <p className="text-[11px] text-muted-foreground mt-2 leading-snug" style={{ width: "110px" }}>{step.desc}</p>
+                    </div>
+                    {i < parcours.length - 1 && (
+                      <div className="flex-1 h-px bg-border mt-[6px]" />
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </AnimatedSection>
