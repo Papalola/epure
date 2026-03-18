@@ -13,18 +13,21 @@ const parcours = [
   { year: "2026", title: "Epure", desc: "L'indépendance. BIM Modeleur & Expert Agencement. Le projet abouti." },
 ];
 
-const certifications = [
-  "Titre Professionnel BIM Modeleur",
-  "Bac Pro CAB Option Bois — Mention Bien",
+const certificationsLeft = [
   "CAP Ébénisterie",
   "CAP Menuiserie-Agencement",
   "BEP Bois et Matériaux",
 ];
 
+const certificationsRight = [
+  "Titre Professionnel BIM Modeleur",
+  "Bac Pro CAB Option Bois — Mention Bien",
+];
+
 const About = () => (
   <Layout>
     <section className="py-24 bg-background">
-      <div className="container mx-auto px-4 max-w-5xl">
+      <div className="container mx-auto px-4 max-w-4xl">
         <AnimatedSection>
           <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
             David Badin
@@ -39,15 +42,15 @@ const About = () => (
 
         {/* Portrait + intro */}
         <AnimatedSection>
-          <div className="flex flex-col md:flex-row items-start gap-12 mb-8">
-            <div className="flex-shrink-0">
+          <div className="flex flex-col md:flex-row gap-10 mb-8">
+            <div className="flex-shrink-0 flex items-center">
               <img
                 src={portrait}
                 alt="David Badin"
-                className="w-40 h-40 object-cover object-top"
+                className="w-36 h-36 object-cover object-top"
               />
             </div>
-            <div className="text-foreground text-lg leading-relaxed self-center">
+            <div className="flex flex-col justify-center text-foreground text-base leading-7">
               <p>25 ans sur le terrain.</p>
               <p>De la menuiserie à l'ébénisterie, de l'agencement à la modélisation BIM.</p>
               <p>Je parle la langue des artisans et celle des bureaux d'études.</p>
@@ -56,7 +59,7 @@ const About = () => (
           </div>
         </AnimatedSection>
 
-        {/* Value box — même largeur que le bloc du dessus */}
+        {/* Value box */}
         <AnimatedSection>
           <div className="border border-border bg-gray-50 p-8 mb-20">
             <ul className="space-y-2 mb-6">
@@ -80,46 +83,46 @@ const About = () => (
           </div>
         </AnimatedSection>
 
-        {/* Timeline — 2 colonnes, sans ligne verticale */}
+        {/* Timeline 3 colonnes */}
         <AnimatedSection>
           <div className="mb-20">
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground mb-10">
               Parcours
             </p>
-            <div className="space-y-6">
+            <div className="space-y-5">
               {parcours.map((step) => (
-                <div key={step.year} className="grid grid-cols-[140px_1fr] gap-8 items-start">
-                  {/* Gauche : année + point + titre */}
-                  <div className="flex items-start gap-3">
-                    <div className="w-2.5 h-2.5 bg-foreground flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="text-xl font-bold text-foreground leading-none">{step.year}</p>
-                      <p className="text-[10px] font-bold tracking-[0.15em] uppercase text-foreground/70 mt-1 leading-tight">{step.title}</p>
-                    </div>
-                  </div>
-                  {/* Droite : description */}
-                  <div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
-                  </div>
+                <div key={step.year} className="grid grid-cols-[80px_180px_1fr] gap-6 items-start">
+                  <p className="text-xl font-bold text-foreground leading-tight">{step.year}</p>
+                  <p className="text-[11px] font-extrabold tracking-[0.12em] uppercase text-foreground leading-tight pt-1">{step.title}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
                 </div>
               ))}
             </div>
           </div>
         </AnimatedSection>
 
-        {/* Formations */}
+        {/* Formations 2 colonnes */}
         <AnimatedSection>
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-8">
               <Award className="text-foreground" size={28} strokeWidth={1} />
               <h2 className="text-3xl font-bold text-foreground">Formations & Certifications</h2>
             </div>
-            <div className="flex flex-col items-center gap-3">
-              {certifications.map((c) => (
-                <div key={c} className="border border-border bg-gray-50 px-8 py-3 text-sm text-card-foreground w-full max-w-md text-center">
-                  {c}
-                </div>
-              ))}
+            <div className="grid grid-cols-2 gap-3">
+              <div className="space-y-3">
+                {certificationsLeft.map((c) => (
+                  <div key={c} className="border border-border bg-gray-50 px-5 py-3 text-sm text-card-foreground">
+                    {c}
+                  </div>
+                ))}
+              </div>
+              <div className="space-y-3">
+                {certificationsRight.map((c) => (
+                  <div key={c} className="border border-border bg-gray-50 px-5 py-3 text-sm text-card-foreground">
+                    {c}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </AnimatedSection>
