@@ -43,11 +43,18 @@ const About = () => (
         {/* Portrait + intro */}
         <AnimatedSection>
           <div className="flex flex-col md:flex-row gap-10 items-start mb-8">
-            <div className="flex-shrink-0 w-36 h-36">
+            {/* Photo avec dégradé en bas */}
+            <div className="flex-shrink-0 relative w-36 h-36">
               <img
                 src={portrait}
                 alt="David Badin"
                 className="w-36 h-36 object-cover object-top"
+              />
+              <div
+                className="absolute bottom-0 left-0 right-0 h-12"
+                style={{
+                  background: "linear-gradient(to bottom, transparent, white)",
+                }}
               />
             </div>
             <div className="self-center text-foreground text-base" style={{ lineHeight: "1.6" }}>
@@ -79,11 +86,11 @@ const About = () => (
           </div>
         </AnimatedSection>
 
-        {/* Ma valeur ajoutée — hors cadre */}
+        {/* Ma valeur ajoutée — hors cadre, plus visible */}
         <AnimatedSection>
           <div className="mb-20 px-2">
             <p className="text-sm font-bold text-foreground mb-2">Ma valeur ajoutée ?</p>
-            <p className="text-sm italic text-muted-foreground">
+            <p className="text-base font-bold italic text-foreground">
               Je ne fais pas que dessiner des plans, je propose des solutions techniques réalistes et réalisables.
             </p>
           </div>
