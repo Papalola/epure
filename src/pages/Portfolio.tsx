@@ -42,7 +42,7 @@ const Portfolio = () => {
   return (
     <Layout>
       <section className="py-24 bg-background">
-        <div className="container mx-auto px-4 max-w-xl">
+        <div className="container mx-auto px-4 max-w-2xl">
           <AnimatedSection>
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
               Projets
@@ -53,34 +53,41 @@ const Portfolio = () => {
           </AnimatedSection>
 
           <AnimatedSection>
-            {/* Image avec flèches intégrées en bas */}
-            <div
-              className="relative overflow-hidden bg-white border border-border group cursor-pointer"
-              style={{ aspectRatio: "1.414 / 1" }}
-            >
-              <img
-                src={projets[current].src}
-                alt={projets[current].titre}
-                className="w-full h-full object-contain transition-transform duration-500 ease-in-out group-hover:scale-105"
-              />
+            <div className="relative px-6">
 
-              {/* Flèches dans les coins bas de l'image */}
-              <button
-                onClick={(e) => { e.stopPropagation(); prev(); }}
-                className="absolute bottom-3 left-3 w-8 h-8 border border-foreground bg-background flex items-center justify-center hover:bg-foreground hover:text-background transition-colors z-10"
+              <div
+                className="relative overflow-hidden bg-white border border-border group cursor-pointer"
+                style={{ aspectRatio: "1.414 / 1" }}
               >
-                <ArrowLeft size={14} />
-              </button>
+                <img
+                  src={projets[current].src}
+                  alt={projets[current].titre}
+                  className="w-full h-full object-contain"
+                  style={{
+                    transition: "transform 1500ms ease-in-out",
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.02)")}
+                  onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+                />
+              </div>
+
               <button
-                onClick={(e) => { e.stopPropagation(); next(); }}
-                className="absolute bottom-3 right-3 w-8 h-8 bg-foreground text-background flex items-center justify-center hover:opacity-80 transition-opacity z-10"
+                onClick={prev}
+                className="absolute left-0 top-1/2 -translate-y-1/2 w-9 h-9 border border-foreground bg-background flex items-center justify-center hover:bg-foreground hover:text-background transition-colors z-10"
               >
-                <ArrowRight size={14} />
+                <ArrowLeft size={15} />
               </button>
+
+              <button
+                onClick={next}
+                className="absolute right-0 top-1/2 -translate-y-1/2 w-9 h-9 bg-foreground text-background flex items-center justify-center hover:opacity-80 transition-opacity z-10"
+              >
+                <ArrowRight size={15} />
+              </button>
+
             </div>
 
-            {/* Légende */}
-            <div className="flex items-start justify-between mt-4 mb-6">
+            <div className="flex items-start justify-between mt-4 mb-6 px-6">
               <div>
                 <p className="text-sm font-bold text-foreground">{projets[current].titre}</p>
                 <p className="text-xs text-muted-foreground mt-1">{projets[current].desc}</p>
@@ -90,8 +97,7 @@ const Portfolio = () => {
               </p>
             </div>
 
-            {/* Miniatures */}
-            <div className="flex gap-2 overflow-x-auto pb-2">
+            <div className="flex gap-2 overflow-x-auto pb-2 px-6">
               {projets.map((p, i) => (
                 <button
                   key={p.src}
