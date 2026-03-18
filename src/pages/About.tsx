@@ -77,37 +77,71 @@ const About = () => (
               </li>
             </ul>
             <p className="text-card-foreground font-bold text-sm">Ma valeur ajoutée ?</p>
-            <p className="text-card-foreground italic mt-3" style={{ fontSize: "0.75rem", lineHeight: "1.5" }}>
+            <p className="text-card-foreground italic text-sm mt-3">
               Je ne fais pas que dessiner des plans, je propose des solutions techniques réalistes et réalisables.
             </p>
           </div>
         </AnimatedSection>
 
-        {/* Timeline horizontale — zones à hauteur fixe pour alignement */}
+        {/* Timeline horizontale — grid rows pour alignement parfait */}
         <AnimatedSection>
           <div className="mb-20">
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground mb-10">
               Parcours
             </p>
             <div className="overflow-x-auto">
-              <div className="flex items-start" style={{ minWidth: "700px" }}>
-                {parcours.map((step, i) => (
-                  <div key={step.year} className="flex items-start flex-1">
-                    <div className="flex flex-col items-center text-center" style={{ width: "120px" }}>
-                      <div className="w-3 h-3 bg-foreground flex-shrink-0" style={{ marginBottom: "12px" }} />
-                      <p className="text-xl font-bold text-foreground" style={{ margin: 0 }}>{step.year}</p>
-                      <div style={{ minHeight: "40px", display: "flex", alignItems: "flex-start", justifyContent: "center", marginTop: "4px" }}>
-                        <p className="text-[9px] font-extrabold tracking-[0.12em] uppercase text-foreground/80 text-center" style={{ width: "110px" }}>{step.title}</p>
+              <div style={{ minWidth: "700px" }}>
+
+                {/* Ligne des carrés */}
+                <div className="flex items-center mb-3">
+                  {parcours.map((step, i) => (
+                    <div key={step.year + "-dot"} className="flex items-center flex-1">
+                      <div className="flex justify-center" style={{ width: "120px" }}>
+                        <div className="w-3 h-3 bg-foreground flex-shrink-0" />
                       </div>
-                      <div style={{ minHeight: "60px", display: "flex", alignItems: "flex-start", justifyContent: "center", marginTop: "4px" }}>
-                        <p className="text-[11px] text-muted-foreground leading-snug text-center" style={{ width: "110px" }}>{step.desc}</p>
-                      </div>
+                      {i < parcours.length - 1 && (
+                        <div className="flex-1 h-px bg-border" />
+                      )}
                     </div>
-                    {i < parcours.length - 1 && (
-                      <div className="flex-1 h-px bg-border" style={{ marginTop: "6px" }} />
-                    )}
-                  </div>
-                ))}
+                  ))}
+                </div>
+
+                {/* Ligne des années */}
+                <div className="flex items-start mb-2">
+                  {parcours.map((step, i) => (
+                    <div key={step.year + "-year"} className="flex items-start flex-1">
+                      <div className="text-center" style={{ width: "120px" }}>
+                        <p className="text-xl font-bold text-foreground">{step.year}</p>
+                      </div>
+                      {i < parcours.length - 1 && <div className="flex-1" />}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Ligne des titres */}
+                <div className="flex items-start mb-3">
+                  {parcours.map((step, i) => (
+                    <div key={step.year + "-title"} className="flex items-start flex-1">
+                      <div className="text-center" style={{ width: "120px" }}>
+                        <p className="text-[9px] font-extrabold tracking-[0.12em] uppercase text-foreground/80">{step.title}</p>
+                      </div>
+                      {i < parcours.length - 1 && <div className="flex-1" />}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Ligne des descriptions */}
+                <div className="flex items-start">
+                  {parcours.map((step, i) => (
+                    <div key={step.year + "-desc"} className="flex items-start flex-1">
+                      <div className="text-center" style={{ width: "120px" }}>
+                        <p className="text-[11px] text-muted-foreground leading-snug">{step.desc}</p>
+                      </div>
+                      {i < parcours.length - 1 && <div className="flex-1" />}
+                    </div>
+                  ))}
+                </div>
+
               </div>
             </div>
           </div>
