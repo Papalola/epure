@@ -7,11 +7,6 @@ import AnimatedSection from "@/components/AnimatedSection";
 
 const projets = [
   {
-    src: "/epure/capture1.png",
-    titre: "Logement T2 — Plan de niveau",
-    desc: "Modélisation 3D architecturale — Plan RDC, logement individuel",
-  },
-  {
     src: "/epure/capture2.png",
     titre: "CAF / URSSAF — Vue volumétrique",
     desc: "Modélisation 3D architecturale — Maquette numérique, équipement public",
@@ -31,6 +26,11 @@ const projets = [
     titre: "Immeuble collectif — Plan de niveau",
     desc: "Modélisation 3D architecturale — Plan RDC, 4 logements",
   },
+  {
+    src: "/epure/capture1.png",
+    titre: "Logement T2 — Plan de niveau",
+    desc: "Modélisation 3D architecturale — Plan RDC, logement individuel",
+  },
 ];
 
 const Portfolio = () => {
@@ -42,24 +42,23 @@ const Portfolio = () => {
   return (
     <Layout>
       <section className="py-24 bg-background">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-3xl">
           <AnimatedSection>
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
               Projets
             </p>
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground text-center mb-20">
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground text-center mb-16">
               Réalisations
             </h1>
           </AnimatedSection>
 
           <AnimatedSection>
-            <div className="flex items-center gap-4">
-
+            <div className="flex items-center gap-3">
               <button
                 onClick={prev}
-                className="flex-shrink-0 w-10 h-10 border border-foreground flex items-center justify-center hover:bg-foreground hover:text-background transition-colors"
+                className="flex-shrink-0 w-9 h-9 border border-foreground flex items-center justify-center hover:bg-foreground hover:text-background transition-colors"
               >
-                <ArrowLeft size={16} />
+                <ArrowLeft size={15} />
               </button>
 
               <div
@@ -75,24 +74,25 @@ const Portfolio = () => {
 
               <button
                 onClick={next}
-                className="flex-shrink-0 w-10 h-10 bg-foreground text-background flex items-center justify-center hover:opacity-80 transition-opacity"
+                className="flex-shrink-0 w-9 h-9 bg-foreground text-background flex items-center justify-center hover:opacity-80 transition-opacity"
               >
-                <ArrowRight size={16} />
+                <ArrowRight size={15} />
               </button>
-
             </div>
 
-            <div className="flex items-start justify-between mt-5 mb-8 px-14">
+            {/* Légende */}
+            <div className="flex items-start justify-between mt-4 mb-6 px-12">
               <div>
-                <p className="text-base font-bold text-foreground">{projets[current].titre}</p>
-                <p className="text-sm text-muted-foreground mt-1">{projets[current].desc}</p>
+                <p className="text-sm font-bold text-foreground">{projets[current].titre}</p>
+                <p className="text-xs text-muted-foreground mt-1">{projets[current].desc}</p>
               </div>
-              <p className="text-sm text-muted-foreground flex-shrink-0 ml-6 pt-1">
+              <p className="text-xs text-muted-foreground flex-shrink-0 ml-6 pt-1">
                 {current + 1} / {projets.length}
               </p>
             </div>
 
-            <div className="flex gap-3 px-14 overflow-x-auto pb-2">
+            {/* Miniatures */}
+            <div className="flex gap-2 px-12 overflow-x-auto pb-2">
               {projets.map((p, i) => (
                 <button
                   key={p.src}
@@ -100,7 +100,7 @@ const Portfolio = () => {
                   className={`flex-shrink-0 border-2 transition-all duration-200 overflow-hidden ${
                     i === current ? "border-foreground" : "border-transparent opacity-50 hover:opacity-80"
                   }`}
-                  style={{ width: "100px", aspectRatio: "1.414 / 1" }}
+                  style={{ width: "88px", aspectRatio: "1.414 / 1" }}
                 >
                   <img
                     src={p.src}
@@ -113,7 +113,7 @@ const Portfolio = () => {
           </AnimatedSection>
 
           <AnimatedSection>
-            <div className="text-center mt-16">
+            <div className="text-center mt-14">
               <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 w-full sm:w-auto">
                 <Link to="/contact">
                   Discutons de votre projet <ArrowRight className="ml-2" size={18} />
