@@ -27,8 +27,6 @@ const certificationsRight = [
 const About = () => (
   <Layout>
     <section className="py-24 bg-background">
-
-      {/* Titre */}
       <div className="container mx-auto px-4 max-w-4xl">
         <AnimatedSection>
           <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
@@ -61,10 +59,10 @@ const About = () => (
           </div>
         </AnimatedSection>
 
-        {/* Value box — même largeur que le reste */}
+        {/* Value box — uniquement les 3 bullets */}
         <AnimatedSection>
-          <div className="border border-border bg-gray-50 p-8 mb-20">
-            <ul className="space-y-2 mb-5">
+          <div className="border border-border bg-gray-50 p-8 mb-6">
+            <ul className="space-y-2">
               <li className="flex items-start gap-3 text-card-foreground text-sm">
                 <span className="mt-1.5 block w-1.5 h-1.5 bg-card-foreground flex-shrink-0" />
                 Un BIM Modeleur qui modélise et anticipe les contraintes terrain
@@ -78,8 +76,14 @@ const About = () => (
                 Un professionnel réactif, disponible et fiable
               </li>
             </ul>
-            <p className="text-card-foreground font-bold text-sm">Ma valeur ajoutée ?</p>
-            <p className="text-card-foreground italic text-sm mt-3">
+          </div>
+        </AnimatedSection>
+
+        {/* Ma valeur ajoutée — hors cadre */}
+        <AnimatedSection>
+          <div className="mb-20 px-2">
+            <p className="text-sm font-bold text-foreground mb-2">Ma valeur ajoutée ?</p>
+            <p className="text-sm italic text-muted-foreground">
               Je ne fais pas que dessiner des plans, je propose des solutions techniques réalistes et réalisables.
             </p>
           </div>
