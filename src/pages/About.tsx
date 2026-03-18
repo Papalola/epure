@@ -39,15 +39,15 @@ const About = () => (
 
         {/* Portrait + intro */}
         <AnimatedSection>
-          <div className="flex flex-col md:flex-row items-center gap-12 mb-20">
+          <div className="flex flex-col md:flex-row items-start gap-12 mb-8">
             <div className="flex-shrink-0">
               <img
                 src={portrait}
                 alt="David Badin"
-                className="w-32 h-32 md:w-36 md:h-36 object-cover object-top"
+                className="w-40 h-40 object-cover object-top"
               />
             </div>
-            <div className="text-foreground text-lg leading-relaxed">
+            <div className="text-foreground text-lg leading-relaxed self-center">
               <p>25 ans sur le terrain.</p>
               <p>De la menuiserie à l'ébénisterie, de l'agencement à la modélisation BIM.</p>
               <p>Je parle la langue des artisans et celle des bureaux d'études.</p>
@@ -56,61 +56,53 @@ const About = () => (
           </div>
         </AnimatedSection>
 
-        {/* Value box */}
+        {/* Value box — même largeur que le bloc du dessus */}
         <AnimatedSection>
           <div className="border border-border bg-gray-50 p-8 mb-20">
             <ul className="space-y-2 mb-6">
-              <li className="flex items-start gap-3 text-card-foreground text-sm">
-                <span className="mt-1.5 block w-1.5 h-1.5 bg-card-foreground flex-shrink-0" />
+              <li className="flex items-start gap-3 text-card-foreground text-base">
+                <span className="mt-2 block w-1.5 h-1.5 bg-card-foreground flex-shrink-0" />
                 Un BIM Modeleur qui modélise et anticipe les contraintes terrain
               </li>
-              <li className="flex items-start gap-3 text-card-foreground text-sm">
-                <span className="mt-1.5 block w-1.5 h-1.5 bg-card-foreground flex-shrink-0" />
+              <li className="flex items-start gap-3 text-card-foreground text-base">
+                <span className="mt-2 block w-1.5 h-1.5 bg-card-foreground flex-shrink-0" />
                 Un expert agencement qui a fabriqué et posé ce qu'il dessine
               </li>
-              <li className="flex items-start gap-3 text-card-foreground text-sm">
-                <span className="mt-1.5 block w-1.5 h-1.5 bg-card-foreground flex-shrink-0" />
+              <li className="flex items-start gap-3 text-card-foreground text-base">
+                <span className="mt-2 block w-1.5 h-1.5 bg-card-foreground flex-shrink-0" />
                 Un professionnel réactif, disponible et fiable
               </li>
             </ul>
-            <p className="text-card-foreground font-bold text-sm">Ma valeur ajoutée ?</p>
-            <p className="text-card-foreground italic text-sm">
+            <p className="text-card-foreground font-bold text-base">Ma valeur ajoutée ?</p>
+            <p className="text-card-foreground italic text-base">
               Je ne fais pas que dessiner des plans, je propose des solutions techniques réalistes et réalisables.
             </p>
           </div>
         </AnimatedSection>
 
-        {/* Timeline verticale */}
+        {/* Timeline — 2 colonnes, sans ligne verticale */}
         <AnimatedSection>
           <div className="mb-20">
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground mb-10">
               Parcours
             </p>
-            <div className="relative">
-              {/* Ligne verticale */}
-              <div className="absolute left-[72px] top-0 bottom-0 w-px bg-border" />
-              <div className="space-y-0">
-                {parcours.map((step, i) => (
-                  <div key={step.year} className="flex items-start gap-8 relative">
-                    {/* Année */}
-                    <div className="w-[60px] flex-shrink-0 text-right">
-                      <p className="text-xl font-bold text-foreground leading-none pt-0.5">{step.year}</p>
-                    </div>
-                    {/* Point */}
-                    <div className="flex flex-col items-center flex-shrink-0" style={{ width: "24px" }}>
-                      <div className="w-3 h-3 bg-foreground flex-shrink-0 mt-1" />
-                      {i < parcours.length - 1 && (
-                        <div className="w-px flex-1 bg-transparent" style={{ minHeight: "48px" }} />
-                      )}
-                    </div>
-                    {/* Contenu */}
-                    <div className="pb-10">
-                      <p className="text-[11px] font-bold tracking-[0.15em] uppercase text-foreground/80 leading-tight">{step.title}</p>
-                      <p className="text-xs text-muted-foreground mt-1 leading-relaxed max-w-xs">{step.desc}</p>
+            <div className="space-y-6">
+              {parcours.map((step) => (
+                <div key={step.year} className="grid grid-cols-[140px_1fr] gap-8 items-start">
+                  {/* Gauche : année + point + titre */}
+                  <div className="flex items-start gap-3">
+                    <div className="w-2.5 h-2.5 bg-foreground flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="text-xl font-bold text-foreground leading-none">{step.year}</p>
+                      <p className="text-[10px] font-bold tracking-[0.15em] uppercase text-foreground/70 mt-1 leading-tight">{step.title}</p>
                     </div>
                   </div>
-                ))}
-              </div>
+                  {/* Droite : description */}
+                  <div>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </AnimatedSection>
