@@ -42,7 +42,7 @@ const About = () => (
 
         {/* Portrait + intro */}
         <AnimatedSection>
-          <div className="flex flex-col md:flex-row gap-10 items-center mb-8">
+          <div className="flex flex-col md:flex-row gap-10 items-start mb-8">
             <div className="flex-shrink-0 w-36 h-36">
               <img
                 src={portrait}
@@ -50,7 +50,7 @@ const About = () => (
                 className="w-36 h-36 object-cover object-top"
               />
             </div>
-            <div className="text-foreground text-base" style={{ lineHeight: "1.6" }}>
+            <div className="self-center text-foreground text-base" style={{ lineHeight: "1.6" }}>
               <p style={{ margin: 0 }}>25 ans sur le terrain.</p>
               <p style={{ margin: 0 }}>De la menuiserie à l'ébénisterie, de l'agencement à la modélisation BIM.</p>
               <p style={{ margin: 0 }}>Je parle la langue des artisans et celle des bureaux d'études.</p>
@@ -77,11 +77,13 @@ const About = () => (
               </li>
             </ul>
             <p className="text-card-foreground font-bold text-sm">Ma valeur ajoutée ?</p>
-            <p className="text-card-foreground italic text-sm">Je ne fais pas que dessiner des plans, je propose des solutions techniques réalistes et réalisables.</p>
+            <p className="text-card-foreground italic mt-3" style={{ fontSize: "0.75rem", lineHeight: "1.5" }}>
+              Je ne fais pas que dessiner des plans, je propose des solutions techniques réalistes et réalisables.
+            </p>
           </div>
         </AnimatedSection>
 
-        {/* Timeline horizontale */}
+        {/* Timeline horizontale — zones à hauteur fixe pour alignement */}
         <AnimatedSection>
           <div className="mb-20">
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground mb-10">
@@ -92,13 +94,17 @@ const About = () => (
                 {parcours.map((step, i) => (
                   <div key={step.year} className="flex items-start flex-1">
                     <div className="flex flex-col items-center text-center" style={{ width: "120px" }}>
-                      <div className="w-3 h-3 bg-foreground mb-3 flex-shrink-0" />
-                      <p className="text-xl font-bold text-foreground">{step.year}</p>
-                      <p className="text-[9px] font-extrabold tracking-[0.12em] uppercase text-foreground/80 mt-1" style={{ width: "110px" }}>{step.title}</p>
-                      <p className="text-[11px] text-muted-foreground mt-2 leading-snug" style={{ width: "110px" }}>{step.desc}</p>
+                      <div className="w-3 h-3 bg-foreground flex-shrink-0" style={{ marginBottom: "12px" }} />
+                      <p className="text-xl font-bold text-foreground" style={{ margin: 0 }}>{step.year}</p>
+                      <div style={{ minHeight: "40px", display: "flex", alignItems: "flex-start", justifyContent: "center", marginTop: "4px" }}>
+                        <p className="text-[9px] font-extrabold tracking-[0.12em] uppercase text-foreground/80 text-center" style={{ width: "110px" }}>{step.title}</p>
+                      </div>
+                      <div style={{ minHeight: "60px", display: "flex", alignItems: "flex-start", justifyContent: "center", marginTop: "4px" }}>
+                        <p className="text-[11px] text-muted-foreground leading-snug text-center" style={{ width: "110px" }}>{step.desc}</p>
+                      </div>
                     </div>
                     {i < parcours.length - 1 && (
-                      <div className="flex-1 h-px bg-border mt-[6px]" />
+                      <div className="flex-1 h-px bg-border" style={{ marginTop: "6px" }} />
                     )}
                   </div>
                 ))}
