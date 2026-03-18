@@ -7,27 +7,27 @@ import AnimatedSection from "@/components/AnimatedSection";
 
 const projets = [
   {
-    src: "/epure/capture1.png",
+    src: "/capture1.png",
     titre: "CAF / URSSAF — Vue 3D bâtiment URSSAF",
     desc: "Modélisation 3D architecturale — Maquette numérique, équipement public",
   },
   {
-    src: "/epure/capture2.png",
+    src: "/capture2.png",
     titre: "CAF / URSSAF — Plan masse",
     desc: "Modélisation 3D architecturale — Plan masse et vues 3D",
   },
   {
-    src: "/epure/capture3.png",
+    src: "/capture3.png",
     titre: "Immeuble collectif — Élévations",
     desc: "Modélisation 3D architecturale — Élévations 4 façades, programme collectif",
   },
   {
-    src: "/epure/capture4.png",
+    src: "/capture4.png",
     titre: "Immeuble collectif — Plan de niveau",
     desc: "Modélisation 3D architecturale — Plan RDC, programme collectif",
   },
   {
-    src: "/epure/capture5.png",
+    src: "/capture5.png",
     titre: "Logement T2 — Plan de niveau",
     desc: "Modélisation 3D architecturale — Plan RDC, logement individuel",
   },
@@ -54,7 +54,6 @@ const Portfolio = () => {
 
           <AnimatedSection>
             <div className="relative px-6">
-
               <div
                 className="relative overflow-hidden bg-white border border-border group cursor-pointer"
                 style={{ aspectRatio: "1.414 / 1" }}
@@ -63,9 +62,7 @@ const Portfolio = () => {
                   src={projets[current].src}
                   alt={projets[current].titre}
                   className="w-full h-full object-contain"
-                  style={{
-                    transition: "transform 1500ms ease-in-out",
-                  }}
+                  style={{ transition: "transform 1500ms ease-in-out" }}
                   onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.02)")}
                   onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
                 />
@@ -84,7 +81,6 @@ const Portfolio = () => {
               >
                 <ArrowRight size={15} />
               </button>
-
             </div>
 
             <div className="flex items-start justify-between mt-4 mb-6 px-6">
@@ -126,7 +122,6 @@ const Portfolio = () => {
               </Button>
             </div>
           </AnimatedSection>
-
         </div>
       </section>
     </Layout>
