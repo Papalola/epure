@@ -21,7 +21,7 @@ const contactInfo = [
     icon: MapPin,
     label: "Localisation",
     value: "Rhône-Alpes",
-    sub: "Interventions région Auvergne-Rhône-Alpes\net au-delà",
+    sub: "Interventions région Auvergne-Rhône-Alpes et au-delà",
   },
 ];
 
@@ -69,42 +69,46 @@ const Contact = () => {
             </p>
           </AnimatedSection>
 
-          <div className="grid lg:grid-cols-5 gap-12 max-w-5xl mx-auto">
-            {/* Info */}
-            <div className="lg:col-span-2 space-y-8">
-              {contactInfo.map((c) => (
-                <AnimatedSection key={c.label}>
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 border border-border flex items-center justify-center flex-shrink-0">
-                      <c.icon className="text-foreground" size={20} strokeWidth={1} />
+          <div className="grid lg:grid-cols-5 gap-12 max-w-5xl mx-auto items-end">
+            {/* Colonne gauche */}
+            <div className="lg:col-span-2 flex flex-col justify-between h-full">
+              <div className="space-y-8">
+                {contactInfo.map((c) => (
+                  <AnimatedSection key={c.label}>
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 border border-border bg-gray-50 flex items-center justify-center flex-shrink-0">
+                        <c.icon className="text-foreground" size={20} strokeWidth={1} />
+                      </div>
+                      <div>
+                        <p className="text-sm mb-1 text-muted-foreground">{c.label}</p>
+                        {c.href ? (
+                          <a href={c.href} className="font-bold text-foreground transition-colors hover:opacity-80">
+                            {c.value}
+                          </a>
+                        ) : (
+                          <p className="font-bold text-foreground">{c.value}</p>
+                        )}
+                        {c.sub && (
+                          <p className="text-xs mt-1 text-muted-foreground whitespace-nowrap">{c.sub}</p>
+                        )}
+                      </div>
                     </div>
-                    <div>
-                      <p className="text-sm mb-1 text-muted-foreground">{c.label}</p>
-                      {c.href ? (
-                        <a href={c.href} className="font-bold text-foreground transition-colors hover:opacity-80">
-                          {c.value}
-                        </a>
-                      ) : (
-                        <p className="font-bold text-foreground">{c.value}</p>
-                      )}
-                      {c.sub && (
-                        <p className="text-xs mt-1 text-muted-foreground whitespace-pre-line">{c.sub}</p>
-                      )}
-                    </div>
-                  </div>
-                </AnimatedSection>
-              ))}
+                  </AnimatedSection>
+                ))}
+              </div>
+
+              {/* Disponibilité aligné en bas */}
               <AnimatedSection>
                 <div className="border border-border bg-gray-50 p-6 mt-8">
                   <p className="text-sm font-bold text-card-foreground">Disponibilité</p>
-                  <p className="text-sm mt-1 text-card-foreground/70">
+                  <p className="text-sm mt-1 text-card-foreground/70 whitespace-nowrap">
                     Missions ponctuelles ou régulières · Télétravail ou sur site
                   </p>
                 </div>
               </AnimatedSection>
             </div>
 
-            {/* Form */}
+            {/* Formulaire */}
             <AnimatedSection className="lg:col-span-3">
               <div className="border border-border bg-gray-50 p-8">
                 <form onSubmit={handleSubmit} className="space-y-5">
