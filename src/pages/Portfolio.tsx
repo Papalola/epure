@@ -42,7 +42,7 @@ const Portfolio = () => {
   return (
     <Layout>
       <section className="py-24 bg-background">
-        <div className="container mx-auto px-4 max-w-2xl">
+        <div className="container mx-auto px-4 max-w-xl">
           <AnimatedSection>
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground text-center mb-3">
               Projets
@@ -53,33 +53,29 @@ const Portfolio = () => {
           </AnimatedSection>
 
           <AnimatedSection>
-            {/* Image avec flèches superposées */}
-            <div className="relative">
-              <div
-                className="relative overflow-hidden bg-white border border-border group cursor-pointer"
-                style={{ aspectRatio: "1.414 / 1" }}
-              >
-                <img
-                  src={projets[current].src}
-                  alt={projets[current].titre}
-                  className="w-full h-full object-contain transition-transform duration-500 ease-in-out group-hover:scale-105"
-                />
-              </div>
+            {/* Image avec flèches intégrées en bas */}
+            <div
+              className="relative overflow-hidden bg-white border border-border group cursor-pointer"
+              style={{ aspectRatio: "1.414 / 1" }}
+            >
+              <img
+                src={projets[current].src}
+                alt={projets[current].titre}
+                className="w-full h-full object-contain transition-transform duration-500 ease-in-out group-hover:scale-105"
+              />
 
-              {/* Flèche gauche — superposée à mi-hauteur */}
+              {/* Flèches dans les coins bas de l'image */}
               <button
-                onClick={prev}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-9 h-9 border border-foreground bg-background flex items-center justify-center hover:bg-foreground hover:text-background transition-colors z-10"
+                onClick={(e) => { e.stopPropagation(); prev(); }}
+                className="absolute bottom-3 left-3 w-8 h-8 border border-foreground bg-background flex items-center justify-center hover:bg-foreground hover:text-background transition-colors z-10"
               >
-                <ArrowLeft size={15} />
+                <ArrowLeft size={14} />
               </button>
-
-              {/* Flèche droite — superposée à mi-hauteur */}
               <button
-                onClick={next}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-9 h-9 bg-foreground text-background flex items-center justify-center hover:opacity-80 transition-opacity z-10"
+                onClick={(e) => { e.stopPropagation(); next(); }}
+                className="absolute bottom-3 right-3 w-8 h-8 bg-foreground text-background flex items-center justify-center hover:opacity-80 transition-opacity z-10"
               >
-                <ArrowRight size={15} />
+                <ArrowRight size={14} />
               </button>
             </div>
 
@@ -103,7 +99,7 @@ const Portfolio = () => {
                   className={`flex-shrink-0 border-2 transition-all duration-200 overflow-hidden ${
                     i === current ? "border-foreground" : "border-transparent opacity-50 hover:opacity-80"
                   }`}
-                  style={{ width: "80px", aspectRatio: "1.414 / 1" }}
+                  style={{ width: "72px", aspectRatio: "1.414 / 1" }}
                 >
                   <img
                     src={p.src}
