@@ -67,10 +67,7 @@ const Contact = () => {
 
           <div className="grid lg:grid-cols-5 gap-12 max-w-5xl mx-auto items-stretch">
 
-            {/* Colonne gauche — flex column justify-between pour remplir la hauteur */}
             <div className="lg:col-span-2 flex flex-col justify-between gap-6">
-
-              {/* Infos contact */}
               <div className="flex flex-col justify-between flex-1 gap-6">
                 {contactInfo.map((c) => (
                   <AnimatedSection key={c.label}>
@@ -93,20 +90,17 @@ const Contact = () => {
                 ))}
               </div>
 
-              {/* Cadre Disponibilité */}
               <AnimatedSection>
                 <div className="border border-border bg-gray-50 p-6">
                   <p className="text-sm font-bold text-card-foreground mb-2">Disponibilité</p>
-                  <p className="text-sm text-card-foreground/70">Missions ponctuelles ou régulières</p>
-                  <p className="text-sm text-card-foreground/70">Télétravail ou sur site</p>
+                  <p className="text-xs italic text-card-foreground/70">Missions ponctuelles ou régulières</p>
+                  <p className="text-xs italic text-card-foreground/70">Télétravail ou sur site</p>
                   <p className="text-sm font-bold text-card-foreground mt-3 mb-2">Interventions</p>
-                  <p className="text-sm text-card-foreground/70">Région Auvergne-Rhône-Alpes et au-delà</p>
+                  <p className="text-xs italic text-card-foreground/70">Région Auvergne-Rhône-Alpes et au-delà</p>
                 </div>
               </AnimatedSection>
-
             </div>
 
-            {/* Formulaire */}
             <AnimatedSection className="lg:col-span-3">
               <div className="border border-border bg-gray-50 p-8 h-full">
                 <form onSubmit={handleSubmit} className="space-y-5">
