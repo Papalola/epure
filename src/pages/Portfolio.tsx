@@ -53,16 +53,10 @@ const Portfolio = () => {
           </AnimatedSection>
 
           <AnimatedSection>
-            <div className="flex items-center gap-3">
-              <button
-                onClick={prev}
-                className="flex-shrink-0 w-9 h-9 border border-foreground flex items-center justify-center hover:bg-foreground hover:text-background transition-colors"
-              >
-                <ArrowLeft size={15} />
-              </button>
-
+            {/* Image avec flèches superposées */}
+            <div className="relative">
               <div
-                className="relative overflow-hidden bg-white border border-border group cursor-pointer flex-1"
+                className="relative overflow-hidden bg-white border border-border group cursor-pointer"
                 style={{ aspectRatio: "1.414 / 1" }}
               >
                 <img
@@ -72,16 +66,25 @@ const Portfolio = () => {
                 />
               </div>
 
+              {/* Flèche gauche — superposée à mi-hauteur */}
+              <button
+                onClick={prev}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-9 h-9 border border-foreground bg-background flex items-center justify-center hover:bg-foreground hover:text-background transition-colors z-10"
+              >
+                <ArrowLeft size={15} />
+              </button>
+
+              {/* Flèche droite — superposée à mi-hauteur */}
               <button
                 onClick={next}
-                className="flex-shrink-0 w-9 h-9 bg-foreground text-background flex items-center justify-center hover:opacity-80 transition-opacity"
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-9 h-9 bg-foreground text-background flex items-center justify-center hover:opacity-80 transition-opacity z-10"
               >
                 <ArrowRight size={15} />
               </button>
             </div>
 
             {/* Légende */}
-            <div className="flex items-start justify-between mt-4 mb-6 px-12">
+            <div className="flex items-start justify-between mt-4 mb-6">
               <div>
                 <p className="text-sm font-bold text-foreground">{projets[current].titre}</p>
                 <p className="text-xs text-muted-foreground mt-1">{projets[current].desc}</p>
@@ -92,7 +95,7 @@ const Portfolio = () => {
             </div>
 
             {/* Miniatures */}
-            <div className="flex gap-2 px-12 overflow-x-auto pb-2">
+            <div className="flex gap-2 overflow-x-auto pb-2">
               {projets.map((p, i) => (
                 <button
                   key={p.src}
