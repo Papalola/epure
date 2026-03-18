@@ -42,15 +42,15 @@ const About = () => (
 
         {/* Portrait + intro */}
         <AnimatedSection>
-          <div className="flex flex-col md:flex-row gap-10 mb-8">
-            <div className="flex-shrink-0 flex items-center">
+          <div className="flex flex-col md:flex-row gap-10 items-center mb-8">
+            <div className="flex-shrink-0 w-36 h-36">
               <img
                 src={portrait}
                 alt="David Badin"
                 className="w-36 h-36 object-cover object-top"
               />
             </div>
-            <div className="flex flex-col justify-center text-foreground text-base leading-7">
+            <div className="text-foreground text-base leading-7">
               <p>25 ans sur le terrain.</p>
               <p>De la menuiserie à l'ébénisterie, de l'agencement à la modélisation BIM.</p>
               <p>Je parle la langue des artisans et celle des bureaux d'études.</p>
@@ -77,23 +77,24 @@ const About = () => (
               </li>
             </ul>
             <p className="text-card-foreground font-bold text-base">Ma valeur ajoutée ?</p>
-            <p className="text-card-foreground italic text-base">
-              Je ne fais pas que dessiner des plans, je propose des solutions techniques réalistes et réalisables.
-            </p>
+            <p className="text-card-foreground italic text-base">Je ne fais pas que dessiner des plans…</p>
+            <p className="text-card-foreground italic text-base">je propose des solutions techniques réalistes et réalisables.</p>
           </div>
         </AnimatedSection>
 
-        {/* Timeline 3 colonnes */}
+        {/* Timeline avec ligne verticale */}
         <AnimatedSection>
           <div className="mb-20">
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-muted-foreground mb-10">
               Parcours
             </p>
-            <div className="space-y-5">
+            <div className="relative pl-6 border-l-2 border-border space-y-8">
               {parcours.map((step) => (
-                <div key={step.year} className="grid grid-cols-[80px_180px_1fr] gap-6 items-start">
+                <div key={step.year} className="relative grid grid-cols-[80px_160px_1fr] gap-6 items-start">
+                  {/* Carré sur la ligne */}
+                  <div className="absolute -left-[29px] top-1 w-3 h-3 bg-foreground" />
                   <p className="text-xl font-bold text-foreground leading-tight">{step.year}</p>
-                  <p className="text-[11px] font-extrabold tracking-[0.12em] uppercase text-foreground leading-tight pt-1">{step.title}</p>
+                  <p className="text-[10px] font-extrabold tracking-[0.12em] uppercase text-foreground pt-1 leading-tight">{step.title}</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
                 </div>
               ))}
