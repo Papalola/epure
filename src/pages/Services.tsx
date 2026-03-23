@@ -113,7 +113,7 @@ const Services = () => (
             </p>
             <div className="grid grid-cols-3 gap-4 max-w-lg mx-auto">
               {sectors.map((s) => (
-                <div key={s} className="border border-border bg-gray-50 py-4 text-sm font-semibold text-foreground text-center tracking-wide">
+                <div key={s} className="border border-border bg-gray-50 py-4 px-1 text-xs sm:text-sm font-semibold text-foreground text-center tracking-wide">
                   {s}
                 </div>
               ))}
