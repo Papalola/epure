@@ -34,7 +34,7 @@ const projets = [
   {
     src: "/ysb1.jpg",
     titre: "Meuble d'entrée — Claustra bois et rangements",
-    desc: "Agencement sur mesure — Claustra bois massif, banquette avec tiroirs, armoire laquée gris",
+    desc: "Agencement sur mesure — Claustra bois massif, banquette tissu gris avec tiroirs, armoire laquée blanc",
   },
   {
     src: "/ysb2.jpg",
