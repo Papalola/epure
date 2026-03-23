@@ -31,6 +31,16 @@ const projets = [
     titre: "Logement T2 — Plan de niveau",
     desc: "Modélisation 3D architecturale — Plan RDC, logement individuel",
   },
+  {
+    src: "/ysb1.jpg",
+    titre: "Meuble d'entrée — Claustra bois et rangements",
+    desc: "Agencement sur mesure — Claustra bois massif, banquette avec tiroirs, armoire laquée gris",
+  },
+  {
+    src: "/ysb2.jpg",
+    titre: "Meuble d'entrée — Vues d'ensemble",
+    desc: "Agencement sur mesure — Détails claustra et intégration dans l'espace",
+  },
 ];
 
 const Portfolio = () => {
