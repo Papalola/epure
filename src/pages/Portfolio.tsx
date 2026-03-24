@@ -32,29 +32,29 @@ const projets = [
     desc: "Modélisation 3D architecturale — Plan RDC, logement individuel",
   },
   {
-    src: "/ysb1.jpg",
+    src: "/BYS 1.png",
     titre: "Meuble d'entrée — Claustra bois et rangements",
     desc: "Agencement sur mesure — Claustra bois massif, banquette tissu gris avec tiroirs, armoire laquée blanc",
   },
   {
-    src: "/ysb2.jpg",
+    src: "/BYS 2.png",
     titre: "Meuble d'entrée — Vues d'ensemble",
     desc: "Agencement sur mesure — Détails claustra et intégration dans l'espace",
   },
   {
     src: "/alb_cuisine_1.png",
     titre: "Cuisine — Vue d'ensemble",
-    desc: "Agencement sur mesure — Cuisine équipée, façades laquées blanc, plan de travail effet béton ciré, réalisation pour particulier",
+    desc: "Agencement sur mesure — Cuisine équipée, façades mélaminées grises, plan de travail stratifié effet béton, réalisation pour particulier",
   },
   {
     src: "/alb_cuisine_2.png",
     titre: "Cuisine — Bloc cuisson",
-    desc: "Agencement sur mesure — Colonne four intégré, plaque induction, hotte inox, façades laquées blanc",
+    desc: "Agencement sur mesure — Colonne four intégré, plaque induction, hotte inox, façades mélaminées grises",
   },
   {
     src: "/alb_cuisine_3.png",
     titre: "Cuisine — Détail colonne",
-    desc: "Agencement sur mesure — Colonne technique, intégration four et hotte, finition laquée blanc mat",
+    desc: "Agencement sur mesure — Colonne four intégré, façades mélaminées grises",
   },
 ];
 
