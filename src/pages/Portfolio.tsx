@@ -80,9 +80,10 @@ const Portfolio = () => {
           <AnimatedSection>
             <div className="relative px-6">
               <div
-                className="relative overflow-hidden group cursor-pointer flex items-center justify-center bg-background"
-                style={{ height: "480px" }}
-              >
+               <div
+  className="relative overflow-hidden group cursor-pointer flex items-center justify-center"
+  style={{ height: "480px", backgroundColor: "#EDE9E4" }}
+>
                 <img
                   src={projets[current].src}
                   alt={projets[current].titre}
