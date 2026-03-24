@@ -42,19 +42,19 @@ const projets = [
     desc: "Agencement sur mesure — Détails claustra et intégration dans l'espace",
   },
   {
-    src: "/alb_cuisine_1.png",
+    src: "/alb_cuisine_1.jpg",
     titre: "Cuisine — Vue d'ensemble",
-    desc: "Agencement sur mesure — Cuisine équipée, façades mélaminées grises, plan de travail stratifié effet béton ciré, réalisation pour particulier",
+    desc: "Agencement sur mesure — Cuisine équipée, façades laquées blanc, plan de travail effet béton ciré, réalisation pour particulier",
   },
   {
-    src: "/alb_cuisine_2.png",
+    src: "/alb_cuisine_2.jpg",
     titre: "Cuisine — Bloc cuisson",
-    desc: "Agencement sur mesure — Colonne four intégré, plaque induction, hotte inox, façades mélaminées grises",
+    desc: "Agencement sur mesure — Colonne four intégré, plaque induction, hotte inox, façades laquées blanc",
   },
   {
-    src: "/alb_cuisine_3.png",
+    src: "/alb_cuisine_3.jpg",
     titre: "Cuisine — Détail colonne",
-    desc: "Agencement sur mesure — Colonne four intégré, façades mélaminées grises",
+    desc: "Agencement sur mesure — Colonne technique, intégration four et hotte, finition laquée blanc mat",
   },
 ];
 
@@ -80,13 +80,13 @@ const Portfolio = () => {
           <AnimatedSection>
             <div className="relative px-6">
               <div
-                className="relative overflow-hidden bg-white border border-border group cursor-pointer"
+                className="relative overflow-hidden group cursor-pointer"
                 style={{ aspectRatio: "1.414 / 1" }}
               >
                 <img
                   src={projets[current].src}
                   alt={projets[current].titre}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                   style={{ transition: "transform 1500ms ease-in-out" }}
                   onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.02)")}
                   onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
@@ -131,7 +131,7 @@ const Portfolio = () => {
                   <img
                     src={p.src}
                     alt={p.titre}
-                    className="w-full h-full object-contain bg-white"
+                    className="w-full h-full object-cover"
                   />
                 </button>
               ))}
