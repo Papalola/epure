@@ -81,7 +81,7 @@ const Portfolio = () => {
             <div className="relative px-6">
               <div
                 className="relative overflow-hidden group cursor-pointer flex items-center justify-center"
-                style={{ height: "480px", backgroundColor: "#EDE9E4" }}
+                style={{ aspectRatio: "1.414 / 1", backgroundColor: "#EDE9E4" }}
               >
                 <img
                   src={projets[current].src}
@@ -126,12 +126,12 @@ const Portfolio = () => {
                   className={`flex-shrink-0 border-2 transition-all duration-200 overflow-hidden ${
                     i === current ? "border-foreground" : "border-transparent opacity-50 hover:opacity-80"
                   }`}
-                  style={{ width: "72px", height: "51px" }}
+                  style={{ width: "72px", aspectRatio: "1.414 / 1", backgroundColor: "#EDE9E4" }}
                 >
                   <img
                     src={p.src}
                     alt={p.titre}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </button>
               ))}
