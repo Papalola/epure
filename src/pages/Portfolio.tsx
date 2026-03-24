@@ -42,17 +42,17 @@ const projets = [
     desc: "Agencement sur mesure — Détails claustra et intégration dans l'espace",
   },
   {
-    src: "/alb_cuisine_1.jpg",
+    src: "/alb_cuisine_1.png",
     titre: "Cuisine — Vue d'ensemble",
     desc: "Agencement sur mesure — Cuisine équipée, façades laquées blanc, plan de travail béton ciré, réalisation pour particulier",
   },
   {
-    src: "/alb_cuisine_2.jpg",
+    src: "/alb_cuisine_2.png",
     titre: "Cuisine — Bloc cuisson",
     desc: "Agencement sur mesure — Colonne four intégré, plaque induction, hotte inox, façades laquées blanc",
   },
   {
-    src: "/alb_cuisine_3.jpg",
+    src: "/alb_cuisine_3.png",
     titre: "Cuisine — Détail colonne",
     desc: "Agencement sur mesure — Colonne technique, intégration four et hotte, finition laquée blanc mat",
   },
