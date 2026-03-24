@@ -10,51 +10,61 @@ const projets = [
     src: "/capture1.png",
     titre: "CAF / URSSAF — Vue 3D bâtiment URSSAF",
     desc: "Modélisation 3D architecturale — Maquette numérique, équipement public",
+    cover: false,
   },
   {
     src: "/capture2.png",
     titre: "CAF / URSSAF — Plan masse",
     desc: "Modélisation 3D architecturale — Plan masse et vues 3D",
+    cover: false,
   },
   {
     src: "/capture3.png",
     titre: "Immeuble collectif — Élévations",
     desc: "Modélisation 3D architecturale — Élévations 4 façades, programme collectif",
+    cover: false,
   },
   {
     src: "/capture4.png",
     titre: "Immeuble collectif — Plan de niveau",
     desc: "Modélisation 3D architecturale — Plan RDC, programme collectif",
+    cover: false,
   },
   {
     src: "/capture5.png",
     titre: "Logement T2 — Plan de niveau",
     desc: "Modélisation 3D architecturale — Plan RDC, logement individuel",
+    cover: false,
   },
   {
     src: "/ysb1.jpg",
     titre: "Meuble d'entrée — Claustra bois et rangements",
     desc: "Agencement sur mesure — Claustra bois massif, banquette tissu gris avec tiroirs, armoire laquée blanc",
+    cover: true,
   },
   {
     src: "/ysb2.jpg",
     titre: "Meuble d'entrée — Vues d'ensemble",
     desc: "Agencement sur mesure — Détails claustra et intégration dans l'espace",
+    cover: true,
   },
   {
-    src: "/alb_cuisine_1.jpg",
+    src: "/alb_cuisine_1.png",
     titre: "Cuisine — Vue d'ensemble",
     desc: "Agencement sur mesure — Cuisine équipée, façades laquées blanc, plan de travail effet béton ciré, réalisation pour particulier",
+    cover: true,
   },
   {
-    src: "/alb_cuisine_2.jpg",
+    src: "/alb_cuisine_2.png",
     titre: "Cuisine — Bloc cuisson",
     desc: "Agencement sur mesure — Colonne four intégré, plaque induction, hotte inox, façades laquées blanc",
+    cover: true,
   },
   {
-    src: "/alb_cuisine_3.jpg",
+    src: "/alb_cuisine_3.png",
     titre: "Cuisine — Détail colonne",
     desc: "Agencement sur mesure — Colonne technique, intégration four et hotte, finition laquée blanc mat",
+    cover: true,
   },
 ];
 
@@ -86,7 +96,7 @@ const Portfolio = () => {
                 <img
                   src={projets[current].src}
                   alt={projets[current].titre}
-                  className="w-full h-full object-cover"
+                  className={`w-full h-full ${projets[current].cover ? "object-cover" : "object-contain"}`}
                   style={{ transition: "transform 1500ms ease-in-out" }}
                   onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.02)")}
                   onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
@@ -131,7 +141,7 @@ const Portfolio = () => {
                   <img
                     src={p.src}
                     alt={p.titre}
-                    className="w-full h-full object-cover"
+                    className={`w-full h-full ${p.cover ? "object-cover" : "object-contain"}`}
                   />
                 </button>
               ))}
