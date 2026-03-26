@@ -81,7 +81,7 @@ const Portfolio = () => {
             <div className="relative px-6">
               <div
                 className="relative overflow-hidden group cursor-pointer flex items-center justify-center"
-                style={{ aspectRatio: "1.414 / 1", backgroundColor: "##FFFFFF" }}
+                style={{ aspectRatio: "1.414 / 1", backgroundColor: "#FFFFFF" }}
               >
                 <img
                   src={projets[current].src}
@@ -126,7 +126,7 @@ const Portfolio = () => {
                   className={`flex-shrink-0 border-2 transition-all duration-200 overflow-hidden ${
                     i === current ? "border-foreground" : "border-transparent opacity-50 hover:opacity-80"
                   }`}
-                  style={{ width: "72px", aspectRatio: "1.414 / 1", backgroundColor: "##FFFFFF" }}
+                  style={{ width: "72px", aspectRatio: "1.414 / 1", backgroundColor: "#FFFFFF" }}
                 >
                   <img
                     src={p.src}
