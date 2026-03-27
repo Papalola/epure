@@ -41,21 +41,6 @@ const projets = [
     titre: "Meuble d'entrée — Vues d'ensemble",
     desc: "Agencement sur mesure — Détails claustra et intégration dans l'espace",
   },
-  {
-    src: "/alb_cuisine_1.png",
-    titre: "Cuisine — Vue d'ensemble",
-    desc: "Agencement sur mesure — Cuisine équipée, façades mélaminées grises, plan de travail stratifié effet béton, réalisation pour particulier",
-  },
-  {
-    src: "/alb_cuisine_2.png",
-    titre: "Cuisine — Bloc cuisson",
-    desc: "Agencement sur mesure — Colonne four intégré, plaque induction, hotte inox, façades mélaminées grises",
-  },
-  {
-    src: "/alb_cuisine_3.png",
-    titre: "Cuisine — Détail colonne",
-    desc: "Agencement sur mesure — Colonne four intégré, façades mélaminées grises",
-  },
 ];
 
 const Portfolio = () => {
