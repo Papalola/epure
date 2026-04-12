@@ -4,10 +4,8 @@
     <meta charset="utf-8">
     <title>Epure</title>
     <script>
-      // GitHub Pages SPA redirect: stocke le path en sessionStorage et redirige vers /
-      var l = window.location;
-      sessionStorage.redirect = l.pathname + l.search;
-      l.replace(l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + '/');
+      sessionStorage.setItem('spa-redirect', window.location.pathname + window.location.search);
+      window.location.replace('/');
     </script>
   </head>
   <body></body>

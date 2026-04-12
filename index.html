@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Epure — BIM Modeleur & Expert Agencement</title>
+    <title>Epure — BIM Modeleur &amp; Expert Agencement</title>
     <meta name="description" content="Epure — David Badin, BIM Modeleur / Dessinateur-Projeteur et Expert Agencement. Rhône-Alpes." />
     <meta name="author" content="David Badin — Epure" />
-    <meta property="og:title" content="Epure — BIM Modeleur & Expert Agencement" />
+    <meta property="og:title" content="Epure — BIM Modeleur &amp; Expert Agencement" />
     <meta property="og:description" content="Epure — David Badin, BIM Modeleur / Dessinateur-Projeteur et Expert Agencement. Rhône-Alpes." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://epure-db.com" />
@@ -15,11 +15,10 @@
     <link rel="icon" media="(prefers-color-scheme: light)" type="image/svg+xml" href="/LOGO_E_NOIR.svg" />
     <link rel="icon" media="(prefers-color-scheme: dark)" type="image/svg+xml" href="/LOGO_E_BLANC.svg" />
     <script>
-      // GitHub Pages SPA: restaure le path stocké par 404.html
-      (function(){
-        var redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
+      (function() {
+        var redirect = sessionStorage.getItem('spa-redirect');
         if (redirect && redirect !== '/') {
+          sessionStorage.removeItem('spa-redirect');
           window.history.replaceState(null, null, redirect);
         }
       })();
