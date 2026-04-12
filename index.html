@@ -14,6 +14,16 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" media="(prefers-color-scheme: light)" type="image/svg+xml" href="/LOGO_E_NOIR.svg" />
     <link rel="icon" media="(prefers-color-scheme: dark)" type="image/svg+xml" href="/LOGO_E_BLANC.svg" />
+    <script>
+      // GitHub Pages SPA: restaure le path stocké par 404.html
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== '/') {
+          window.history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
