@@ -34,9 +34,9 @@ const Footer = () => {
             <a href="tel:0688813086" className="flex items-center gap-2 hover:text-primary-foreground transition-colors">
               <Phone size={16} strokeWidth={1} /> 06 88 81 30 86
             </a>
-            <a href="mailto:contact@epure-db.com" className="flex items-center gap-2 hover:text-primary-foreground transition-colors">
+            <Link to="/contact" className="flex items-center gap-2 hover:text-primary-foreground transition-colors">
               <Mail size={16} strokeWidth={1} /> contact@epure-db.com
-            </a>
+            </Link>
             <span className="flex items-center gap-2">
               <MapPin size={16} strokeWidth={1} /> Rhône-Alpes
             </span>
