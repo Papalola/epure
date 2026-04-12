@@ -41,7 +41,7 @@ const Contact = () => {
     setErrors({});
     setSending(true);
     try {
-      const res = await fetch("https://formspree.io/f/xpwzgkjb", {
+      const res = await fetch("https://formspree.io/f/xkokwrwo", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
@@ -83,7 +83,7 @@ const Contact = () => {
               Contact
             </h1>
             <p className="text-muted-foreground text-center max-w-lg mx-auto mb-20">
-              Une question ? Un projet ?<br />
+              Une question ? Un projet ?<br />
               Je suis disponible pour échanger sur vos besoins.
             </p>
           </AnimatedSection>
