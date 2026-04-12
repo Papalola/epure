@@ -1,53 +1,8 @@
-import { useState } from "react";
-import { Phone, Mail, MapPin, ArrowRight, Linkedin } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useToast } from "@/hooks/use-toast";
+import { Phone, Mail, MapPin, Linkedin, ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
-import { z } from "zod";
-
-const contactSchema = z.object({
-  name: z.string().trim().min(1, "Nom requis").max(100),
-  company: z.string().trim().max(100).optional(),
-  email: z.string().trim().email("Email invalide").max(255),
-  phone: z.string().trim().max(20).optional(),
-  message: z.string().trim().min(1, "Message requis").max(2000),
-});
-
-const contactInfo = [
-  { icon: Phone, label: "Téléphone", value: "06 88 81 30 86", href: "tel:0688813086" },
-  { icon: Mail, label: "Email", value: "contact@epure-db.com", href: "mailto:contact@epure-db.com" },
-  { icon: MapPin, label: "Localisation", value: "Rhône-Alpes" },
-  { icon: Linkedin, label: "LinkedIn", value: "Epure — David Badin", href: "https://www.linkedin.com/company/112306131/" },
-];
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", company: "", email: "", phone: "", message: "" });
-  const [errors, setErrors] = useState<Record<string, string>>({});
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const result = contactSchema.safeParse(form);
-    if (!result.success) {
-      const fieldErrors: Record<string, string> = {};
-      result.error.issues.forEach((issue) => {
-        fieldErrors[issue.path[0] as string] = issue.message;
-      });
-      setErrors(fieldErrors);
-      return;
-    }
-    setErrors({});
-    toast({
-      title: "Message envoyé !",
-      description: "Merci, je vous recontacterai dans les plus brefs délais.",
-    });
-    setForm({ name: "", company: "", email: "", phone: "", message: "" });
-  };
-
-  const update = (field: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
-    setForm({ ...form, [field]: e.target.value });
-
   return (
     <Layout>
       <section className="py-24 bg-background">
@@ -65,104 +20,55 @@ const Contact = () => {
             </p>
           </AnimatedSection>
 
-          <div className="grid lg:grid-cols-5 gap-12 max-w-5xl mx-auto items-stretch">
+          <div className="max-w-2xl mx-auto">
 
-            <div className="lg:col-span-2 flex flex-col">
-              <div className="flex flex-col flex-1 justify-between">
-                {contactInfo.map((c) => (
-                  <AnimatedSection key={c.label}>
-                    <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 border border-border bg-gray-50 flex items-center justify-center flex-shrink-0">
-                        <c.icon className="text-foreground" size={20} strokeWidth={1} />
-                      </div>
-                      <div>
-                        <p className="text-sm mb-1 text-muted-foreground">{c.label}</p>
-                        {c.href ? (
-                          <a href={c.href} target={c.label === "LinkedIn" ? "_blank" : undefined} rel="noreferrer" className="font-bold text-foreground transition-colors hover:opacity-80">
-                            {c.value}
-                          </a>
-                        ) : (
-                          <p className="font-bold text-foreground">{c.value}</p>
-                        )}
-                      </div>
-                    </div>
-                  </AnimatedSection>
-                ))}
-              </div>
+            <AnimatedSection>
+              <div className="border border-border bg-gray-50 p-10 flex flex-col gap-8">
 
-              <AnimatedSection>
-                <div className="border border-border bg-gray-50 p-6 mt-6">
-                  <p className="text-sm font-bold text-card-foreground mb-2">Disponibilité</p>
-                  <p className="text-xs text-card-foreground/70">Missions ponctuelles ou régulières</p>
-                  <p className="text-xs text-card-foreground/70">Télétravail privilégié</p>
-                  <p className="text-xs text-card-foreground/70">Déplacements selon projet</p>
-                  <p className="text-sm font-bold text-card-foreground mt-3 mb-2">Interventions</p>
-                  <p className="text-xs text-card-foreground/70">Région Auvergne-Rhône-Alpes et au-delà</p>
+                <a href="mailto:contact@epure-db.com" className="flex items-center gap-5 group">
+                  <div className="w-12 h-12 border border-border bg-white flex items-center justify-center flex-shrink-0 group-hover:bg-foreground transition-colors">
+                    <Mail className="text-foreground group-hover:text-background transition-colors" size={20} strokeWidth={1} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs text-muted-foreground mb-0.5">Email</p>
+                    <p className="font-bold text-foreground group-hover:opacity-70 transition-opacity">contact@epure-db.com</p>
+                  </div>
+                  <ArrowRight className="text-muted-foreground group-hover:text-foreground transition-colors flex-shrink-0" size={18} />
+                </a>
+
+                <a href="tel:0688813086" className="flex items-center gap-5 group">
+                  <div className="w-12 h-12 border border-border bg-white flex items-center justify-center flex-shrink-0 group-hover:bg-foreground transition-colors">
+                    <Phone className="text-foreground group-hover:text-background transition-colors" size={20} strokeWidth={1} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs text-muted-foreground mb-0.5">Téléphone</p>
+                    <p className="font-bold text-foreground group-hover:opacity-70 transition-opacity">06 88 81 30 86</p>
+                  </div>
+                  <ArrowRight className="text-muted-foreground group-hover:text-foreground transition-colors flex-shrink-0" size={18} />
+                </a>
+
+                <a href="https://www.linkedin.com/company/112306131/" target="_blank" rel="noreferrer" className="flex items-center gap-5 group">
+                  <div className="w-12 h-12 border border-border bg-white flex items-center justify-center flex-shrink-0 group-hover:bg-foreground transition-colors">
+                    <Linkedin className="text-foreground group-hover:text-background transition-colors" size={20} strokeWidth={1} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs text-muted-foreground mb-0.5">LinkedIn</p>
+                    <p className="font-bold text-foreground group-hover:opacity-70 transition-opacity">Epure — David Badin</p>
+                  </div>
+                  <ArrowRight className="text-muted-foreground group-hover:text-foreground transition-colors flex-shrink-0" size={18} />
+                </a>
+
+                <div className="flex items-start gap-5">
+                  <div className="w-12 h-12 border border-border bg-white flex items-center justify-center flex-shrink-0">
+                    <MapPin className="text-foreground" size={20} strokeWidth={1} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs text-muted-foreground mb-0.5">Localisation</p>
+                    <p className="font-bold text-foreground">Rhône-Alpes</p>
+                    <p className="text-xs text-muted-foreground mt-1">Télétravail privilégié · Déplacements selon projet</p>
+                  </div>
                 </div>
-              </AnimatedSection>
-            </div>
 
-            <AnimatedSection className="lg:col-span-3">
-              <div className="border border-border bg-gray-50 p-8 h-full">
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="grid sm:grid-cols-2 gap-5">
-                    <div>
-                      <label className="text-sm font-bold text-card-foreground mb-1.5 block">Nom / Prénom *</label>
-                      <input
-                        value={form.name}
-                        onChange={update("name")}
-                        className="flex h-10 w-full border border-border bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-foreground focus:ring-offset-2"
-                      />
-                      {errors.name && <p className="text-destructive text-xs mt-1">{errors.name}</p>}
-                    </div>
-                    <div>
-                      <label className="text-sm font-bold text-card-foreground mb-1.5 block">Entreprise</label>
-                      <input
-                        value={form.company}
-                        onChange={update("company")}
-                        className="flex h-10 w-full border border-border bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-foreground focus:ring-offset-2"
-                      />
-                    </div>
-                  </div>
-                  <div className="grid sm:grid-cols-2 gap-5">
-                    <div>
-                      <label className="text-sm font-bold text-card-foreground mb-1.5 block">Email *</label>
-                      <input
-                        type="email"
-                        value={form.email}
-                        onChange={update("email")}
-                        className="flex h-10 w-full border border-border bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-foreground focus:ring-offset-2"
-                      />
-                      {errors.email && <p className="text-destructive text-xs mt-1">{errors.email}</p>}
-                    </div>
-                    <div>
-                      <label className="text-sm font-bold text-card-foreground mb-1.5 block">Téléphone</label>
-                      <input
-                        type="tel"
-                        value={form.phone}
-                        onChange={update("phone")}
-                        className="flex h-10 w-full border border-border bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-foreground focus:ring-offset-2"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="text-sm font-bold text-card-foreground mb-1.5 block">Message *</label>
-                    <textarea
-                      rows={5}
-                      value={form.message}
-                      onChange={update("message")}
-                      className="flex w-full border border-border bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-foreground focus:ring-offset-2"
-                    />
-                    {errors.message && <p className="text-destructive text-xs mt-1">{errors.message}</p>}
-                  </div>
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
-                  >
-                    Envoyer <ArrowRight className="ml-2" size={18} />
-                  </Button>
-                </form>
               </div>
             </AnimatedSection>
 
