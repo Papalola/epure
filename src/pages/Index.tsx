@@ -9,59 +9,58 @@ const services = [
   {
     icon: Box,
     title: "BIM Modeleur",
+    subtitle: "Des maquettes BIM fiables pour anticiper les erreurs avant le chantier",
     items: [
       "Modélisation 3D BIM — maquettes architecturales (Revit, AutoCAD)",
       "Détection de conflits inter-corps d'état",
       "Export fichiers IFC et extraction de métrés",
       "Assistance MOE BIM (coordination, vérification modèles, réunions)",
     ],
+    cta: "Voir mes prestations BIM",
   },
   {
     icon: Ruler,
     title: "Dessinateur-Projeteur",
+    subtitle: "Des plans précis, directement exploitables par les équipes terrain",
     items: [
-      "Plans d'exécution tous corps d'état (AutoCAD)",
+      "Plans d'exécution (AutoCAD)",
       "Plans de détails techniques et coupes constructives",
       "Dossiers graphiques pour permis de construire (PC / PCMI)",
       "Plans conformes à exécution (DOE)",
     ],
+    cta: "Voir mes prestations en dessin technique",
   },
   {
     icon: Home,
     title: "Expert Agencement",
+    subtitle: "Des solutions sur mesure, pensées pour être réellement fabriquées et posées",
     items: [
-      "Mobilier et menuiserie sur mesure (de l'étude à la pose)",
       "Détails techniques d'exécution et plans d'atelier",
       "Conseil en optimisation des méthodes de fabrication",
       "Assistance MOE Agencement (mise à jour plans, préparation dossiers entreprises, suivi chantier)",
     ],
+    cta: "Voir mes prestations en agencement",
   },
 ];
 
 const advantages = [
   {
-    title: "Double compétence rare",
-    lines: [
-      "BIM Modeleur + 25 ans terrain.",
-      "Je ne fais pas que dessiner des plans,",
-      "je comprends ce que je dessine.",
-    ],
+    title: "Une double expertise BIM + terrain",
+    subtitle: "25 ans d'expérience terrain pour des plans pensés pour être réellement construits",
+    body: "Je ne me contente pas de modéliser : j'intègre les contraintes de fabrication, de pose et de chantier dès la conception.",
+    result: "Moins d'erreurs, moins d'allers-retours, des projets plus fluides",
   },
   {
-    title: "Solutions concrètes",
-    lines: [
-      "Je comprends les contraintes de réalisation.",
-      "Mes propositions sont techniques,",
-      "réalistes et réalisables.",
-    ],
+    title: "Des solutions concrètes, pas théoriques",
+    subtitle: "Des plans directement exploitables par les équipes sur le terrain",
+    body: "Chaque détail est conçu pour être compris et utilisé facilement par les intervenants.",
+    result: "Gain de temps, meilleure coordination, exécution plus fiable",
   },
   {
-    title: "Réactivité & flexibilité",
-    lines: [
-      "Missions courtes ou longues.",
-      "Télétravail privilégié,",
-      "déplacements selon projet.",
-    ],
+    title: "Réactivité et adaptation à vos projets",
+    subtitle: "Un renfort opérationnel, immédiatement efficace",
+    body: "Mission ponctuelle ou accompagnement long terme, je m'adapte à vos contraintes et à votre organisation.",
+    result: "Un partenaire flexible, sans complexité",
   },
 ];
 
@@ -120,9 +119,10 @@ const Index = () => {
               <AnimatedSection key={service.title} delay={i * 0.15}>
                 <div className="border border-border bg-gray-50 p-8 h-full flex flex-col transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
                   <service.icon className="text-card-foreground mb-4" size={36} strokeWidth={1} />
-                  <h3 className="text-xl font-bold text-card-foreground mb-4 tracking-wide">
+                  <h3 className="text-xl font-bold text-card-foreground mb-2 tracking-wide">
                     {service.title}
                   </h3>
+                  <p className="text-card-foreground/60 text-sm italic mb-4">{service.subtitle}</p>
                   <ul className="space-y-2 flex-1">
                     {service.items.map((item) => (
                       <li key={item} className="flex items-start gap-2 text-card-foreground/70 text-sm">
@@ -132,8 +132,8 @@ const Index = () => {
                     ))}
                   </ul>
                   <div className="mt-6">
-                    <Link to="/services" className="text-xs text-card-foreground/50 hover:text-card-foreground underline transition-colors">
-                      Voir toutes les prestations →
+                    <Link to="/services" className="inline-flex items-center gap-1 text-xs font-semibold text-card-foreground hover:opacity-70 underline transition-opacity">
+                      {service.cta} <ArrowRight size={12} />
                     </Link>
                   </div>
                 </div>
@@ -157,21 +157,28 @@ const Index = () => {
               Avantages
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground text-center mb-10">
-              Pourquoi me choisir ?
+              Ce que je vous apporte concrètement
             </h2>
           </AnimatedSection>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mx-auto items-stretch">
             {advantages.map((adv, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className="border border-border bg-gray-50 p-8 h-full transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
-                  <p className="text-card-foreground font-bold text-sm mb-3 tracking-wide">{adv.title}</p>
-                  {adv.lines.map((line, j) => (
-                    <p key={j} className="text-card-foreground/70 text-sm leading-relaxed">{line}</p>
-                  ))}
+                <div className="border border-border bg-gray-50 p-8 h-full flex flex-col transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(52,51,50,0.15)]">
+                  <p className="text-card-foreground font-bold text-sm mb-1 tracking-wide">{adv.title}</p>
+                  <p className="text-card-foreground/80 text-sm font-semibold mb-3">{adv.subtitle}</p>
+                  <p className="text-card-foreground/70 text-sm leading-relaxed flex-1">{adv.body}</p>
+                  <p className="mt-4 text-card-foreground text-xs font-semibold tracking-wide border-t border-border pt-3">
+                    → {adv.result}
+                  </p>
                 </div>
               </AnimatedSection>
             ))}
           </div>
+          <AnimatedSection>
+            <p className="text-muted-foreground text-center text-sm mt-10">
+              Moins d'erreurs chantier · Des plans exploitables immédiatement · Un interlocuteur unique, de la maquette au terrain
+            </p>
+          </AnimatedSection>
         </div>
       </section>
 
