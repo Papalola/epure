@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Box, Home, HardHat, Ruler } from "lucide-react";
+import { ArrowRight, Box, Home, HardHat, Ruler, Square } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -164,9 +164,10 @@ const Index = () => {
                   <p className="text-card-foreground font-bold text-sm mb-1 tracking-wide">{adv.title}</p>
                   <p className="text-card-foreground/80 text-sm font-semibold mb-3">{adv.subtitle}</p>
                   <p className="text-card-foreground/70 text-sm leading-relaxed flex-1">{adv.body}</p>
-                  <p className="mt-4 text-card-foreground text-xs font-semibold tracking-wide border-t border-border pt-3">
-                    → {adv.result}
-                  </p>
+                  <div className="mt-4 flex items-center gap-2 border-t border-border pt-3">
+                    <Square className="text-card-foreground flex-shrink-0" size={10} strokeWidth={1} />
+                    <p className="text-card-foreground text-xs font-semibold tracking-wide">{adv.result}</p>
+                  </div>
                 </div>
               </AnimatedSection>
             ))}

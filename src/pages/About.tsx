@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Award } from "lucide-react";
+import { ArrowRight, Award, Square } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -59,27 +59,27 @@ const About = () => (
           </div>
         </AnimatedSection>
 
-        {/* Value box — uniquement les 3 bullets */}
+        {/* Value box */}
         <AnimatedSection>
           <div className="border border-border bg-gray-50 p-8 mb-6">
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               <li className="flex items-start gap-3 text-card-foreground text-sm">
-                <span className="mt-1.5 block w-1.5 h-1.5 bg-card-foreground flex-shrink-0" />
+                <Square className="mt-0.5 flex-shrink-0 text-card-foreground" size={12} strokeWidth={1} />
                 Un BIM Modeleur qui modélise et anticipe les contraintes terrain
               </li>
               <li className="flex items-start gap-3 text-card-foreground text-sm">
-                <span className="mt-1.5 block w-1.5 h-1.5 bg-card-foreground flex-shrink-0" />
+                <Square className="mt-0.5 flex-shrink-0 text-card-foreground" size={12} strokeWidth={1} />
                 Un expert agencement qui a fabriqué et posé ce qu'il dessine
               </li>
               <li className="flex items-start gap-3 text-card-foreground text-sm">
-                <span className="mt-1.5 block w-1.5 h-1.5 bg-card-foreground flex-shrink-0" />
+                <Square className="mt-0.5 flex-shrink-0 text-card-foreground" size={12} strokeWidth={1} />
                 Un professionnel réactif, disponible et fiable
               </li>
             </ul>
           </div>
         </AnimatedSection>
 
-        {/* Ma valeur ajoutée — hors cadre */}
+        {/* Ma valeur ajoutée */}
         <AnimatedSection>
           <div className="mb-20 px-2">
             <p className="text-sm font-bold text-foreground mb-2">Ma valeur ajoutée ?</p>
