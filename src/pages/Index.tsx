@@ -16,7 +16,6 @@ const services = [
       "Export fichiers IFC et extraction de métrés",
       "Assistance MOE BIM (coordination, vérification modèles, réunions)",
     ],
-    cta: "Voir mes prestations BIM",
   },
   {
     icon: Ruler,
@@ -28,7 +27,6 @@ const services = [
       "Dossiers graphiques pour permis de construire (PC / PCMI)",
       "Plans conformes à exécution (DOE)",
     ],
-    cta: "Voir mes prestations en dessin technique",
   },
   {
     icon: Home,
@@ -39,7 +37,6 @@ const services = [
       "Conseil en optimisation des méthodes de fabrication",
       "Assistance MOE Agencement (mise à jour plans, préparation dossiers entreprises, suivi chantier)",
     ],
-    cta: "Voir mes prestations en agencement",
   },
 ];
 
@@ -133,7 +130,7 @@ const Index = () => {
                   </ul>
                   <div className="mt-6">
                     <Link to="/services" className="inline-flex items-center gap-1 text-xs font-semibold text-card-foreground hover:opacity-70 underline transition-opacity">
-                      {service.cta} <ArrowRight size={12} />
+                      Voir mes prestations <ArrowRight size={12} />
                     </Link>
                   </div>
                 </div>
