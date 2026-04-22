@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Award, Square } from "lucide-react";
+import { ArrowRight, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -64,15 +64,15 @@ const About = () => (
           <div className="border border-border bg-gray-50 p-8 mb-6">
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-card-foreground text-sm">
-                <Square className="mt-0.5 flex-shrink-0 text-card-foreground" size={12} strokeWidth={1} />
+                <span className="mt-1 block w-2.5 h-2.5 bg-foreground flex-shrink-0" />
                 Un BIM Modeleur qui modélise et anticipe les contraintes terrain
               </li>
               <li className="flex items-start gap-3 text-card-foreground text-sm">
-                <Square className="mt-0.5 flex-shrink-0 text-card-foreground" size={12} strokeWidth={1} />
+                <span className="mt-1 block w-2.5 h-2.5 bg-foreground flex-shrink-0" />
                 Un expert agencement qui a fabriqué et posé ce qu'il dessine
               </li>
               <li className="flex items-start gap-3 text-card-foreground text-sm">
-                <Square className="mt-0.5 flex-shrink-0 text-card-foreground" size={12} strokeWidth={1} />
+                <span className="mt-1 block w-2.5 h-2.5 bg-foreground flex-shrink-0" />
                 Un professionnel réactif, disponible et fiable
               </li>
             </ul>
